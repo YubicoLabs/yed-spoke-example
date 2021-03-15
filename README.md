@@ -25,8 +25,9 @@ The first step when building a new Spoke is to create a Scoped Application. The 
 6. In the subsequent dialog click the **Continue in Studio (Advanced)** link
 
 ## Add a YubiKey to the Service Catalog
-Let's add a YubiKey 5 NFC to the service catalog
+Let's add a YubiKey 5 NFC to the service catalog.
 
+### Create product catalog hardware model
 1. Navigate to **Product Catalog > Hardware Models**
 2. Click **New**
 3. Fill out the hardware form with the following values
@@ -40,11 +41,23 @@ Let's add a YubiKey 5 NFC to the service catalog
   **Product catalog**
   **Description:** The YubiKey 5 Series is a hardware based authentication solution that provides superior defense against phishing, eliminates account takeovers, and enables compliance requirements for strong authentication.
 4. Click **Submit**
-5. 
+5. In Hardware Models, search for `YubiKey`, and click **YubiKey 5 NFC**
+6. Under **Related Links** click **Publish to Hardware Catalog**
+7. Select the **Peripherals** catalog and click **OK**
 
+### Create service catalog item
+1. Navigate to **Service Catalog > Catalog Definitions > Maitain Items**
+2. Click **New**
+3. Fill out the catalog item form with the following values
+  **Name:** YubiKey 5 NFC
+  **Catalogs:** Service Catalog
+  **Category:** Peripherals
+  **Picture:** Upload an [offical Yubico image](https://brandfolder.yubico.com/yubico/press-room-images-logos)
+4. Click **Submit**
+5. Navigate to **Self-Service > Service Catalog > Peripherals** and confirm the **YubiKey 5 NFC** is present.
 
 ## Create the shipment request action
-Now that you have a scoped app, it's time to create the shipment request action.  All of the actions in this example will be created in the Yubico Enterprise API Spoke.
+Now that you have a scoped app and a YubiKey in the catalog, it's time to create the shipment request action.  All of the actions in this example will be created in the Yubico Enterprise API Spoke.
 
 ### Launch the flow designer
 To launch the flow designer, navigate to **Flow Designer > Designer**

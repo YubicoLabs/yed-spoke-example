@@ -117,9 +117,73 @@ Action inputs should always have human-friendly names.
   | Shipment Product ID | Integer | on |
 6. **Save** the Action
 
-## The input Script step
+## The input script step
 ---
+At this point, the Action is getting the shipment address, product, and quantity. Now you will use a Script Step to process the input data and create a shipment exact request payload.
 
+### Script input variables
+The script step gets its own set of input variables. This allows you to map data from the data pane into script-friendly variables.
+
+1. In the **Input Variables** widget, click the **+ Create Variable* button 
+2. Set the **Name** to `delivery_type`
+3. Drag the **Delivery Type** data pill from the data pane to the **Value** field. You can now reference the Delivery Type in your script as `inputs.delivery_type`.
+4. Repeat steps 1-3 for each of the action input varables
+5. Set the script to:
+
+Note: Ensure the input variable names match the script variables below otherwise the input values will not be mapped.
+```javascript
+(function execute(inputs, outputs) {
+
+  // Enforce API constraints here. See https://console.yubico.com/help/API_Onboarding_Playbook.html?highlight=max#executing-a-shipping-request for full list
+  // A. 2 character country codes only
+  const countryCodeMap = {
+    "USA": "US",
+    "US": "US"
+  };
+  const code = countryCodeMap[inputs.country_code_2];
+  
+  // The rest of the constraints are left as an exercise for the reader
+  // B. recipient_firstname max = 15
+  // C. recipient_lastname max = 20
+  // D. recipient max = 20
+  // E. street_line max = 40. Overflow address to street_line2 and street_line3
+  // F. city max = 20
+  // G. region max = 20
+  // H. postal_code max = 20
+  // I. recipient_email max = 40
+  // J. recipient_telephone max = 14
+
+  outputs.shipmentexactrequest = JSON.stringify({
+    "delivery_type": parseInt(inputs.delivery_type),
+    "country_code_2": code,
+    "recipient": inputs.Recipient,
+    "recipient_email": inputs.recipient_email,
+    "recipient_firstname": inputs.recipient_firstname,
+    "recipient_lastname": inputs.recipient_lastname,
+    "recipient_telephone": inputs.recipient_telephone,
+    "street_line1": inputs.street_line1,
+    "street_line2": inputs.street_line2,
+    "street_line3": inputs.street_line3,
+    "city": inputs.City,
+    "region": inputs.Region,
+    "postal_code": inputs.postal_code,
+    "shipment_items": [
+      {
+      "product_id": parseInt(inputs.product_id),
+      "inventory_product_id": parseInt(inputs.inventory_product_id),
+      "shipment_product_quantity": parseInt(inputs.shipment_product_quantity)
+    }
+   ]
+  });
+
+})(inputs, outputs);
+```
+
+### Script output variables
+Similar to Script Input Variables, Script Output Variables allow you to pasa data out of your script to other steps in the action. These variables are internal to the action, and are not surfaced in Flow Designer.
+
+1. In the **Output Variables** widget, click the **+ Create Variable** button.
+2. Set the **Label** and **Name** to "Shipment Exact Request". Leave the **Type** as String.
 
 ## The REST step
 ---

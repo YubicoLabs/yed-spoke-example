@@ -182,8 +182,9 @@ Note: Ensure the input variable names match the script variables below otherwise
 ### Script output variables
 Similar to Script Input Variables, Script Output Variables allow you to pasa data out of your script to other steps in the action. These variables are internal to the action, and are not surfaced in Flow Designer.
 
-1. In the **Output Variables** widget, click the **+ Create Variable** button.
-2. Set the **Label** and **Name** to "Shipment Exact Request". Leave the **Type** as String.
+1. In the **Output Variables** widget, click the **+ Create Variable** button
+2. Set the **Label** and **Name** to "Shipment Exact Request". Leave the **Type** as String
+3. You will now see a new data pill in the **Script step** section of the Data Pane.
 
 ## The REST step
 ---

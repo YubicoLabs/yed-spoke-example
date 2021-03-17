@@ -219,13 +219,47 @@ In this example, we will start with an inline connection. You can convert the ac
   | Content-Type | application/json |
   | Authorization | Bearer *paste your YED API token here* |
  
-6. Drag the **Shipment Exact Request** data pill from the data pane to the **Request Content Request Vody [Text]** field 
+6. Drag the **Shipment Exact Request** data pill from the data pane to the **Request Content Request Body [Text]** field 
 7. **Save** the Rest step
 
-
-## The output Script step
+## The output script step
 ---
+Right now, the Action has sent the shipment request to the REST endpoint and recieved the response body but doesn't know if the request was successful. In this step, you will parse the output of the REST step.
 
+1. Add a new Action Step after the REST step. When prompted, choose the **Script** step
+
+### Script Input Variables
+1. In the **Input Variables** widget, click the **+ Create Variable** button
+2. Set the **Name** to `responseBody`
+3. Drag the **Response Body** data pill from the data pane to the **Value** field. You can now reference the Response Body in your scripts as `inputs.responseBody`
+4. Set the script to
+
+```javascript
+(function execute(inputs, outputs) {
+  outputs.shipment_response = inputs.responseBody;
+  const response = JSON.parse(inputs.responseBody);
+  outputs.shipment_request_id = response.shipment_id;
+  outputs.shipment_state_id = response.shipment_state_id;
+  outputs.shipment_state_message = response.shipment_state_message;
+  const messages = (response.shipment_messages === undefined) ? "" : JSON.stringify(response.shipment_messages);
+  outputs.shipment_messages = messages;
+})(inputs, outputs);
+```
+
+### Script Output Variables
+1. In the **Output Variables** widget, click the **+ Create Variable** button
+2. Set the **Label** to "Shipment Response". The **Name** should be "shipment_response" Leave the **Type** as String
+3. You will now see a new data pill in the **Script step** section of the Data Pane
+4. Repeat steps 1 - 2 for the following
+
+  | **Label** | **Name** | **Type** | **Mandatory** |
+  | --------- | -------- | -------- | ------------- |
+  | Shipment Request ID | shipment_request_id | String | off |
+  | Shipment State ID | shipment_state_id | Integer | off |
+  | Shipment State Message | shipment_state_message | String | off |
+  | Shipment Messages | shipment_messages | String | off |
+
+6. **Save** the Script step
 
 ## Action outputs
 ---

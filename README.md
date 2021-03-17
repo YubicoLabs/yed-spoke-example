@@ -263,11 +263,36 @@ Right now, the Action has sent the shipment request to the REST endpoint and rec
 
 ## Action outputs
 ---
+Use Action Outpus to return data from the action to Flow Designer. The Script Output variables we just defined are intentially "private" to the action and are intended for use by scripts or other action steps (this, the camel case naming convention).
 
+The same naming considerations we used for Action Inputs also apply to Action Outputs. Outputs should always be human readable, use natural language, and should not contain underscores or use variable naming conventions like camelCase.
+
+**GOOD:** Score
+
+**BAD:** score
+
+1. Click the **Outputs** section in the **Action Outline**
+2. Click the **+ Create Output** button
+3. Set the following outputs
+
+  | **Label** | **Name** | **Type** | **Mandatory** |
+  | --------- | -------- | -------- | ------------- |
+  | HTTP Status Code | http_status_code| String | off |
+  | HTTP Error Code | http_error_code| String | off |
+  | HTTP Error Message | http_error_message | String | off |
+  | Shipment Request ID | shipment_request_id | String | off |
+  | Shipment State ID | shipment_state_id | Integer | off |
+  | Shipment State Message | shipment_state_message | String | off |
+  | Shipment Messages | shipment_messages | String | off |
+
+5. Click the **Exit Edit Mode** button
 
 ## Create the shipment request flow
 ---
 
+
+## Test the flow
+---
 
 ## References
 ---

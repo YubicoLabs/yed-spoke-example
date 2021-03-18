@@ -291,7 +291,7 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
 
 ### Test the Action
 1. Click the **Test** button
-2. Set the folling variables
+2. Set the following variables
 
   | **Name** | **VALUE** |
   | -------- | --------- |
@@ -314,6 +314,13 @@ If everything looks good, click the **Publish** button on the action to make it 
 
 ## Create the shipment request flow
 ---
+Now that you have the Action, lets put it into a Flow and test it.
+
+1. Click the **+ New** button, and then click **Flow** in the resulting menu
+2. Name the Flow "Yubico YED API Create a Shipment" and click the **Submit* button
+
+### Add a Trigger
+Flows run when a Trigger condition is met. For this example, we will run a flow on the Service Catalog
 
 
 ## Test the flow
@@ -325,6 +332,8 @@ If everything looks good, click the **Publish** button on the action to make it 
 * [YED API Onboarding Playbook](https://console.yubico.com/help/API_Onboarding_Playbook.html)
 * [Spoke Development Best Practices](https://github.com/ServiceNowDevProgram/SpoketoberfestResources/blob/master/SpokeDevelopmentBestPracticesPublic.md)
 * [Import a ServiceNow Application from Source Control](https://developer.servicenow.com/dev.do#!/learn/learning-plans/quebec/servicenow_application_developer/app_store_learnv2_devenvironment_quebec_importing_an_application_from_source_control)
+* This example is based off of the ServiceNow [Building Your First Spoke guidebook](https://developer.servicenow.com/connect.do#!/event/knowledge2020/CCW2510)
 
 ## Help & Support
 ---
+

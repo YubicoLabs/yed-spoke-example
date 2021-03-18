@@ -286,6 +286,31 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
   | Shipment Messages | shipment_messages | String | off |
 
 5. Click the **Exit Edit Mode** button
+6. Using the Data Pill Picker, set the **Value** of the Script Output Variables to the associated output variables
+7. **Save** the Action
+
+### Test the Action
+1. Click the **Test** button
+2. Set the folling variables
+
+  | **Name** | **VALUE** |
+  | -------- | --------- |
+  | Country Code | US |
+  | Recipient | Example Inc. |
+  | Stree Line 1 | 7788 Foxrun Street |
+  | City | Dedham |
+  | Region | MA |
+  | Postal Code| 02026 |
+  | Product ID | 1 |
+  | Inventory Product Id | 15 |
+  | Shipment Product Quantity | 1 |
+  
+3. Click **Run Test**
+4. Wait for the processing to complete and click **Your test has finished running. View the action execution details.**
+5. In the **Output Data** verify the **Shimpent Message** is equal to "Awaiting Validation"
+
+### Publish the Action
+If everything looks good, click the **Publish** button on the action to make it available for all flows.
 
 ## Create the shipment request flow
 ---

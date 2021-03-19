@@ -320,7 +320,18 @@ Now that you have the Action, lets put it into a Flow and test it.
 2. Name the Flow "Yubico YED API Create a Shipment" and click the **Submit* button
 
 ### Add a Trigger
-Flows run when a Trigger condition is met. For this example, we will run a flow on the Service Catalog
+Flows run when a Trigger condition is met. For this example, we will run a flow on the Service Catalog.
+
+1. Click the **Select to add a trigger** button
+2. Under the **Application** section, click **Service Catalog**
+3. Click **Done**
+
+### Add the Action to the Flow
+Now it's time to add the Action to the Flow.
+
+1. Click the **Select to add an Action, Flow Logic, or Subflow** link
+2. Click the **Action** button. Click the **Yubico Enterprise Delivery API** Spoke. Click the **YED Shipment Request** Action.
+3. The Action is now part of the Flow.
 
 
 ## Test the flow

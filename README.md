@@ -365,6 +365,8 @@ Let's handle shipment failures by sending an email to the administrator.
 15. Drag the **Shipment Messages** data pill from the data pane next to the **More Details** text 
 16. Clicke **Done**
 
+Challenge: If the shipment fails, return the Shipment State Message and Shipment Messages to the user to fix any errors.
+
 ## Test the flow
 ---
 

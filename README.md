@@ -34,15 +34,25 @@ Let's add a YubiKey 5 NFC to the service catalog.
 1. Navigate to **Product Catalog > Hardware Models**
 2. Click **New**
 3. Fill out the hardware form with the following values
+  
   **General tab**
+  
   **Name:** YubiKey 5 NFC
+  
   **Manufacturer:** Click the magnifying glass icon, create a new manufacturer named 'Yubico', and click Submit
+  
   **Short description:** Yubico YubiKey 5 NFC
+  
   **Model categories:** Computer Peripheral, Hardware, Consumable
+  
   **Asset tracking strategy:** Create consumable asset
+  
   **Model number:** 1 (Use the response from YED API GET /products to map the product_id of the "YubiKey 5 NFC" to the hardware model number)
+  
   **Product catalog**
+  
   **Description:** The YubiKey 5 Series is a hardware based authentication solution that provides superior defense against phishing, eliminates account takeovers, and enables compliance requirements for strong authentication.
+
 4. Click **Submit**
 5. In Hardware Models, search for `YubiKey`, and click **YubiKey 5 NFC**
 6. Under **Related Links** click **Publish to Hardware Catalog**
@@ -52,10 +62,15 @@ Let's add a YubiKey 5 NFC to the service catalog.
 1. Navigate to **Service Catalog > Catalog Definitions > Maitain Items**
 2. Click **New**
 3. Fill out the catalog item form with the following values
+  
   **Name:** YubiKey 5 NFC
+  
   **Catalogs:** Service Catalog
+  
   **Category:** Peripherals
+  
   **Picture:** Upload an [offical Yubico image](https://brandfolder.yubico.com/yubico/press-room-images-logos)
+
 4. Click **Submit**
 5. Navigate to **Self-Service > Service Catalog > Peripherals** and confirm the **YubiKey 5 NFC** is present.
 
@@ -71,9 +86,13 @@ This opens a new UI where you will manage and build Actions, Flows, and Subflows
 ### Create the shipment request action
 1. Click the **+ New** button, and then click **Action** in the rersulting menu
 2. Fill ou the Action Properties form
+  
   **Name:** YED Shipment Request
+  
   **Application:** Yubico Enterprise Delivery API Spoke
+  
   **Description:** Place a request for a shipment
+
 3. Click the **Submit** button and you will be taken to the new/empty Action
 
 ## Define action inputs

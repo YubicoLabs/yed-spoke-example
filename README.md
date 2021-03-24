@@ -34,14 +34,16 @@ Let's add a YubiKey 5 NFC to the service catalog.
 1. Navigate to **Product Catalog > Hardware Models**
 2. Click **New**
 3. Fill out the hardware form with the following values
-  * **General tab**
+
+  **General tab**
   * **Name:** YubiKey 5 NFC
   * **Manufacturer:** Click the magnifying glass icon, create a new manufacturer named 'Yubico', and click Submit
   * **Short description:** Yubico YubiKey 5 NFC
   * **Model categories:** Computer Peripheral, Hardware, Consumable
   * **Asset tracking strategy:** Create consumable asset
   * **Model number:** 1 (Use the response from YED API GET /products to map the product_id of the "YubiKey 5 NFC" to the hardware model number)
-  * **Product catalog**
+
+  **Product catalog**
   * **Description:** The YubiKey 5 Series is a hardware based authentication solution that provides superior defense against phishing, eliminates account takeovers, and enables compliance requirements for strong authentication.
   * **Picture:** Upload an [offical Yubico image](https://brandfolder.yubico.com/yubico/press-room-images-logos)
 4. Click **Submit**

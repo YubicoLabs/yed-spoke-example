@@ -87,14 +87,12 @@ Action inputs should always have human-friendly names.
 
 ### Add the shipment request inputs
 1. Click the **Inputs** section at the top of the **Action Outline**
-2. Click the **Create Input** button
-3. Click the "variable" label and change the value to "Delivery Type". Change the type to **Integer**. Leave the **Mandatory** toggle off
-4. Note that there is now a "Delivery Type" pill in the **Input Variables** section of the Data pane
-5. Repeat for steps 2 and 3 for each of the elements of the create shipment request object ([POST /shipments_exact](https://console.dev.in.yubico.org/apidocs/#operation/CreateShipmentExact))
+2. Click the **Create Input** button and add the following based on the create shipment request object ([POST /shipments_exact](https://console.dev.in.yubico.org/apidocs/#operation/CreateShipmentExact))
 
   | **Label** | **Type** | **Mandatory** |
   | --------- | -------- | ------------- |
-  | Country Code | String | on |
+  | Delivery Type | Integer | off|
+  | Country Code 2 | String | on |
   | Recipient | String | on |
   | Recipient Email | String | off |
   | Recipient Firstname | String | off |
@@ -110,7 +108,7 @@ Action inputs should always have human-friendly names.
   | Inventory Product ID | Integer | on |
   | Shipment Product ID | Integer | on |
   
-6. **Save** the Action
+3. **Save** the Action
 
 ## The input script step
 ---

@@ -146,7 +146,7 @@ Note: Ensure the input variable names match the script variables below otherwise
   // I. recipient_email max = 40
   // J. recipient_telephone max = 14
 
-  outputs.shipmentexactrequest = JSON.stringify({
+  outputs.shipment_exact_request = JSON.stringify({
     "delivery_type": parseInt(inputs.delivery_type),
     "country_code_2": code,
     "recipient": inputs.recipient,

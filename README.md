@@ -149,7 +149,7 @@ Note: Ensure the input variable names match the script variables below otherwise
   outputs.shipmentexactrequest = JSON.stringify({
     "delivery_type": parseInt(inputs.delivery_type),
     "country_code_2": code,
-    "recipient": inputs.Recipient,
+    "recipient": inputs.recipient,
     "recipient_email": inputs.recipient_email,
     "recipient_firstname": inputs.recipient_firstname,
     "recipient_lastname": inputs.recipient_lastname,
@@ -157,8 +157,8 @@ Note: Ensure the input variable names match the script variables below otherwise
     "street_line1": inputs.street_line1,
     "street_line2": inputs.street_line2,
     "street_line3": inputs.street_line3,
-    "city": inputs.City,
-    "region": inputs.Region,
+    "city": inputs.city,
+    "region": inputs.region,
     "postal_code": inputs.postal_code,
     "shipment_items": [
       {

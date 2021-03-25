@@ -240,13 +240,11 @@ Right now, the Action has sent the shipment request to the REST endpoint and rec
 ```
 
 ### Script Output Variables
-1. In the **Output Variables** widget, click the **+ Create Variable** button
-2. Set the **Label** to "Shipment Response". The **Name** should be "shipment_response" Leave the **Type** as String
-3. You will now see a new data pill in the **Script step** section of the Data Pane
-4. Repeat steps 1 - 2 for the following
+1. In the **Output Variables** widget, click the **+ Create Variable** button and add the following
 
   | **Label** | **Name** | **Type** | **Mandatory** |
   | --------- | -------- | -------- | ------------- |
+  | Shipment Response | shipment_response | String| off |
   | Shipment Request ID | shipment_request_id | String | off |
   | Shipment State ID | shipment_state_id | Integer | off |
   | Shipment State Message | shipment_state_message | String | off |

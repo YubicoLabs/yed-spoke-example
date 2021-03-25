@@ -20,19 +20,27 @@ In this example we will walk through the process of creating a YED API Spoke and
 The first step when building a new Spoke is to create a Scoped Application. The following instructions describe how to setup the YED API Spoke your personal ServiceNow developer instance. 
 
 1. Navigate to **System Applications > Studio**
+  ![](/images/1-studio.png)
 2. Click the **Create Application** button
 3. Click the **Let's get started** button
+  ![](/images/2-get-started.png)
 4. Fill out the "Create Application" form with the following values
-  **Name:** Yubico Enterprise Delivery API Spoke
+
+  **Name:** Yubico Enterprise Delivery API Spoke 
+  ![](/images/3-create-app.png)
+
 5. Click the **Create** button
 6. In the subsequent dialog click the **Continue in Studio (Advanced)** link
+  ![](/images/4-continue.png)
 
 ## Add a YubiKey to the Service Catalog
 Let's add a YubiKey 5 NFC to the service catalog.
 
 ### Create product catalog hardware model
 1. Navigate to **Product Catalog > Hardware Models**
+  ![](/images/8-hardware-models.png)
 2. Click **New**
+  ![](/images/9-hardware-models-new.png)
 3. Fill out the hardware form with the following values
 
   **General tab**
@@ -42,16 +50,27 @@ Let's add a YubiKey 5 NFC to the service catalog.
   * **Model categories:** Computer Peripheral, Hardware
   * **Model number:** 1 (Use the response from YED API GET /products to map the product_id of the "YubiKey 5 NFC" to the hardware model number)
 
+    ![](/images/10-hardware-model-general.png)
+
   **Product catalog**
   * **Description:** The YubiKey 5 Series is a hardware based authentication solution that provides superior defense against phishing, eliminates account takeovers, and enables compliance requirements for strong authentication.
+
+    ![](/images/11-hardware-model-product-catalog.png)
   
 4. Click **Submit**
 5. In Hardware Models, search for `YubiKey`, and click **YubiKey 5 NFC**
+  ![](/images/12-hardware-models-search.png)
 6. Under **Related Links** click **Publish to Hardware Catalog**
+  ![](/images/13-hardware-model-publish.png)
 7. Select the **Peripherals** catalog and click **OK**
+  ![](/images/14-hardware-model-publish-category.png)
 8. Unter the **Images** tab, upload an [offical Yubico image](https://brandfolder.yubico.com/yubico/press-room-images-logos)
+  ![](/images/15-hardware-model-image.png)
 9. Navigate to **Self-Service > Service Catalog > Peripherals**
+  ![](/images/16-service-catalog.png)
+  ![](/images/17-service-catalog-peripherals.png)
 10. Confirm the **YubiKey 5 NFC** is present.
+  ![](/images/18-service-catalog-yubikey.png)
 
 ## Create the action
 ---
@@ -59,16 +78,24 @@ Now that you have a scoped app and a YubiKey in the catalog, it's time to create
 
 ### Launch the flow designer
 To launch the flow designer, navigate to **Flow Designer > Designer**
+  ![](/images/6-flow-designer.png)
 
 This opens a new UI where you will manage and build Actions, Flows, and Subflows
 
+  ![](/images/7-flow-designer-ui.png)
+
 ### Create the shipment request action
 1. Click the **+ New** button, and then click **Action** in the rersulting menu
+  ![](/images/19-new-action.png)
 2. Fill ou the Action Properties form
+
   * **Name:** YED Shipment Request
   * **Application:** Yubico Enterprise Delivery API Spoke
   * **Description:** Place a request for a shipment
+
+  ![](/images/20-action-properties.png)
 3. Click the **Submit** button and you will be taken to the new/empty Action
+  ![](/images/21-action-ui.png)
 
 ## Define action inputs
 ---
@@ -108,11 +135,18 @@ Action inputs should always have human-friendly names.
   | Inventory Product ID | Integer | on |
   | Shipment Product ID | Integer | on |
   
+  ![](/images/22-create-input.png)
+
 3. **Save** the Action
 
 ## The input script step
 ---
 At this point, the Action is getting the shipment address, product, and quantity. Now you will use a Script Step to process the input data and create a shipment exact request payload.
+
+1. Add a new Action Step. When prompted, choose the **Script** step
+  ![](/images/23-add-new-step.png)
+2. When prompted, choose the **Script** step
+  ![](/images/24-script.png)
 
 ### Script input variables
 The script step gets its own set of input variables. This allows you to map data from the data pane into script-friendly variables.
@@ -121,9 +155,11 @@ The script step gets its own set of input variables. This allows you to map data
 2. Set the **Name** to `delivery_type`
 3. Drag the **Delivery Type** data pill from the data pane to the **Value** field. You can now reference the Delivery Type in your script as `inputs.delivery_type`.
 4. Repeat steps 1-3 for each of the action input varables
-5. Set the script to:
 
-Note: Ensure the input variable names match the script variables below otherwise the input values will not be mapped.
+  ![](/images/23-script-input.png)
+
+5. Set the script to the following. 
+   Note: Ensure the input variable names match the script variables below otherwise the input values will not be mapped.
 ```javascript
 (function execute(inputs, outputs) {
 
@@ -177,6 +213,7 @@ Similar to Script Input Variables, Script Output Variables allow you to pasa dat
 
 1. In the **Output Variables** widget, click the **+ Create Variable** button
 2. Set the **Label** and **Name** to "Shipment Exact Request". Leave the **Type** as String
+  ![](/images/24-script-output.png)
 3. You will now see a new data pill in the **Script step** section of the Data Pane
 4. **Save** the Script step
 
@@ -186,7 +223,9 @@ The REST step is exclusive to IntegrationHub, and is only available after activa
 
 ### Add the shipment request REST step to the Action
 1. Click the + button underneath the Script step you added earlier
+  ![](/images/25-add-new-step.png)
 2. Click the REST step in the **Integrations** section of the dialog
+  ![](/images/26-rest.png)
 3. You will be presented with the REST step UI
 
 ### Define Connection Information
@@ -211,20 +250,27 @@ In this example, we will start with an inline connection. You can convert the ac
   | Accept | application/json |
   | Content-Type | application/json |
   | Authorization | Bearer *paste your YED API token here* |
+
+  ![](/images/27-rest-connection-headers.png)
  
 6. Drag the **Shipment Exact Request** data pill from the data pane to the **Request Content Request Body [Text]** field 
+  ![](/images/28-request-content.png)
 7. **Save** the Rest step
 
 ## The output script step
 ---
 Right now, the Action has sent the shipment request to the REST endpoint and recieved the response body but doesn't know if the request was successful. In this step, you will parse the output of the REST step.
 
-1. Add a new Action Step after the REST step. When prompted, choose the **Script** step
+1. Add a new Action Step after the REST step. 
+  ![](/images/29-add-output-script.png)
+2. When prompted, choose the **Script** step
+  ![](/images/30-script.png)
 
 ### Script Input Variables
 1. In the **Input Variables** widget, click the **+ Create Variable** button
 2. Set the **Name** to `responseBody`
 3. Drag the **Response Body** data pill from the data pane to the **Value** field. You can now reference the Response Body in your scripts as `inputs.responseBody`
+  ![](/images/31-input-variables.png)
 4. Set the script to
 
 ```javascript
@@ -249,6 +295,8 @@ Right now, the Action has sent the shipment request to the REST endpoint and rec
   | Shipment State ID | shipment_state_id | Integer | off |
   | Shipment State Message | shipment_state_message | String | off |
   | Shipment Messages | shipment_messages | String | off |
+
+  ![](/images/32-output-variables.png)
 
 6. **Save** the Script step
 
@@ -276,8 +324,11 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
   | Shipment State Message | shipment_state_message | String | off |
   | Shipment Messages | shipment_messages | String | off |
 
+  ![](/images/33-create-action-output.png)
+
 5. Click the **Exit Edit Mode** button
 6. Using the Data Pill Picker, set the **Value** of the Script Output Variables to the associated output variables
+  ![](/images/34-action-output.png)
 7. **Save** the Action
 
 ### Test the Action
@@ -295,9 +346,13 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
   | Product ID | 1 |
   | Inventory Product Id | 15 |
   | Shipment Product Quantity | 1 |
+
+  ![](/images/35-test-input.png)
   
 3. Click **Run Test**
+  ![](/images/35-test.png)
 4. Wait for the processing to complete and click **Your test has finished running. View the action execution details.**
+  ![](/images/36-test-finished.png)
 5. In the **Output Data** verify the **Shimpent Message** is equal to "Awaiting Validation"
 
 ### Publish the Action
@@ -308,22 +363,28 @@ If everything looks good, click the **Publish** button on the action to make it 
 Now that you have the Action, lets put it into a Flow and test it.
 
 1. Click the **+ New** button, and then click **Flow** in the resulting menu
+  ![](/images/37-new-flow.png)
 2. Name the Flow "Yubico YED API Create a Shipment"
 3. Set **Run As** to "System User"
-4. Click the **Submit* button
+  ![](/images/38-flow-properties.png)
+4. Click the **Submit** button
 
 ### Add a Trigger
 Flows run when a Trigger condition is met. For this example, we will run a flow on the Service Catalog.
 
 1. Click the **Select to add a trigger** button
+  ![](/images/39-add-trigger.png)
 2. Under the **Application** section, click **Service Catalog**
+  ![](/images/40-service-catalog-trigger.png)
 3. Click **Done**
+![](/images/41-trigger-done.png)
 
 ### Add the Action to the Flow
 Now it's time to add the Action to the Flow.
 
 1. Click the **Select to add an Action, Flow Logic, or Subflow** link
 2. Click the **Action** button. Click the **Yubico Enterprise Delivery API** Spoke. Click the **YED Shipment Request** Action.
+![](/images/42-add-action.png)
 3. The Action is now part of the Flow.
 
 ### Map service catalog fields to action input variables
@@ -348,6 +409,8 @@ Now it's time to add the Action to the Flow.
   | Product ID | Tigger > Requested Item Record > Requested for > Model > Model Number |
   | Inventory Product Id | 15 |
   | Shipment Product Quantity | Tigger > Requested Item Record > Quantity  |
+  
+  ![](/images/43-map-action-inputs.png)
   
 4. Click **Done**
 

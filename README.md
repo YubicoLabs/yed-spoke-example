@@ -308,7 +308,9 @@ If everything looks good, click the **Publish** button on the action to make it 
 Now that you have the Action, lets put it into a Flow and test it.
 
 1. Click the **+ New** button, and then click **Flow** in the resulting menu
-2. Name the Flow "Yubico YED API Create a Shipment" and click the **Submit* button
+2. Name the Flow "Yubico YED API Create a Shipment"
+3. Set **Run As** to "System User"
+4. Click the **Submit* button
 
 ### Add a Trigger
 Flows run when a Trigger condition is met. For this example, we will run a flow on the Service Catalog.

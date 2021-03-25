@@ -286,7 +286,7 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
 
   | **Name** | **VALUE** |
   | -------- | --------- |
-  | Country Code | US |
+  | Country Code 2 | US |
   | Recipient | Example Inc. |
   | Stree Line 1 | 7788 Foxrun Street |
   | City | Dedham |
@@ -325,6 +325,29 @@ Now it's time to add the Action to the Flow.
 1. Click the **Select to add an Action, Flow Logic, or Subflow** link
 2. Click the **Action** button. Click the **Yubico Enterprise Delivery API** Spoke. Click the **YED Shipment Request** Action.
 3. The Action is now part of the Flow.
+
+### Map service catalog fields to action input variables
+
+1. Set the **Delivery Type** to a value of 1 or your organization's preferred delivery type 
+2. Set the **Inventory Product Id** to the value 15 or your organization's inventory product ID
+3. Drag the following data pills from the data pane to the action input variables
+
+  | **Name** | **VALUE** |
+  | -------- | --------- |
+  | Delivery Type | 1 |
+  | Country Code 2 | Tigger > Requested Item Record > Requested for > Location > Country |
+  | Recipient | Tigger > Requested Item Record > Requested for > Company > Name |
+  | Recipient Email | Tigger > Requested Item Record > Requested for > Email |
+  | Recipient Firstname | Tigger > Requested Item Record > Requested for > First Name  |
+  | Recipient Lastname | Tigger > Requested Item Record > Requested for > Last Name |
+  | Recipient Telephone | Tigger > Requested Item Record > Requested for > Location > Phone |
+  | Stree Line 1 | Tigger > Requested Item Record > Requested for > Location > Street |
+  | City | Tigger > Requested Item Record > Requested for > Location > City |
+  | Region | Tigger > Requested Item Record > Requested for > Location > State / Province |
+  | Postal Code| Tigger > Requested Item Record > Requested for > Location > Zip / Postal Code |
+  | Product ID | Tigger > Requested Item Record > Requested for > Model > Model Number |
+  | Inventory Product Id | 15 |
+  | Shipment Product Quantity | Tigger > Requested Item Record > Quantity  |
 
 ## Add the Flow Logic to the Flow
 Let's handle shipment failures by sending an email to the administrator. 

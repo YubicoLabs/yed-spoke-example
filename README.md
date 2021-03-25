@@ -348,6 +348,8 @@ Now it's time to add the Action to the Flow.
   | Product ID | Tigger > Requested Item Record > Requested for > Model > Model Number |
   | Inventory Product Id | 15 |
   | Shipment Product Quantity | Tigger > Requested Item Record > Quantity  |
+  
+4. Click **Done**
 
 ## Add the Flow Logic to the Flow
 Let's handle shipment failures by sending an email to the administrator. 

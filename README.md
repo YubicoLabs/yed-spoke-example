@@ -354,6 +354,7 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
 4. Wait for the processing to complete and click **Your test has finished running. View the action execution details.**
   ![](/images/36-test-finished.png)
 5. In the **Output Data** verify the **Shimpent Message** is equal to "Awaiting Validation"
+  ![](/images/36-test-validate.png)
 
 ### Publish the Action
 If everything looks good, click the **Publish** button on the action to make it available for all flows.

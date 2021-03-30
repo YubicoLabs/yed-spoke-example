@@ -64,7 +64,7 @@ Let's add a YubiKey 5 NFC to the service catalog.
   ![](/images/13-hardware-model-publish.png)
 7. Select the **Peripherals** catalog and click **OK**
   ![](/images/14-hardware-model-publish-category.png)
-8. Unter the **Images** tab, upload an [offical Yubico image](https://brandfolder.yubico.com/yubico/press-room-images-logos)
+8. Under the **Images** tab, upload an [official Yubico image](https://brandfolder.yubico.com/yubico/press-room-images-logos)
   ![](/images/15-hardware-model-image.png)
 9. Navigate to **Self-Service > Service Catalog > Peripherals**
   ![](/images/16-service-catalog.png)
@@ -85,7 +85,7 @@ This opens a new UI where you will manage and build Actions, Flows, and Subflows
   ![](/images/7-flow-designer-ui.png)
 
 ### Create the shipment request action
-1. Click the **+ New** button, and then click **Action** in the rersulting menu
+1. Click the **+ New** button, and then click **Action** in the resulting menu
   ![](/images/19-new-action.png)
 2. Fill ou the Action Properties form
 
@@ -154,7 +154,7 @@ The script step gets its own set of input variables. This allows you to map data
 1. In the **Input Variables** widget, click the **+ Create Variable* button 
 2. Set the **Name** to `delivery_type`
 3. Drag the **Delivery Type** data pill from the data pane to the **Value** field. You can now reference the Delivery Type in your script as `inputs.delivery_type`.
-4. Repeat steps 1-3 for each of the action input varables
+4. Repeat steps 1-3 for each of the action input variables
 
   ![](/images/23-script-input.png)
 
@@ -209,7 +209,7 @@ The script step gets its own set of input variables. This allows you to map data
 ```
 
 ### Script output variables
-Similar to Script Input Variables, Script Output Variables allow you to pasa data out of your script to other steps in the action. These variables are internal to the action, and are not surfaced in Flow Designer.
+Similar to Script Input Variables, Script Output Variables allow you to pass data out of your script to other steps in the action. These variables are internal to the action, and are not surfaced in Flow Designer.
 
 1. In the **Output Variables** widget, click the **+ Create Variable** button
 2. Set the **Label** and **Name** to "Shipment Exact Request". Leave the **Type** as String
@@ -259,7 +259,7 @@ In this example, we will start with an inline connection. You can convert the ac
 
 ## The output script step
 ---
-Right now, the Action has sent the shipment request to the REST endpoint and recieved the response body but doesn't know if the request was successful. In this step, you will parse the output of the REST step.
+Right now, the Action has sent the shipment request to the REST endpoint and received the response body but doesn't know if the request was successful. In this step, you will parse the output of the REST step.
 
 1. Add a new Action Step after the REST step. 
   ![](/images/29-add-output-script.png)
@@ -302,7 +302,7 @@ Right now, the Action has sent the shipment request to the REST endpoint and rec
 
 ## Action outputs
 ---
-Use Action Outpus to return data from the action to Flow Designer. The Script Output variables we just defined are intentially "private" to the action and are intended for use by scripts or other action steps (this, the camel case naming convention).
+Use Action Outputs to return data from the action to Flow Designer. The Script Output variables we just defined are intentionally "private" to the action and are intended for use by scripts or other action steps (this, the camel case naming convention).
 
 The same naming considerations we used for Action Inputs also apply to Action Outputs. Outputs should always be human readable, use natural language, and should not contain underscores or use variable naming conventions like camelCase.
 
@@ -339,7 +339,7 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
   | -------- | --------- |
   | Country Code 2 | US |
   | Recipient | Example Inc. |
-  | Stree Line 1 | 7788 Foxrun Street |
+  | Street Line 1 | 7788 Foxrun Street |
   | City | Dedham |
   | Region | MA |
   | Postal Code| 02026 |
@@ -353,7 +353,7 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
   ![](/images/35-test.png)
 4. Wait for the processing to complete and click **Your test has finished running. View the action execution details.**
   ![](/images/36-test-finished.png)
-5. In the **Output Data** verify the **Shimpent Message** is equal to "Awaiting Validation"
+5. In the **Output Data** verify the **Shipment Message** is equal to "Awaiting Validation"
   ![](/images/36-test-validate.png)
 
 ### Publish the Action
@@ -397,19 +397,19 @@ Now it's time to add the Action to the Flow.
   | **Name** | **VALUE** |
   | -------- | --------- |
   | Delivery Type | 1 |
-  | Country Code 2 | Tigger > Requested Item Record > Requested for > Location > Country |
-  | Recipient | Tigger > Requested Item Record > Requested for > Company > Name |
-  | Recipient Email | Tigger > Requested Item Record > Requested for > Email |
-  | Recipient Firstname | Tigger > Requested Item Record > Requested for > First Name  |
-  | Recipient Lastname | Tigger > Requested Item Record > Requested for > Last Name |
-  | Recipient Telephone | Tigger > Requested Item Record > Requested for > Location > Phone |
-  | Stree Line 1 | Tigger > Requested Item Record > Requested for > Location > Street |
-  | City | Tigger > Requested Item Record > Requested for > Location > City |
-  | Region | Tigger > Requested Item Record > Requested for > Location > State / Province |
-  | Postal Code| Tigger > Requested Item Record > Requested for > Location > Zip / Postal Code |
-  | Product ID | Tigger > Requested Item Record > Requested for > Model > Model Number |
+  | Country Code 2 | Trigger > Requested Item Record > Requested for > Location > Country |
+  | Recipient | Trigger > Requested Item Record > Requested for > Company > Name |
+  | Recipient Email | Trigger > Requested Item Record > Requested for > Email |
+  | Recipient Firstname | Trigger > Requested Item Record > Requested for > First Name  |
+  | Recipient Lastname | Trigger > Requested Item Record > Requested for > Last Name |
+  | Recipient Telephone | Trigger > Requested Item Record > Requested for > Location > Phone |
+  | Street Line 1 | Trigger > Requested Item Record > Requested for > Location > Street |
+  | City | Trigger > Requested Item Record > Requested for > Location > City |
+  | Region | Trigger > Requested Item Record > Requested for > Location > State / Province |
+  | Postal Code| Trigger > Requested Item Record > Requested for > Location > Zip / Postal Code |
+  | Product ID | Trigger > Requested Item Record > Requested for > Model > Model Number |
   | Inventory Product Id | 15 |
-  | Shipment Product Quantity | Tigger > Requested Item Record > Quantity  |
+  | Shipment Product Quantity | Trigger > Requested Item Record > Quantity  |
   
   ![](/images/43-map-action-inputs.png)
   
@@ -445,7 +445,7 @@ Let's handle shipment failures by sending an email to the administrator.
 13. Drag the **Shipment ID** data pill from the data pane next to the **Shipment ID** text 
 14. Drag the **Shipment State Message** data pill from the data pane next to the **Reason** text 
 15. Drag the **Shipment Messages** data pill from the data pane next to the **More Details** text 
-16. Clicke **Done**
+16. Click **Done**
 
 Challenge: If the shipment fails, return the Shipment State Message and Shipment Messages to the user to fix any errors.
 
@@ -471,8 +471,8 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 3. A dialog will open. Click **Requested Item Record** and select the **Request Number** from earlier e.g. REQ0010001
 4. Click **Run Test**
 5. Click **Your test has finished running. View the flow execution details.**
-6. This will open the Exectuion Details for the test run
-7. Click the **YED Shipment Request** action. The Steps section will show the list of steps executed inside of the action, and the step configuraiton details
+6. This will open the Execution Details for the test run
+7. Click the **YED Shipment Request** action. The Steps section will show the list of steps executed inside of the action, and the step configuration details
 
 ## Call the flow from a workflow
 

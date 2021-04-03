@@ -594,6 +594,7 @@ To test the workflow first we must impersonate a user with an address and order 
 9. Select the **Request Item** e.g. REQ0010002
 10. Under the **Approvers** tab, check the box and **Approve** the request.
 11. Click **Workflow Context**
+12. Go to **Workflow Transition History** and view the workflow execution
 
 ## References
 ---

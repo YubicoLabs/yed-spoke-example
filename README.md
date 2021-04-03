@@ -474,8 +474,126 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 6. This will open the Execution Details for the test run
 7. Click the **YED Shipment Request** action. The Steps section will show the list of steps executed inside of the action, and the step configuration details
 
-## Call the flow from a workflow
 
+## Call the flow from a workflow
+---
+
+### Create the workflow
+
+1. Open the **Workflow Editor**
+2. Search for the workflow named **Service Catalog Item Request**
+2. Click **Service Catalog Item Request** to open the workflow
+3. Click **Workflow Actions** > **Copy**
+4. Set the **Workflow Name** to "Service Catalog YubiKey Request"
+5. Delete the following nodes:
+
+  * **Approval - User** activity named "CIO Approval"
+  * **Catalog Task** activity named "Asset Mgmt. Fullfils Order"
+  * **Notification** named "Inform of Backordered Status"
+  * **Catalog Task** activity named "Receive Backordered Item"
+  * **Notification** activity named "Inform Backordered Received"
+  * **Catalog Task** activity named "Deploy Item to User"
+  * **Log Message** named "Item Deployed"
+
+6. Click the **Core** tab and 
+7. Drag the **Run Script** to the Workflow canvas
+8. Set the fields of the Run Script activities properties to the following:
+
+  | **Name** | **Value** |
+  | -------- | --------- |
+  | Name | Request YubiKey |
+  | Stage | Order Fulfillment |
+
+9. Set the **Script** to:
+
+```Javascript
+activity.result = shipYubiKey();
+
+function shipYubiKey() {
+	
+	try {
+		var inputs = {};
+		inputs['request_item'] = current;
+    inputs['table_name'] = current.getTableName();
+
+		var result = sn_fd.FlowAPI.getRunner().flow('x_490107_yed_api_s.yubikey_shipment_request_flow').inForeground().withInputs(inputs).run();
+		
+	} catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);
+		return -1;
+	}
+	
+}
+```
+
+10. Click **Submit**
+11. Delete the arrow from the **Approval Action**
+12. Drag the **Approval Action Always Condition box** to **Run Script**
+13. Double click the **Run Script**
+14. Click **Conditions**
+15. Delete the **Always** condition
+16. Click **New**
+17. Set the fields to the following:
+
+  | **Name** | **Value** |
+  | -------- | --------- |
+  | Name | Success |
+  | Short Description | Shipment Awaiting Validation |
+  | Condition | activity.result==3 | 
+
+18. Click **Submit*
+16. Click **New**
+17. Set the fields to the following:
+
+  | **Name** | **Value** |
+  | -------- | --------- |
+  | Name | Failure |
+  | Short Description | Shipment Failure |
+  | Condition | activity.result==3 | 
+
+18. Click **Submit*
+19. Close the Workflow Conditions view and return to the workflow canvas
+20. Drag the **Run Script Success Condition box** to **Notification - Inform Completion**
+21. Double-click the **Notification - Inform Completion** and set the **Stage** to "Completed"
+22. Click **uUpdate**
+23. Right-click **Notification - Inform Completion** and select **Copy Activity**
+24. Double-click the new **Notification** activity and set the fields to the following
+
+  | **Name** | **Value** |
+  | -------- | --------- |
+  | Name | Inform of shipment request failure |
+  | Stage| Request Cancelled |
+  | Subject | Your requested item ${number} for ${cat_item} failed due to an error | 
+
+25. Click **Submit**
+26. Drag the **Run Script Failure Condition Box** to **Notification - Inform of shipment request failure**
+27. Drag the **Notification - Inform of shipment request failure Always Condition Box** to **End**
+
+### Set the YubiKey process engine to the workflow
+
+1. Go to **Service Catalog** > **Catalog Definitions** > **Maintain Items**
+2. Select the **Yubikey 5 NFC**
+3. Set the **Workflow** to "Service Catalog YubiKey Request"
+4. Click **Update**
+
+
+## Test the workflow
+---
+To test the workflow first we must impersonate a user with an address and order a Yubikey
+
+## Order a YubiKey from the Service Catalog
+1. Click **System Administrator** dropdown menu then click **Impersonate User**
+2. Click **Search for user** and select "Adela Cervantsz"
+3. Click **Service Catalog** then click **Peripherals**
+4. Click **Yubikey 5 NFC**
+5. Click **Order Now**
+6. Take note of the **Request Number** e.g. REQ0010002
+7. Click **Adela Cervantsz** and then select **End Impersonation**
+8. Open the **Service Catalog** > **Open Records** > **Items**
+9. Select the **Request Item** e.g. REQ0010002
+10. Under the **Approvers** tab, check the box and **Approve** the request.
+11. Click **Workflow Context**
 
 ## References
 ---

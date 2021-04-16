@@ -481,21 +481,28 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 ### Create the workflow
 
 1. Open the **Workflow Editor**
+![](/images/71-workflow.png)
 2. Search for the workflow named **Service Catalog Item Request**
+![](/images/72-search.png)
 2. Click **Service Catalog Item Request** to open the workflow
+![](/images/73-service-catalog-item-request.png)
 3. Click **Workflow Actions** > **Copy**
+![](/images/74-copy.png)
 4. Set the **Workflow Name** to "Service Catalog YubiKey Request"
 5. Delete the following nodes:
 
   * **Approval - User** activity named "CIO Approval"
-  * **Catalog Task** activity named "Asset Mgmt. Fullfils Order"
+  * **Catalog Task** activity named "Asset Mgmt. Fulfills Order"
   * **Notification** named "Inform of Backordered Status"
   * **Catalog Task** activity named "Receive Backordered Item"
   * **Notification** activity named "Inform Backordered Received"
   * **Catalog Task** activity named "Deploy Item to User"
   * **Log Message** named "Item Deployed"
 
+  ![](/images/75-delete.png)
+
 6. Click the **Core** tab and 
+![](/images/76-core.png)
 7. Drag the **Run Script** to the Workflow canvas
 8. Set the fields of the Run Script activities properties to the following:
 
@@ -503,6 +510,8 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
   | -------- | --------- |
   | Name | Request YubiKey |
   | Stage | Order Fulfillment |
+
+  ![](/images/80-stage.png)
 
 9. Set the **Script** to:
 
@@ -528,11 +537,14 @@ function shipYubiKey() {
 ```
 
 10. Click **Submit**
+![](/images/77-submit.png)
 11. Delete the arrow from the **Approval Action**
 12. Drag the **Approval Action Always Condition box** to **Run Script**
+![](/images/78-approval-arrow.png)
 13. Double click the **Run Script**
 14. Click **Conditions**
 15. Delete the **Always** condition
+![](/images/79-delete-always.png)
 16. Click **New**
 17. Set the fields to the following:
 
@@ -541,6 +553,8 @@ function shipYubiKey() {
   | Name | Success |
   | Short Description | Shipment Awaiting Validation |
   | Condition | activity.result==3 | 
+
+  ![](/images/81-success-condition.png)
 
 18. Click **Submit*
 16. Click **New**
@@ -552,11 +566,15 @@ function shipYubiKey() {
   | Short Description | Shipment Failure |
   | Condition | activity.result==3 | 
 
+  ![](/images/82-failure-condition.png)
+
 18. Click **Submit*
 19. Close the Workflow Conditions view and return to the workflow canvas
 20. Drag the **Run Script Success Condition box** to **Notification - Inform Completion**
+![](/images/83-success-arrow.png)
 21. Double-click the **Notification - Inform Completion** and set the **Stage** to "Completed"
-22. Click **uUpdate**
+![](/images/85-stage-completed.png)
+22. Click **Update**
 23. Right-click **Notification - Inform Completion** and select **Copy Activity**
 24. Double-click the new **Notification** activity and set the fields to the following
 
@@ -569,13 +587,16 @@ function shipYubiKey() {
 25. Click **Submit**
 26. Drag the **Run Script Failure Condition Box** to **Notification - Inform of shipment request failure**
 27. Drag the **Notification - Inform of shipment request failure Always Condition Box** to **End**
+![](/images/86-yed-workflow.png)
 
 ### Set the YubiKey process engine to the workflow
 
 1. Go to **Service Catalog** > **Catalog Definitions** > **Maintain Items**
+![](/images/87-maintain-items.png)
 2. Select the **Yubikey 5 NFC**
 3. Set the **Workflow** to "Service Catalog YubiKey Request"
 4. Click **Update**
+![](/images/88-set-workflow.png)
 
 
 ## Test the workflow
@@ -591,9 +612,12 @@ To test the workflow first we must impersonate a user with an address and order 
 6. Take note of the **Request Number** e.g. REQ0010002
 7. Click **Adela Cervantsz** and then select **End Impersonation**
 8. Open the **Service Catalog** > **Open Records** > **Items**
+![](/images/92-open-record.png)
 9. Select the **Request Item** e.g. REQ0010002
 10. Under the **Approvers** tab, check the box and **Approve** the request.
+![](/images/93-approve.png)
 11. Click **Workflow Context**
+![](/images/94-context.png)
 12. Go to **Workflow Transition History** and view the workflow execution
 
 ## References

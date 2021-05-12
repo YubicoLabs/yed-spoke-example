@@ -1,0 +1,2119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"activities":{"45cb138a2f803010a40e93acf699b60e":"4d839b0a2f803010a40e93acf699b641","c5839b0a2f803010a40e93acf699b64c":"09839b0a2f803010a40e93acf699b641","d1839b0a2f803010a40e93acf699b659":"45839b0a2f803010a40e93acf699b642","91839b0a2f803010a40e93acf699b65e":"4d839b0a2f803010a40e93acf699b641","4334934a2f803010a40e93acf699b694":"41839b0a2f803010a40e93acf699b642"},"subflows":[],"stages":{"09839b0a2f803010a40e93acf699b641":{"duration":"2 Days","order":0,"stageId":"09839b0a2f803010a40e93acf699b641","name":"Dept. Head Approval","value":"Dept. Head Approval"},"45839b0a2f803010a40e93acf699b642":{"duration":"","order":1100,"stageId":"45839b0a2f803010a40e93acf699b642","name":"Completed","value":"complete"},"41839b0a2f803010a40e93acf699b642":{"duration":"4 Days","order":2,"stageId":"41839b0a2f803010a40e93acf699b642","name":"Order Fulfillment","value":"Order Fulfillment"},"4d839b0a2f803010a40e93acf699b641":{"duration":"","order":1000,"stageId":"4d839b0a2f803010a40e93acf699b641","name":"Request Cancelled","value":"Request Cancelled"}},"ends":["15839b0a2f803010a40e93acf699b65d"]}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Legacy">007c2f021b020100adca1e094f0713b4</column_renderer>
+        <condition/>
+        <condition_type/>
+        <description/>
+        <expected_sequences>99839b0a2f803010a40e93acf699b660,c5839b0a2f803010a40e93acf699b64c,15839b0a2f803010a40e93acf699b657,4334934a2f803010a40e93acf699b694,d1839b0a2f803010a40e93acf699b659,15839b0a2f803010a40e93acf699b65d</expected_sequences>
+        <expected_time>1970-01-06 00:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>99839b0a2f803010a40e93acf699b660,c5839b0a2f803010a40e93acf699b64c,15839b0a2f803010a40e93acf699b657,dd839b0a2f803010a40e93acf699b674,4334934a2f803010a40e93acf699b694,91839b0a2f803010a40e93acf699b65e,d1839b0a2f803010a40e93acf699b659,45cb138a2f803010a40e93acf699b60e,15839b0a2f803010a40e93acf699b65d</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Service Catalog YubiKey Request</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration/>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field>stage</stage_field>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">99839b0a2f803010a40e93acf699b660</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:53</sys_created_on>
+        <sys_id>4583d30a2f803010a40e93acf699b67e</sys_id>
+        <sys_mod_count>106</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:46:38</sys_updated_on>
+        <table>sc_req_item</table>
+        <timezone/>
+        <validated>false</validated>
+        <workflow display_value="Service Catalog YubiKey Request">8183d30a2f803010a40e93acf699b67d</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Service Catalog YubiKey Request</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8183d30a2f803010a40e93acf699b67d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Service Catalog YubiKey Request</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_490107_yubico_0">6236f2062f403010a40e93acf699b677</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">6236f2062f403010a40e93acf699b677</sys_scope>
+        <sys_update_name>wf_workflow_8183d30a2f803010a40e93acf699b67d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <table>sc_req_item</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Backordered</name>
+        <ola>1970-01-15 00:00:00</ola>
+        <order>3</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c1839b0a2f803010a40e93acf699b642</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>Backordered</value>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>CIO Approval</name>
+        <ola>1970-01-03 00:00:00</ola>
+        <order>1</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c9839b0a2f803010a40e93acf699b641</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>CIO Approval</value>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Completed</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>45839b0a2f803010a40e93acf699b642</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>complete</value>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Deployment</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>4</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>cd839b0a2f803010a40e93acf699b641</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>Deployment</value>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Dept. Head Approval</name>
+        <ola>1970-01-03 00:00:00</ola>
+        <order>0</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>09839b0a2f803010a40e93acf699b641</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>Dept. Head Approval</value>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Order Fulfillment</name>
+        <ola>1970-01-05 00:00:00</ola>
+        <order>2</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>41839b0a2f803010a40e93acf699b642</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>Order Fulfillment</value>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Cancelled</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1000</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>4d839b0a2f803010a40e93acf699b641</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>Request Cancelled</value>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+    </wf_stage>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id/>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>99839b0a2f803010a40e93acf699b660</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=99839b0a2f803010a40e93acf699b660"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">99839b0a2f803010a40e93acf699b660</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>d1839b0a2f803010a40e93acf699b661</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Approval - User">35433da80a0a029a0028c639a1e51eb4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id/>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Dept. Head Approval</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="Dept. Head Approval">09839b0a2f803010a40e93acf699b641</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c5839b0a2f803010a40e93acf699b64c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+        <x>215</x>
+        <y>22</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=c5839b0a2f803010a40e93acf699b64c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>2000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>01839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">02ca01820a0a0b261cf923fb95f5e1d0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>104</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>01839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Document Table">e37a96e80a0004f978b47d2d6c5e0b22</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>05839b0a2f803010a40e93acf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">4485eef70a6a803f6bc4bafa9e999640</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>09839b0a2f803010a40e93acf699b64e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>${requested_for.department.dept_head}</value>
+        <variable display_value="Users">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>0d839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Column">e846198f0a0004f91fba434a514ba8b8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>115</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>0d839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Due date based on">a76680b9c0a8006661b107d0f21fae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>41839b0a2f803010a40e93acf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>1970-01-01 04:00:00</value>
+        <variable display_value="Duration">a769a182c0a8006629db7fa3fc2a863d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>45839b0a2f803010a40e93acf699b64e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="Due date script">a782cde9c0a8006608f39abdd85c8395</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>49839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Groups">02c618170a0a0b26436f5c2c9f7a3901</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>2050</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>49839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&#13;
+//&#13;
+// For example:&#13;
+// answer = [];&#13;
+// answer.push('id1');&#13;
+// answer.push('id2');</value>
+        <variable display_value="Additional approvers script">c35e582f0a0a0ba96248a70985207e63</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>4d839b0a2f803010a40e93acf699b64c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule based on">a77191a4c0a800662b403f7dff5f1bbd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>4d839b0a2f803010a40e93acf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="Schedule">a7754e91c0a800664938d0ef6d2664d7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>81839b0a2f803010a40e93acf699b64e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone based on">a77903a7c0a8006641af7c9b1d34444e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>85839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone">a775f59ac0a8006665d72362ae687035</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>85839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule field">a774138dc0a80066000be7af20961c7d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>89839b0a2f803010a40e93acf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Due date field">a76b8c6ec0a800664bb14d5d8b9cd7c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>8d839b0a2f803010a40e93acf699b64e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>reject</value>
+        <variable display_value="When anyone rejects">502163410a6a803f0356332b24dc7945</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1370</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c1839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval. When called, the following information is available:&#13;
+//&#13;
+// counts.total = total number of users that are part of this approval&#13;
+// counts.approved = # of users that approved so far&#13;
+// counts.rejected = # of users that rejected so far&#13;
+// counts.requested = # of users that are pending approval&#13;
+// counts.not_requested = # of users that are not pending approval&#13;
+// counts.not_required = # of users that approval is not required&#13;
+//</value>
+        <variable display_value="Approval Script">02c86d780a0a0b261e6a356bc893d348</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c1839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>any</value>
+        <variable display_value="Wait for">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c5839b0a2f803010a40e93acf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="Relative duration">a76c6257c0a8006645cff43883470e64</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c9839b0a2f803010a40e93acf699b64e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Approval Journal Column">e863e3b80a0004f911d67787e77e0f16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>103</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>cd839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Document ID">e37b77ac0a0004f973283ad13b341c5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>cd839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone field">a7781cb6c0a80066147dc7a5244d5d16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>05839b0a2f803010a40e93acf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">4485eef70a6a803f6bc4bafa9e999640</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c1839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>any</value>
+        <variable display_value="Wait for">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>0d839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Column">e846198f0a0004f91fba434a514ba8b8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>103</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>cd839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Document ID">e37b77ac0a0004f973283ad13b341c5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>104</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>01839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Document Table">e37a96e80a0004f978b47d2d6c5e0b22</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>4d839b0a2f803010a40e93acf699b64c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule based on">a77191a4c0a800662b403f7dff5f1bbd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>115</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>0d839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Due date based on">a76680b9c0a8006661b107d0f21fae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>81839b0a2f803010a40e93acf699b64e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone based on">a77903a7c0a8006641af7c9b1d34444e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>09839b0a2f803010a40e93acf699b64e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>${requested_for.department.dept_head}</value>
+        <variable display_value="Users">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>8d839b0a2f803010a40e93acf699b64e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>reject</value>
+        <variable display_value="When anyone rejects">502163410a6a803f0356332b24dc7945</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c9839b0a2f803010a40e93acf699b64e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Approval Journal Column">e863e3b80a0004f911d67787e77e0f16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>85839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule field">a774138dc0a80066000be7af20961c7d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>4d839b0a2f803010a40e93acf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="Schedule">a7754e91c0a800664938d0ef6d2664d7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>41839b0a2f803010a40e93acf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>1970-01-01 04:00:00</value>
+        <variable display_value="Duration">a769a182c0a8006629db7fa3fc2a863d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c5839b0a2f803010a40e93acf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="Relative duration">a76c6257c0a8006645cff43883470e64</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>89839b0a2f803010a40e93acf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Due date field">a76b8c6ec0a800664bb14d5d8b9cd7c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>85839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone">a775f59ac0a8006665d72362ae687035</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>cd839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone field">a7781cb6c0a80066147dc7a5244d5d16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>49839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value/>
+        <variable display_value="Groups">02c618170a0a0b26436f5c2c9f7a3901</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>45839b0a2f803010a40e93acf699b64e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="Due date script">a782cde9c0a8006608f39abdd85c8395</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>1370</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c1839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval. When called, the following information is available:&#13;
+//&#13;
+// counts.total = total number of users that are part of this approval&#13;
+// counts.approved = # of users that approved so far&#13;
+// counts.rejected = # of users that rejected so far&#13;
+// counts.requested = # of users that are pending approval&#13;
+// counts.not_requested = # of users that are not pending approval&#13;
+// counts.not_required = # of users that approval is not required&#13;
+//</value>
+        <variable display_value="Approval Script">02c86d780a0a0b261e6a356bc893d348</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>2000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>01839b0a2f803010a40e93acf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">02ca01820a0a0b261cf923fb95f5e1d0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c5839b0a2f803010a40e93acf699b64c</document_key>
+        <order>2050</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>49839b0a2f803010a40e93acf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&#13;
+//&#13;
+// For example:&#13;
+// answer = [];&#13;
+// answer.push('id1');&#13;
+// answer.push('id2');</value>
+        <variable display_value="Additional approvers script">c35e582f0a0a0ba96248a70985207e63</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Dept. Head Approval">c5839b0a2f803010a40e93acf699b64c</activity>
+        <condition>activity.result == 'approved' || activity.result == 'skipped'</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Approved</name>
+        <order>1</order>
+        <short_description>Approval request was approved</short_description>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>c5839b0a2f803010a40e93acf699b651</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Dept. Head Approval">c5839b0a2f803010a40e93acf699b64c</activity>
+        <condition>activity.result == 'rejected'</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Rejected</name>
+        <order>2</order>
+        <short_description>Approval request was rejected</short_description>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>45839b0a2f803010a40e93acf699b651</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id/>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>15839b0a2f803010a40e93acf699b65d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+        <x>187</x>
+        <y>518</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=15839b0a2f803010a40e93acf699b65d"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Notification">0a6c97790a0a0b2756919eb960284334</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id/>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Inform Completion</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="Completed">45839b0a2f803010a40e93acf699b642</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>d1839b0a2f803010a40e93acf699b659</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:41:42</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+        <x>1232</x>
+        <y>311</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=d1839b0a2f803010a40e93acf699b659"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>19839b0a2f803010a40e93acf699b65a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value/>
+        <variable display_value="To (groups)">ae2121c70a0a0b3459708c9a60cd7312</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>1d839b0a2f803010a40e93acf699b659</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">6d6816cd0a6a803f0853a8df38007572</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>55839b0a2f803010a40e93acf699b65a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>Click here to view request: ${URI}&#13;
+&lt;p&gt;&#13;
+Number: ${number}&#13;
+Opened: ${opened_at}&#13;
+Item: ${cat_item}&#13;
+Quantity: ${quantity}&#13;
+&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+Additional comments: &#13;
+${comments}&#13;
+&lt;/p&gt;&#13;
+&#13;
+</value>
+        <variable display_value="Message">c35db5a50a0a0ba96248a70938ae8de6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>59839b0a2f803010a40e93acf699b659</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>${request.requested_for},${requested_for}</value>
+        <variable display_value="To">c35daa890a0a0ba96248a709c32994d6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>91839b0a2f803010a40e93acf699b65a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>Your requested item ${number} for ${cat_item} is in stock and will be deployed soon!</value>
+        <variable display_value="Subject">c35db2180a0a0ba96248a709d1b6df20</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>dd839b0a2f803010a40e93acf699b659</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user or group sys_ids that you want the email sent to.</value>
+        <variable display_value="To (script)">c35dae3d0a0a0ba96248a7098ed9b4aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>59839b0a2f803010a40e93acf699b659</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>${request.requested_for},${requested_for}</value>
+        <variable display_value="To">c35daa890a0a0ba96248a709c32994d6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>19839b0a2f803010a40e93acf699b65a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value/>
+        <variable display_value="To (groups)">ae2121c70a0a0b3459708c9a60cd7312</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>91839b0a2f803010a40e93acf699b65a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>Your requested item ${number} for ${cat_item} is in stock and will be deployed soon!</value>
+        <variable display_value="Subject">c35db2180a0a0ba96248a709d1b6df20</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>55839b0a2f803010a40e93acf699b65a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>Click here to view request: ${URI}&#13;
+&lt;p&gt;&#13;
+Number: ${number}&#13;
+Opened: ${opened_at}&#13;
+Item: ${cat_item}&#13;
+Quantity: ${quantity}&#13;
+&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+Additional comments: &#13;
+${comments}&#13;
+&lt;/p&gt;&#13;
+&#13;
+</value>
+        <variable display_value="Message">c35db5a50a0a0ba96248a70938ae8de6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>1d839b0a2f803010a40e93acf699b659</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">6d6816cd0a6a803f0853a8df38007572</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>d1839b0a2f803010a40e93acf699b659</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>dd839b0a2f803010a40e93acf699b659</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user or group sys_ids that you want the email sent to.</value>
+        <variable display_value="To (script)">c35dae3d0a0a0ba96248a7098ed9b4aa</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Inform Completion">d1839b0a2f803010a40e93acf699b659</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>9d839b0a2f803010a40e93acf699b65a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Notification">0a6c97790a0a0b2756919eb960284334</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Inform of shipment request failure</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="Request Cancelled">4d839b0a2f803010a40e93acf699b641</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>45cb138a2f803010a40e93acf699b60e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:41:34</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+        <x>1005</x>
+        <y>374</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=45cb138a2f803010a40e93acf699b60e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>05cb138a2f803010a40e93acf699b60f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:39:56</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user or group sys_ids that you want the email sent to.</value>
+        <variable display_value="To (script)">c35dae3d0a0a0ba96248a7098ed9b4aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>41cb138a2f803010a40e93acf699b60f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:39:56</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">6d6816cd0a6a803f0853a8df38007572</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>49cb138a2f803010a40e93acf699b60e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:39:56</sys_updated_on>
+        <value>${request.requested_for},${requested_for}</value>
+        <variable display_value="To">c35daa890a0a0ba96248a709c32994d6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>4dcb138a2f803010a40e93acf699b60f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:39:56</sys_updated_on>
+        <value/>
+        <variable display_value="To (groups)">ae2121c70a0a0b3459708c9a60cd7312</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>89cb138a2f803010a40e93acf699b60f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:39:56</sys_updated_on>
+        <value>Click here to view request: ${URI}&#13;
+&lt;p&gt;&#13;
+Number: ${number}&#13;
+Opened: ${opened_at}&#13;
+Item: ${cat_item}&#13;
+Quantity: ${quantity}&#13;
+&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+Additional comments: &#13;
+${comments}&#13;
+&lt;/p&gt;&#13;
+&#13;
+</value>
+        <variable display_value="Message">c35db5a50a0a0ba96248a70938ae8de6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>c5cb138a2f803010a40e93acf699b60f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:40:57</sys_updated_on>
+        <value>Your requested item ${number} for ${cat_item} failed due to an error</value>
+        <variable display_value="Subject">c35db2180a0a0ba96248a709d1b6df20</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>49cb138a2f803010a40e93acf699b60e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:39:56</sys_updated_on>
+        <value>${request.requested_for},${requested_for}</value>
+        <variable display_value="To">c35daa890a0a0ba96248a709c32994d6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>4dcb138a2f803010a40e93acf699b60f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:39:56</sys_updated_on>
+        <value/>
+        <variable display_value="To (groups)">ae2121c70a0a0b3459708c9a60cd7312</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>c5cb138a2f803010a40e93acf699b60f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:40:57</sys_updated_on>
+        <value>Your requested item ${number} for ${cat_item} failed due to an error</value>
+        <variable display_value="Subject">c35db2180a0a0ba96248a709d1b6df20</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>89cb138a2f803010a40e93acf699b60f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:39:56</sys_updated_on>
+        <value>Click here to view request: ${URI}&#13;
+&lt;p&gt;&#13;
+Number: ${number}&#13;
+Opened: ${opened_at}&#13;
+Item: ${cat_item}&#13;
+Quantity: ${quantity}&#13;
+&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+Additional comments: &#13;
+${comments}&#13;
+&lt;/p&gt;&#13;
+&#13;
+</value>
+        <variable display_value="Message">c35db5a50a0a0ba96248a70938ae8de6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>41cb138a2f803010a40e93acf699b60f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:39:56</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">6d6816cd0a6a803f0853a8df38007572</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>45cb138a2f803010a40e93acf699b60e</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>05cb138a2f803010a40e93acf699b60f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:39:56</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user or group sys_ids that you want the email sent to.</value>
+        <variable display_value="To (script)">c35dae3d0a0a0ba96248a7098ed9b4aa</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Inform of shipment request failure">45cb138a2f803010a40e93acf699b60e</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:39:56</sys_created_on>
+        <sys_id>45cbdb8e2f803010a40e93acf699b639</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:39:56</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Approval Action">50a78fa50a6a803f66d064255f7201a5</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id/>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Mark item approved</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>15839b0a2f803010a40e93acf699b657</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+        <x>689</x>
+        <y>28</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=15839b0a2f803010a40e93acf699b657"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>15839b0a2f803010a40e93acf699b657</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>99839b0a2f803010a40e93acf699b657</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>approved</value>
+        <variable display_value="Action">50ab35f70a6a803f76d36e1ebaf3639e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>15839b0a2f803010a40e93acf699b657</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>99839b0a2f803010a40e93acf699b657</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>approved</value>
+        <variable display_value="Action">50ab35f70a6a803f76d36e1ebaf3639e</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Mark item approved">15839b0a2f803010a40e93acf699b657</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>11839b0a2f803010a40e93acf699b658</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Approval Action">50a78fa50a6a803f66d064255f7201a5</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id/>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Mark Rejected</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="Request Cancelled">4d839b0a2f803010a40e93acf699b641</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>91839b0a2f803010a40e93acf699b65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+        <x>314</x>
+        <y>339</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=91839b0a2f803010a40e93acf699b65e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>91839b0a2f803010a40e93acf699b65e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>15839b0a2f803010a40e93acf699b65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>rejected</value>
+        <variable display_value="Action">50ab35f70a6a803f76d36e1ebaf3639e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>91839b0a2f803010a40e93acf699b65e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>15839b0a2f803010a40e93acf699b65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>rejected</value>
+        <variable display_value="Action">50ab35f70a6a803f76d36e1ebaf3639e</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Mark Rejected">91839b0a2f803010a40e93acf699b65e</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>19839b0a2f803010a40e93acf699b65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Notification">0a6c97790a0a0b2756919eb960284334</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id/>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Rejection Notification</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>dd839b0a2f803010a40e93acf699b674</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+        <x>83</x>
+        <y>339</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=dd839b0a2f803010a40e93acf699b674"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>11839b0a2f803010a40e93acf699b676</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value/>
+        <variable display_value="To (groups)">ae2121c70a0a0b3459708c9a60cd7312</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>15839b0a2f803010a40e93acf699b675</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">6d6816cd0a6a803f0853a8df38007572</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>51839b0a2f803010a40e93acf699b675</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>${request.requested_for},${requested_for}</value>
+        <variable display_value="To">c35daa890a0a0ba96248a709c32994d6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>5d839b0a2f803010a40e93acf699b675</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>Click here to view request: ${URI}&#13;
+&lt;p&gt;&#13;
+Number: ${number}&#13;
+Opened: ${opened_at}&#13;
+Item: ${cat_item}&#13;
+Quantity: ${quantity}&#13;
+&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+Additional comments: &#13;
+${comments}&#13;
+&lt;/p&gt;&#13;
+&#13;
+</value>
+        <variable display_value="Message">c35db5a50a0a0ba96248a70938ae8de6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>99839b0a2f803010a40e93acf699b675</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>Your requested item ${number} for ${cat_item} has been rejected</value>
+        <variable display_value="Subject">c35db2180a0a0ba96248a709d1b6df20</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>d5839b0a2f803010a40e93acf699b675</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user or group sys_ids that you want the email sent to.</value>
+        <variable display_value="To (script)">c35dae3d0a0a0ba96248a7098ed9b4aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>51839b0a2f803010a40e93acf699b675</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>${request.requested_for},${requested_for}</value>
+        <variable display_value="To">c35daa890a0a0ba96248a709c32994d6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>11839b0a2f803010a40e93acf699b676</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value/>
+        <variable display_value="To (groups)">ae2121c70a0a0b3459708c9a60cd7312</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>99839b0a2f803010a40e93acf699b675</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>Your requested item ${number} for ${cat_item} has been rejected</value>
+        <variable display_value="Subject">c35db2180a0a0ba96248a709d1b6df20</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>5d839b0a2f803010a40e93acf699b675</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>Click here to view request: ${URI}&#13;
+&lt;p&gt;&#13;
+Number: ${number}&#13;
+Opened: ${opened_at}&#13;
+Item: ${cat_item}&#13;
+Quantity: ${quantity}&#13;
+&lt;/p&gt;&#13;
+&lt;p&gt;&#13;
+Additional comments: &#13;
+${comments}&#13;
+&lt;/p&gt;&#13;
+&#13;
+</value>
+        <variable display_value="Message">c35db5a50a0a0ba96248a70938ae8de6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>15839b0a2f803010a40e93acf699b675</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">6d6816cd0a6a803f0853a8df38007572</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>dd839b0a2f803010a40e93acf699b674</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>d5839b0a2f803010a40e93acf699b675</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user or group sys_ids that you want the email sent to.</value>
+        <variable display_value="To (script)">c35dae3d0a0a0ba96248a7098ed9b4aa</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Rejection Notification">dd839b0a2f803010a40e93acf699b674</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>15839b0a2f803010a40e93acf699b676</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Request YubiKey</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="Order Fulfillment">41839b0a2f803010a40e93acf699b642</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:08:12</sys_created_on>
+        <sys_id>4334934a2f803010a40e93acf699b694</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:25:00</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+        <x>860</x>
+        <y>174</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=4334934a2f803010a40e93acf699b694"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>4334934a2f803010a40e93acf699b694</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:08:12</sys_created_on>
+        <sys_id>4084934a2f803010a40e93acf699b6ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:08:12</sys_updated_on>
+        <value>activity.result = shipYubiKey();&#13;
+&#13;
+function shipYubiKey() {&#13;
+	&#13;
+	try {&#13;
+		var inputs = {};&#13;
+		inputs['request_item'] = current;&#13;
+    inputs['table_name'] = current.getTableName();&#13;
+&#13;
+		var result = sn_fd.FlowAPI.getRunner().flow('x_490107_yed_api_s.yubikey_shipment_request_flow').inForeground().withInputs(inputs).run();&#13;
+		&#13;
+	} catch (ex) {&#13;
+		var message = ex.getMessage();&#13;
+		gs.error(message);&#13;
+		return -1;&#13;
+	}&#13;
+	&#13;
+}</value>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>4334934a2f803010a40e93acf699b694</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:08:12</sys_created_on>
+        <sys_id>4084934a2f803010a40e93acf699b6ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:08:12</sys_updated_on>
+        <value>activity.result = shipYubiKey();&#13;
+&#13;
+function shipYubiKey() {&#13;
+	&#13;
+	try {&#13;
+		var inputs = {};&#13;
+		inputs['request_item'] = current;&#13;
+    inputs['table_name'] = current.getTableName();&#13;
+&#13;
+		var result = sn_fd.FlowAPI.getRunner().flow('x_490107_yed_api_s.yubikey_shipment_request_flow').inForeground().withInputs(inputs).run();&#13;
+		&#13;
+	} catch (ex) {&#13;
+		var message = ex.getMessage();&#13;
+		gs.error(message);&#13;
+		return -1;&#13;
+	}&#13;
+	&#13;
+}</value>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Request YubiKey">4334934a2f803010a40e93acf699b694</activity>
+        <condition>activity.result!=3</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Failure</name>
+        <order>1</order>
+        <short_description>Shipment Failure</short_description>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:32:44</sys_created_on>
+        <sys_id>900a574e2f803010a40e93acf699b6e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:32:44</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Request YubiKey">4334934a2f803010a40e93acf699b694</activity>
+        <condition>activity.result==3</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Success</name>
+        <order>1</order>
+        <short_description>Shipment Awaiting Validation</short_description>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:31:31</sys_created_on>
+        <sys_id>81b9174e2f803010a40e93acf699b694</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:31:31</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">19839b0a2f803010a40e93acf699b65e</condition>
+        <from display_value="Mark Rejected">91839b0a2f803010a40e93acf699b65e</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>19839b0a2f803010a40e93acf699b67d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <to display_value="End">15839b0a2f803010a40e93acf699b65d</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">9d839b0a2f803010a40e93acf699b65a</condition>
+        <from display_value="Inform Completion">d1839b0a2f803010a40e93acf699b659</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>1d839b0a2f803010a40e93acf699b67c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:24:52</sys_updated_on>
+        <to display_value="End">15839b0a2f803010a40e93acf699b65d</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">15839b0a2f803010a40e93acf699b676</condition>
+        <from display_value="Rejection Notification">dd839b0a2f803010a40e93acf699b674</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>1d839b0a2f803010a40e93acf699b68a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <to display_value="Mark Rejected">91839b0a2f803010a40e93acf699b65e</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">11839b0a2f803010a40e93acf699b658</condition>
+        <from display_value="Mark item approved">15839b0a2f803010a40e93acf699b657</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>55839b0a2f803010a40e93acf699b67d</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:24:49</sys_updated_on>
+        <to display_value="Request YubiKey">4334934a2f803010a40e93acf699b694</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Approved">c5839b0a2f803010a40e93acf699b651</condition>
+        <from display_value="Dept. Head Approval">c5839b0a2f803010a40e93acf699b64c</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>59839b0a2f803010a40e93acf699b68a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:42:16</sys_updated_on>
+        <to display_value="Mark item approved">15839b0a2f803010a40e93acf699b657</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Rejected">45839b0a2f803010a40e93acf699b651</condition>
+        <from display_value="Dept. Head Approval">c5839b0a2f803010a40e93acf699b64c</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:42:18</sys_created_on>
+        <sys_id>634c5f4e2f803010a40e93acf699b628</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:42:18</sys_updated_on>
+        <to display_value="Rejection Notification">dd839b0a2f803010a40e93acf699b674</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Success">81b9174e2f803010a40e93acf699b694</condition>
+        <from display_value="Request YubiKey">4334934a2f803010a40e93acf699b694</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:35:42</sys_created_on>
+        <sys_id>7acadb4e2f803010a40e93acf699b6a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:35:42</sys_updated_on>
+        <to display_value="Inform Completion">d1839b0a2f803010a40e93acf699b659</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">d1839b0a2f803010a40e93acf699b661</condition>
+        <from display_value="Begin">99839b0a2f803010a40e93acf699b660</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:55</sys_created_on>
+        <sys_id>91839b0a2f803010a40e93acf699b68b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:55</sys_updated_on>
+        <to display_value="Dept. Head Approval">c5839b0a2f803010a40e93acf699b64c</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">45cbdb8e2f803010a40e93acf699b639</condition>
+        <from display_value="Inform of shipment request failure">45cb138a2f803010a40e93acf699b60e</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:41:16</sys_created_on>
+        <sys_id>9c1c138e2f803010a40e93acf699b6ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:41:16</sys_updated_on>
+        <to display_value="End">15839b0a2f803010a40e93acf699b65d</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Failure">900a574e2f803010a40e93acf699b6e6</condition>
+        <from display_value="Request YubiKey">4334934a2f803010a40e93acf699b694</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:41:09</sys_created_on>
+        <sys_id>fe0c174e2f803010a40e93acf699b65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:41:09</sys_updated_on>
+        <to display_value="Inform of shipment request failure">45cb138a2f803010a40e93acf699b60e</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-12 20:03:54</sys_created_on>
+        <sys_id>8983d30a2f803010a40e93acf699b67e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-12 20:03:54</sys_updated_on>
+        <workflow_version display_value="Service Catalog YubiKey Request">4583d30a2f803010a40e93acf699b67e</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=8183d30a2f803010a40e93acf699b67d^sys_id!=4583d30a2f803010a40e93acf699b67e">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

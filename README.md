@@ -87,7 +87,7 @@ This opens a new UI where you will manage and build Actions, Flows, and Subflows
 ### Create the shipment request action
 1. Click the **+ New** button, and then click **Action** in the resulting menu
   ![](/images/19-new-action.png)
-2. Fill ou the Action Properties form
+2. Fill out the Action Properties form
 
   * **Name:** YED Shipment Request
   * **Application:** Yubico Enterprise Delivery API Spoke
@@ -151,7 +151,7 @@ At this point, the Action is getting the shipment address, product, and quantity
 ### Script input variables
 The script step gets its own set of input variables. This allows you to map data from the data pane into script-friendly variables.
 
-1. In the **Input Variables** widget, click the **+ Create Variable* button 
+1. In the **Input Variables** widget, click the **+ Create Variable** button 
 2. Set the **Name** to `delivery_type`
 3. Drag the **Delivery Type** data pill from the data pane to the **Value** field. You can now reference the Delivery Type in your script as `inputs.delivery_type`.
 4. Repeat steps 1-3 for each of the action input variables
@@ -407,7 +407,7 @@ Now it's time to add the Action to the Flow.
   | City | Trigger > Requested Item Record > Requested for > Location > City |
   | Region | Trigger > Requested Item Record > Requested for > Location > State / Province |
   | Postal Code| Trigger > Requested Item Record > Requested for > Location > Zip / Postal Code |
-  | Product ID | Trigger > Requested Item Record > Requested for > Model > Model Number |
+  | Product ID | Trigger > Requested Item Record > Item > Model > Model Number |
   | Inventory Product Id | 15 |
   | Shipment Product Quantity | Trigger > Requested Item Record > Quantity  |
   
@@ -442,10 +442,11 @@ Let's handle shipment failures by sending an email to the administrator.
   1. Cancel the order
   2. Notify user to fix the error and try again
   ```
-13. Drag the **Shipment ID** data pill from the data pane next to the **Shipment ID** text 
+13. Drag the **Shipment Request ID** data pill from the data pane next to the **Shipment ID** text 
 14. Drag the **Shipment State Message** data pill from the data pane next to the **Reason** text 
 15. Drag the **Shipment Messages** data pill from the data pane next to the **More Details** text 
 16. Click **Done**
+17. Click **Activate**
 
 Challenge: If the shipment fails, return the Shipment State Message and Shipment Messages to the user to fix any errors.
 
@@ -525,7 +526,7 @@ function shipYubiKey() {
 		inputs['request_item'] = current;
     inputs['table_name'] = current.getTableName();
 
-		var result = sn_fd.FlowAPI.getRunner().flow('x_490107_yed_api_s.yubikey_shipment_request_flow').inForeground().withInputs(inputs).run();
+		var result = sn_fd.FlowAPI.getRunner().flow('x_490107_yubico_0.yubico_yed_api_create_a_shipment').inForeground().withInputs(inputs).run();
 		
 	} catch (ex) {
 		var message = ex.getMessage();
@@ -536,17 +537,19 @@ function shipYubiKey() {
 }
 ```
 
-10. Click **Submit**
+10. In a new window, navigate to the **Flow Designer**, open the "Yubico YED API Create a Shipment" Flow, click the **...**, then click **Create code snippet**. In the workflow script, replace `x_490107_yubico_0.yubico_yed_api_create_a_shipment` with your flow identifier
+![](/images/95-snippet.png)
+11. Click **Submit**
 ![](/images/77-submit.png)
-11. Delete the arrow from the **Approval Action**
-12. Drag the **Approval Action Always Condition box** to **Run Script**
+12. Delete the arrow from the **Approval Action**
+13. Drag the **Approval Action Always Condition box** to **Run Script**
 ![](/images/78-approval-arrow.png)
-13. Double click the **Run Script**
-14. Click **Conditions**
-15. Delete the **Always** condition
+14. Double click the **Run Script**
+15. Click **Conditions**
+16. Delete the **Always** condition
 ![](/images/79-delete-always.png)
-16. Click **New**
-17. Set the fields to the following:
+17. Click **New**
+18. Set the fields to the following:
 
   | **Name** | **Value** |
   | -------- | --------- |
@@ -556,27 +559,27 @@ function shipYubiKey() {
 
   ![](/images/81-success-condition.png)
 
-18. Click **Submit*
-16. Click **New**
-17. Set the fields to the following:
+19. Click **Submit*
+20. Click **New**
+21. Set the fields to the following:
 
   | **Name** | **Value** |
   | -------- | --------- |
   | Name | Failure |
   | Short Description | Shipment Failure |
-  | Condition | activity.result==3 | 
+  | Condition | activity.result!=3 | 
 
   ![](/images/82-failure-condition.png)
 
-18. Click **Submit*
-19. Close the Workflow Conditions view and return to the workflow canvas
-20. Drag the **Run Script Success Condition box** to **Notification - Inform Completion**
+22. Click **Submit*
+23. Close the Workflow Conditions view and return to the workflow canvas
+24. Drag the **Run Script Success Condition box** to **Notification - Inform Completion**
 ![](/images/83-success-arrow.png)
-21. Double-click the **Notification - Inform Completion** and set the **Stage** to "Completed"
+25. Double-click the **Notification - Inform Completion** and set the **Stage** to "Completed"
 ![](/images/85-stage-completed.png)
-22. Click **Update**
-23. Right-click **Notification - Inform Completion** and select **Copy Activity**
-24. Double-click the new **Notification** activity and set the fields to the following
+26. Click **Update**
+27. Right-click **Notification - Inform Completion** and select **Copy Activity**
+28. Double-click the new **Notification** activity and set the fields to the following
 
   | **Name** | **Value** |
   | -------- | --------- |
@@ -584,10 +587,12 @@ function shipYubiKey() {
   | Stage| Request Cancelled |
   | Subject | Your requested item ${number} for ${cat_item} failed due to an error | 
 
-25. Click **Submit**
-26. Drag the **Run Script Failure Condition Box** to **Notification - Inform of shipment request failure**
-27. Drag the **Notification - Inform of shipment request failure Always Condition Box** to **End**
+29. Click **Submit**
+30. Drag the **Run Script Failure Condition Box** to **Notification - Inform of shipment request failure**
+31. Drag the **Notification - Inform of shipment request failure Always Condition Box** to **End**
 ![](/images/86-yed-workflow.png)
+32. Publish the workflow
+![](/images/96-publish.png)
 
 ### Set the YubiKey process engine to the workflow
 

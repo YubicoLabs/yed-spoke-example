@@ -133,7 +133,7 @@ Action inputs should always have human-friendly names.
   | Postal Code | String | on |
   | Product ID | Integer | on |
   | Inventory Product ID | Integer | on |
-  | Shipment Product ID | Integer | on |
+  | Shipment Product Quantity | Integer | on |
   
   ![](/images/22-create-input.png)
 

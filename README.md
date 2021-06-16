@@ -1,6 +1,24 @@
 # yed-spoke-example
 Example ServiceNow IntegrationHub spoke to interact with Yubico Enterprise Delivery API
 
+# Table of Contents
+#### [Overview](#overview)
+#### [Prerequisites](#prerequisites)
+#### [Create a Scoped Application](#create-a-scoped-application)
+#### [Add a YubiKey to the Service Catalog](#add-a-yubikey-to-the-service-catalog)
+#### [Create the action](#create-the-action)
+#### [Define action inputs](#define-action-inputs)
+#### [The input script step](#the-input-script-step)
+#### [The REST step](#the-rest-step)
+#### [The output script step](#the-output-script-step)
+#### [Action outputs](#action-outputs)
+#### [Create the shipment request flow](#create-the-shipment-request-flow)
+#### [Add the Flow Logic to the Flow](#add-the-flow-logic-to-the-flow)
+#### [Test the flow](#test-the-flow)
+#### [Call the flow from a workflow](#call-the-flow-from-a-workflow)
+#### [Test the workflow](#test-the-workflow)
+
+---
 ## Overview
 ---
 [Yubico Enterprise Delivery](https://www.yubico.com/products/yubienterprise/) (YED) is a global service that helps organizations deliver YubiKeys to remote and in-office users.  Organizations can automate delivery by integrating the YED REST API into their IT and service catalog flows.
@@ -454,7 +472,7 @@ Challenge: If the shipment fails, return the Shipment State Message and Shipment
 ---
 To test the flow first we must impersonate a user with an address and order a Yubikey
 
-## Order a YubiKey from the Service Catalog
+### Order a YubiKey from the Service Catalog
 1. Click **System Administrator** dropdown menu then click **Impersonate User**
 2. Click **Search for user** and select "Adela Cervantsz"
 3. Click **Service Catalog** then click **Peripherals**
@@ -466,7 +484,7 @@ To test the flow first we must impersonate a user with an address and order a Yu
 ### Launch the flow designer
 To launch the flow designer, navigate to **Flow Designer > Designer**
 
-## Test the Request Shipment flow
+### Test the Request Shipment flow
 1. Search for **Yubico YED API Create a Shipment** by name and then select the flow
 2. Click **Test**
 3. A dialog will open. Click **Requested Item Record** and select the **Request Number** from earlier e.g. REQ0010001
@@ -608,7 +626,7 @@ function shipYubiKey() {
 ---
 To test the workflow first we must impersonate a user with an address and order a Yubikey
 
-## Order a YubiKey from the Service Catalog
+### Order a YubiKey from the Service Catalog
 1. Click **System Administrator** dropdown menu then click **Impersonate User**
 2. Click **Search for user** and select "Adela Cervantsz"
 3. Click **Service Catalog** then click **Peripherals**

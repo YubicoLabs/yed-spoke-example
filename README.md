@@ -2,21 +2,21 @@
 Example ServiceNow IntegrationHub spoke to interact with Yubico Enterprise Delivery API
 
 # Table of Contents
-#### [Overview](#overview)
-#### [Prerequisites](#prerequisites)
-#### [Create a Scoped Application](#create-a-scoped-application)
-#### [Add a YubiKey to the Service Catalog](#add-a-yubikey-to-the-service-catalog)
-#### [Create the action](#create-the-action)
-#### [Define action inputs](#define-action-inputs)
-#### [The input script step](#the-input-script-step)
-#### [The REST step](#the-rest-step)
-#### [The output script step](#the-output-script-step)
-#### [Action outputs](#action-outputs)
-#### [Create the shipment request flow](#create-the-shipment-request-flow)
-#### [Add the Flow Logic to the Flow](#add-the-flow-logic-to-the-flow)
-#### [Test the flow](#test-the-flow)
-#### [Call the flow from a workflow](#call-the-flow-from-a-workflow)
-#### [Test the workflow](#test-the-workflow)
+* [Overview](#overview)
+* [Prerequisites](#prerequisites)
+* [Create a Scoped Application](#create-a-scoped-application)
+* [Add a YubiKey to the Service Catalog](#add-a-yubikey-to-the-service-catalog)
+* [Create the action](#create-the-action)
+* [Define action inputs](#define-action-inputs)
+* [The input script step](#the-input-script-step)
+* [The REST step](#the-rest-step)
+* [The output script step](#the-output-script-step)
+* [Action outputs](#action-outputs)
+* [Create the shipment request flow](#create-the-shipment-request-flow)
+* [Add the Flow Logic to the Flow](#add-the-flow-logic-to-the-flow)
+* [Test the flow](#test-the-flow)
+* [Call the flow from a workflow](#call-the-flow-from-a-workflow)
+* [Test the workflow](#test-the-workflow)
 
 ---
 ## Overview

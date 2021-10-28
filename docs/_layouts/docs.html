@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>YED Spoke Example</title>
+    <link rel="stylesheet" href="/assets/css/bulma.min.css">
+  </head>
+  <body>
+    <h1>{{ page.title }}</h1>
+    <div class="columns">
+        <div class="column is-3">
+            <div class="container">
+                <ol>
+                    <li>123</li>
+                    <li>123</li>
+                    <li>123</li>
+                </ol>
+            </div>
+        </div>
+        <div class="column is-9">
+            <div class="container">
+                <section>
+                    {{ content }}
+                </section>
+            </div>
+        </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

@@ -1,0 +1,60 @@
+.image-block-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-wrapper {
+  height: 2.5rem;
+  width: 2.5rem;
+
+  @include media-breakpoint-up(lg){
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .block-editor-inner-blocks img {
+    height: 3rem !important;
+    width: 3rem !important;
+  }
+
+  &--md {
+    height: 4.5rem;
+    width: 4.5rem;
+
+    @include media-breakpoint-up(md){
+      height: 5rem;
+      width: 5rem;
+    }
+
+    @include media-breakpoint-up(lg){
+      height: 6rem;
+      width: 6rem;
+    }
+
+    .block-editor-inner-blocks img {
+      height: 6rem !important;
+      width: 6rem !important;
+    }
+  }
+
+  &--lg {
+    height: 9rem;
+    width: 9rem;
+
+    @include media-breakpoint-up(md){
+      height: 10rem;
+      width: 10rem;
+    }
+
+    @include media-breakpoint-up(lg){
+      height: 12rem;
+      width: 12rem;
+    }
+
+    .block-editor-inner-blocks img {
+      height: 12rem !important;
+      width: 12rem !important;
+    }
+  }
+}

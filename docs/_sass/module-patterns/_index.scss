@@ -1,0 +1,14 @@
+// Add block patterns here
+
+// used for block patterns that use the button block
+// ex. .inside-btn--xs--full-width will expand button width on mobile
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-down($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .inside-btn-#{$infix}--full-width a.btn {
+      width: 100%;
+    }
+  }
+}

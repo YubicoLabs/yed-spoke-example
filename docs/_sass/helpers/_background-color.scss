@@ -1,0 +1,19 @@
+
+// Utilities for `background-color` values
+//
+
+$bg-colors: (
+  "gray": $gray-0, 
+  "blue": $blue-8,
+  "none": none,
+);
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $key, $value in $bg-colors {
+      .bg#{$infix}--#{$key} { background-color: $value; }
+    }
+  }
+}

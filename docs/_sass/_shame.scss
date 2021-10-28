@@ -1,0 +1,510 @@
+// Hacks and messy overrides that can be refactored
+// be very specific about what each piece of code is doing, and
+// how to better fix it later
+
+// Try:  $ git blame _shame.scss
+
+// Rules:
+// ---------------
+//   1. If it’s a hack, it goes in _shame.scss.
+//   2. Document all hacks fully:
+//   3. What part of the codebase does it relate to?
+//   4. Why was this needed?
+//   5. How does this fix it?
+//   6. How might you fix it properly, given more time?
+//   7. Do not blame the developer; if they explained why they had to do it then their reasons are probably (hopefully) valid.
+//   8. Try and clean _shame.scss up when you have some down time.
+
+// Example:
+// ---------------
+// Nav specificity fix.
+
+// Someone used an ID in the header code (`#header a{}`) which trumps the
+// nav selectors (`.site-nav a{}`). Use !important to override it until I
+// have time to refactor the header stuff.
+
+// .site-nav a { color:#BADA55!important; }
+
+// ========================================================
+// GUTENBERG EDITOR STYLES - TODO move to editor stylesheet
+// ========================================================
+
+// Wordpress MCE editor styles
+
+// Caption
+.wp-caption {
+  max-width: 100%;
+
+  &-text {
+    color: $gray-5;
+    font-size: $font-size-sm;
+    line-height: 1rem;
+    margin-top: $spacer-1 / 2;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+// Pagination & Breadcrumbs
+.container {
+  .bread-crumbs {
+    color: $gray-8;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .pagination {
+    .nav-links {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .page-numbers {
+      color: $gray-8;
+      font-size: 0.875rem;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-left: $spacer-1;
+      padding-right: $spacer-1;
+    }
+
+    .page-numbers:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+// for a width issue in search results where read more is misaligned
+
+.search-container {
+  .card_copy {
+    width: 100% !important;
+  }
+
+  .search-page-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .js-search-close {
+      display: none;
+    }
+  }
+}
+
+// MCE alignment
+.align {
+  &center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &left {
+    float: left;
+    margin: $spacer-1 $spacer-2 $spacer-1 0;
+    max-width: 50% !important;
+    height: auto !important;
+  }
+
+  &right {
+    float: right;
+    margin: $spacer-1 0 $spacer-1 $spacer-2;
+    max-width: 50% !important;
+    height: auto !important;
+  }
+}
+
+.is-style-outline {
+  @extend .card--outline;
+}
+
+.wp-block,
+.block-editor-block-list__block {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+body .editor-styles-wrapper {
+  font-family: inherit;
+
+  h1 {
+    @extend .h1;
+  }
+  h2 {
+    @extend .h2;
+  }
+  h3 {
+    @extend .h3;
+  }
+  h4 {
+    @extend .h4;
+  }
+  h5 {
+    @extend .h5;
+  }
+  h6 {
+    @extend .h6;
+  }
+  .title--featured {
+    @extend .title--featured;
+  }
+}
+
+.btn {
+  font-family: inherit;
+}
+
+.card {
+  min-width: 0;
+  max-width: none;
+}
+
+.btns {
+  form.blocks-button__inline-link {
+    position: relative;
+    display: none;
+    svg,
+    button {
+      display: none;
+    }
+    .components-base-control__field {
+      margin: 0;
+    }
+  }
+  &:focus,
+  &:focus-within {
+    form.blocks-button__inline-link {
+      display: block;
+    }
+  }
+}
+
+// ========================================================
+// / END GUTENBERG EDITOR STYLES
+// ========================================================
+
+// ========================================================
+// FRONT-END ONLY STYLES - won't show in editor
+// ========================================================
+
+body:not(.wp-admin) {
+  .hero {
+    @extend .escape-container;
+  }
+}
+
+// ========================================================
+// / END FRONT-END ONLY STYLES
+// ========================================================
+
+// ========================================================
+// WORDPRESS STYLE OVERRIDES
+// ========================================================
+
+h1, h2, h3, h4, h5, h6, p, div, li, span {
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
+}
+
+.card {
+  .wp-block-image {
+    margin-bottom: 0;
+  }
+}
+
+.has-small-font-size {
+  @extend .font--sm;
+}
+
+// yoast extend breadcrumb module
+
+.breadcrumbs {
+  @extend .breadcrumbs;
+  a {
+    @extend .breadcrumbs__item;
+  }
+  a:hover {
+    color: $gray-6;
+  }
+  a:active {
+    color: $gray-9;
+  }
+  .breadcrumb_last {
+    color: inherit;
+  }
+}
+
+// WPML Style Changes
+.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+  bottom: 100%;
+  top: unset;
+}
+
+.wt-cli-iframe-placeholder {
+  padding: $spacer-5;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+// ========================================================
+// / WORDPRESS STYLE OVERRIDES
+// ========================================================
+
+// ========================================================
+// Grid styles and overrides
+// ========================================================
+
+// reverse column order - we need this much specificity
+.reverse-column {
+  &#{&} {
+    &#{&} {
+      &#{&} {
+        grid-column-start: 1;
+      }
+    }
+  }
+}
+
+// force gutters off on grid - we need this much specificity
+.wp-block-jetpack-layout-grid {
+  &#{&} {
+    &#{&} {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+// grid + grid margins when stacked
+html .wp-block-jetpack-layout-grid {
+  gap: $spacer-4;
+  + .wp-block-jetpack-layout-grid {
+    margin-top: $spacer-4;
+  }
+
+  @include media-breakpoint-only(xs) {
+    // beat grid into submission on tablet
+    grid-template-columns: repeat(4, 1fr);
+
+    // unset tablet values
+    @for $i from 1 through 12 {
+      @for $x from 1 through 4 {
+        &.column#{ $x }-tablet-grid__start-#{ $i } > .wp-block-jetpack-layout-grid-column:nth-child(#{ $x }) {
+          grid-column-start: unset;
+        }
+      }
+    }
+
+    @for $i from 1 through 12 {
+      @for $x from 1 through 4 {
+        &.column#{ $x }-tablet-grid__span-#{ $i } > .wp-block-jetpack-layout-grid-column:nth-child(#{ $x }) {
+          grid-column-end: unset; // Set it to span $i columns, regardless of starting position.
+        }
+      }
+    }
+
+    @for $i from 1 through 4 {
+      @for $x from 1 through 4 {
+        &.column#{ $x }-tablet-grid__row-#{ $i } > .wp-block-jetpack-layout-grid-column:nth-child(#{ $x }) {
+          grid-row-start: unset;
+        }
+      }
+    }
+
+    // use mobile values in tablet breakpoint
+    @for $i from 1 through 12 {
+      @for $x from 1 through 4 {
+        &.column#{ $x }-mobile-grid__start-#{ $i } > .wp-block-jetpack-layout-grid-column:nth-child(#{ $x }) {
+          grid-column-start: $i;
+        }
+      }
+    }
+
+    @for $i from 1 through 12 {
+      @for $x from 1 through 4 {
+        &.column#{ $x }-mobile-grid__span-#{ $i } > .wp-block-jetpack-layout-grid-column:nth-child(#{ $x }) {
+          grid-column-end: span $i; // Set it to span $i columns, regardless of starting position.
+        }
+      }
+    }
+
+    @for $i from 1 through 4 {
+      @for $x from 1 through 4 {
+        &.column#{ $x }-mobile-grid__row-#{ $i } > .wp-block-jetpack-layout-grid-column:nth-child(#{ $x }) {
+          grid-row-start: $i;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: repeat(12, 1fr);
+
+    // use desktop values at sm breakpoint
+    @for $i from 1 through 12 {
+      @for $x from 1 through 4 {
+        &.column#{ $x }-desktop-grid__start-#{ $i } > .wp-block-jetpack-layout-grid-column:nth-child(#{ $x }) {
+          grid-column-start: $i;
+        }
+      }
+    }
+
+    @for $i from 1 through 12 {
+      @for $x from 1 through 4 {
+        &.column#{ $x }-desktop-grid__span-#{ $i } > .wp-block-jetpack-layout-grid-column:nth-child(#{ $x }) {
+          grid-column-end: span $i; // Set it to span $i columns, regardless of starting position.
+        }
+      }
+    }
+
+    @for $i from 1 through 4 {
+      @for $x from 1 through 4 {
+        &.column#{ $x }-desktop-grid__row-#{ $i } > .wp-block-jetpack-layout-grid-column:nth-child(#{ $x }) {
+          grid-row-start: $i;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  // reduce huge grid gap when adding 'reduce-huge-gutters' class
+  .reduce-huge-gutters.wp-block-jetpack-layout-gutter__huge {
+    grid-gap: $spacer-1 !important;
+  }
+}
+
+
+// ========================================================
+// / Grid styles and overrides
+// ========================================================
+
+
+// Make rich text attachment download texts expand so click area covers icon
+.file-download {
+  position: relative;
+}
+
+.file-download__text a {
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin-left: -1.75rem;
+  padding-left: 1.75rem;
+  margin-top: -12px;
+}
+
+// Resolve whitespace no-wrap for GDPR Privacy Text
+.fixwrap {
+  white-space: normal !important;
+}
+
+// remove after testing pipeline
+.test123 {
+  background-color: red;
+}
+
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__control {
+  border: 1px solid $gray-2;
+  background-color: $gray-0;
+  border-radius: 8px;
+  padding: 8px;
+  color: $gray-9;
+  &.clear {
+    border: none;
+    background: none;
+    color: red;
+  }
+  &.filter {
+    &.is--active {
+      background: $color-primary;
+    }
+  }
+}
+.tags.pill-bottle {
+  display: none;
+  line-height: 32px; 
+  margin: 8px 0;
+  &.is--open {
+    display: block;
+  }
+}
+
+a.pill__tag {
+  display: inline-block;
+  font-size: 12px;
+  border: 1px solid $gray-2;
+  padding: 4px;
+  border-radius: 16px;
+  margin: 0 4px;
+  color: $gray-8;
+  line-height: 16px;
+  &.active {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    &::after {
+      content: " x";
+    }
+  }
+}
+
+.one-off-h2 {
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: -1.5px;
+  color: #005572;
+}
+
+
+.components-popover__content {
+  width: 400px;
+  height: 420px;
+  .CalendarMonth {
+    padding: 0 !important;
+  }
+  .DayPicker {
+    width: 100% !important;
+    > div, > div > div, .DayPicker_transitionContainer, .CalendarMonthGrid {
+      width: 100% !important;
+      height: 420px !important;
+    }
+    li.DayPicker_weekHeader_li {
+      width: 47px !important;
+      text-align: left;
+    }
+  }
+  .components-datetime__date {
+    height: 420px;
+  }
+  div.components-datetime__date__day {
+    width: unset !important;
+    height: unset !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero--img-aware .hero__img img {
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero.hero--img-aware.hero--home-page .container {
+    display: none;
+  }
+  .hero--img-aware .hero__img img {
+    vertical-align: bottom;
+    height: 200px;
+    object-fit: cover !important;
+  }
+}

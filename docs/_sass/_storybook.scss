@@ -1,0 +1,120 @@
+.storybook.grid-layout {
+  display: grid;
+  grid-gap: 16px;
+  width: 100%;
+  flex-grow: 0;
+
+  &.horizontal {
+    grid-template-columns: auto auto auto;
+  }
+
+  &.vertical {
+    grid-template-rows: auto auto auto;
+  }
+}
+
+.storybook.color-layout {
+  .gray-0 {
+    background-color: $gray-0;
+  }
+  .gray-1 {
+    background-color: $gray-1;
+  }
+  .gray-2 {
+    background-color: $gray-2;
+  }
+  .gray-3 {
+    background-color: $gray-3;
+  }
+  // .gray-4 {
+  //   background-color: $gray-4;
+  // }
+  .gray-5 {
+    background-color: $gray-5;
+  }
+  .gray-6 {
+    background-color: $gray-6;
+  }
+  .gray-7 {
+    background-color: $gray-7;
+  }
+  .gray-8 {
+    background-color: $gray-8;
+  }
+  .gray-9 {
+    background-color: $gray-9;
+    color: #fff;
+  }
+  .gray-10 {
+    background-color: $gray-10;
+  }
+  .green-1 {
+    background-color: $green-1;
+  }
+  .green-7 {
+    background-color: $green-7;
+  }
+  .green-8 {
+    background-color: $green-8;
+  }
+  .blue-8 {
+    background-color: $blue-8;
+  }
+  .cyan-7 {
+    background-color: $cyan-7;
+  }
+  .lime-4 {
+    background-color: $lime-4;
+  }
+  .lime-5 {
+    background-color: $lime-5;
+  }
+  .color-primary {
+    background-color: $color-primary;
+  }
+  .text-color--primary {
+    background-color: $text-color-primary;
+  }
+  .text-color-link {
+    background-color: $text-color-link;
+  }
+  .btn-bg-color-primary {
+    background-color: $btn-bg-color-primary;
+  }
+  .btn-bg-color-primary-hover {
+    background-color: $btn-bg-color-primary-hover;
+  }
+  .btn-bg-color-secondary {
+    background-color: $btn-bg-color-secondary;
+  }
+  .btn-bg-color-secondary-hover {
+    background-color: $btn-bg-color-secondary-hover;
+  }
+  .hero-blue-1 {
+    background-color: $hero-blue-1;
+  }
+  .hero-blue-2 {
+    background-color: $hero-blue-2;
+  }
+  .hero-blue-3 {
+    background-color: $hero-blue-3;
+  }
+  .hero-blue-4 {
+    background-color: $hero-blue-4;
+  }
+  .hero-blue-5 {
+    background-color: $hero-blue-5;
+  }
+  .hero-blue-6 {
+    background-color: $hero-blue-6;
+  }
+  .hero-green-1 {
+    background-color: $hero-green-1;
+  }
+  .hero-gray-1 {
+    background-color: $hero-gray-1;
+  }
+  .hero-gray-2 {
+    background-color: $hero-gray-2;
+  }
+}

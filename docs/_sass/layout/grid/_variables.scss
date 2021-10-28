@@ -1,0 +1,20 @@
+
+// TODO - refactor to use already defined grid breakpoints
+
+$xs: '479px';
+$sm: '768px';
+$md: '1024px';
+$lg: '1440px';
+$xl: '1920px';
+
+$directions: "top" "right" "bottom" "left";
+$sizes: "" "-md" "-lg";
+$properties: "left" "right" "center" "start" "normal";
+$maximum: 12;
+
+/* Note:
+** These must be in the same order
+----------------------------------------- */
+$breakpoints:       "xs" "sm" "md" "lg" "xl";
+$breakpoint_values: $xs  $sm  $md  $lg  $xl;
+

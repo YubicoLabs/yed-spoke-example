@@ -1,0 +1,72 @@
+// Margin and Padding
+// For example: .mtl-1 is `margin-top: 0.5rem` at the breakpoint of min-width lg
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+        .#{$abbrev}#{$infix}--#{$size} { #{$prop}: $length; }
+        .#{$abbrev}t#{$infix}--#{$size},
+        .#{$abbrev}y#{$infix}--#{$size} {
+          #{$prop}-top: $length;
+        }
+        .#{$abbrev}r#{$infix}--#{$size},
+        .#{$abbrev}x#{$infix}--#{$size} {
+          #{$prop}-right: $length;
+        }
+        .#{$abbrev}b#{$infix}--#{$size},
+        .#{$abbrev}y#{$infix}--#{$size} {
+          #{$prop}-bottom: $length;
+        }
+        .#{$abbrev}l#{$infix}--#{$size},
+        .#{$abbrev}x#{$infix}--#{$size} {
+          #{$prop}-left: $length;
+        }
+      }
+    }
+
+    // Negative margins (e.g., where `.mb--neg1` is negative version of `.mb--1`)
+    @each $size, $length in $spacers {
+      @if $size != 0 {
+        .m#{$infix}--neg#{$size} { margin: -$length; }
+        .mt#{$infix}--neg#{$size},
+        .my#{$infix}--neg#{$size} {
+          margin-top: -$length;
+        }
+        .mr#{$infix}--neg#{$size},
+        .mx#{$infix}--neg#{$size} {
+          margin-right: -$length;
+        }
+        .mb#{$infix}--neg#{$size},
+        .my#{$infix}--neg#{$size} {
+          margin-bottom: -$length;
+        }
+        .ml#{$infix}--neg#{$size},
+        .mx#{$infix}--neg#{$size} {
+          margin-left: -$length;
+        }
+      }
+    }
+
+    // Some special margin utils
+    .m#{$infix}--auto { margin: auto; }
+    .mt#{$infix}--auto,
+    .my#{$infix}--auto {
+      margin-top: auto;
+    }
+    .mr#{$infix}--auto,
+    .mx#{$infix}--auto {
+      margin-right: auto;
+    }
+    .mb#{$infix}--auto,
+    .my#{$infix}--auto {
+      margin-bottom: auto;
+    }
+    .ml#{$infix}--auto,
+    .mx#{$infix}--auto {
+      margin-left: auto;
+    }
+  }
+}

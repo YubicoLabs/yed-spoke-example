@@ -653,4 +653,4 @@ To test the workflow first we must impersonate a user with an address and order 
 
 ## Help & Support
 ---
-
+Yubico Professional Services provides consultation and workshops focused on technical integration, deployment strategy or both. Contact your Yubico customer success represenatative to learn more.

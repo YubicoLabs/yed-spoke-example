@@ -18,14 +18,15 @@ Example ServiceNow IntegrationHub spoke to interact with Yubico Enterprise Deliv
 * [Call the flow from a workflow](#call-the-flow-from-a-workflow)
 * [Test the workflow](#test-the-workflow)
 
----
 ## Overview
 ---
 [Yubico Enterprise Delivery](https://www.yubico.com/products/yubienterprise/) (YED) is a global service that helps organizations deliver YubiKeys to remote and in-office users.  Organizations can automate delivery by integrating the YED REST API into their IT and service catalog flows.
 
-[ServiceNow IntegrationHub](https://www.servicenow.com/products/integration-hub.html) is a centralized place to build and manage integrations which is made up of a series of "Spokes". [Spokes](https://developer.servicenow.com/dev.do#!/learn/courses/quebec/app_store_learnv2_flowdesigner_quebec_flow_designer/app_store_learnv2_flowdesigner_quebec_developing_for_flow_designer/app_store_learnv2_flowdesigner_quebec_working_with_spokes) are self-contained scoped applications that contain all fo the artifacts that make up an integration, primarily "Actions".
+[ServiceNow IntegrationHub](https://www.servicenow.com/products/integration-hub.html) is a centralized place to build and manage integrations which is made up of a series of "Spokes". [Spokes](https://developer.servicenow.com/dev.do#!/learn/courses/quebec/app_store_learnv2_flowdesigner_quebec_flow_designer/app_store_learnv2_flowdesigner_quebec_developing_for_flow_designer/app_store_learnv2_flowdesigner_quebec_working_with_spokes) are self-contained scoped applications that contain all of the artifacts that make up an integration, primarily "Actions".
 
 In this example we will walk through the process of creating a YED API Spoke and focus on adding a YubiKey to the service catalog and sending a shipment request to YED when the user checks out of their cart.
+
+**Note** - This example is a proof of concept to demonstrate the ability to integrate the YED API into ServiceNow, and is not meant to run as-is in production.
 
 ## Prerequisites
 ---
@@ -37,14 +38,14 @@ In this example we will walk through the process of creating a YED API Spoke and
 ---
 The first step when building a new Spoke is to create a Scoped Application. The following instructions describe how to setup the YED API Spoke your personal ServiceNow developer instance. 
 
-1. Navigate to **System Applications > Studio**
+1. Navigate to **System Applications > Studio**  
   ![](/images/1-studio.png)
 2. Click the **Create Application** button
 3. Click the **Let's get started** button
   ![](/images/2-get-started.png)
 4. Fill out the "Create Application" form with the following values
 
-  **Name:** Yubico Enterprise Delivery API Spoke 
+  - **Name:** Yubico Enterprise Delivery API Spoke 
   ![](/images/3-create-app.png)
 
 5. Click the **Create** button
@@ -239,6 +240,8 @@ Similar to Script Input Variables, Script Output Variables allow you to pass dat
 ---
 The REST step is exclusive to IntegrationHub, and is only available after activating the IntegrationHub Installer plugin.
 
+The IntegrationHub Installer Plugin can be installed following [these steps](https://developer.servicenow.com/dev.do#!/learn/learning-plans/quebec/servicenow_application_developer/app_store_learnv2_rest_quebec_activating_integrationhub)
+
 ### Add the shipment request REST step to the Action
 1. Click the + button underneath the Script step you added earlier
   ![](/images/25-add-new-step.png)
@@ -255,7 +258,7 @@ Whenever possible, you should use a Connection Alias when designing your step. T
 * Quick prototyping/testing
 * When connection info is dynamic and will be passed into the action as an input or otherwise dynamically determined.
 
-In this example, we will start with an inline connection. You can convert the action to use a Connection Alias at a later time.
+**In this example**, we will start with an **inline connection**. You can convert the action to use a Connection Alias at a later time.
 
 1. Change the **Connection** choice to "Define Connection Inline"
 2. Set the **Base URL** to `https://api.console.yubico.com/v1/`
@@ -499,13 +502,13 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 
 ### Create the workflow
 
-1. Open the **Workflow Editor**
+1. Open the **Workflow Editor**  
 ![](/images/71-workflow.png)
 2. Search for the workflow named **Service Catalog Item Request**
 ![](/images/72-search.png)
 2. Click **Service Catalog Item Request** to open the workflow
 ![](/images/73-service-catalog-item-request.png)
-3. Click **Workflow Actions** > **Copy**
+3. Click **Workflow Actions** > **Copy**  
 ![](/images/74-copy.png)
 4. Set the **Workflow Name** to "Service Catalog YubiKey Request"
 5. Delete the following nodes:
@@ -557,7 +560,7 @@ function shipYubiKey() {
 
 10. In a new window, navigate to the **Flow Designer**, open the "Yubico YED API Create a Shipment" Flow, click the **...**, then click **Create code snippet**. In the workflow script, replace `x_490107_yubico_0.yubico_yed_api_create_a_shipment` with your flow identifier
 ![](/images/95-snippet.png)
-11. Click **Submit**
+11. Click **Submit**  
 ![](/images/77-submit.png)
 12. Delete the arrow from the **Approval Action**
 13. Drag the **Approval Action Always Condition box** to **Run Script**
@@ -609,7 +612,7 @@ function shipYubiKey() {
 30. Drag the **Run Script Failure Condition Box** to **Notification - Inform of shipment request failure**
 31. Drag the **Notification - Inform of shipment request failure Always Condition Box** to **End**
 ![](/images/86-yed-workflow.png)
-32. Publish the workflow
+32. Publish the workflow  
 ![](/images/96-publish.png)
 
 ### Set the YubiKey process engine to the workflow
@@ -639,7 +642,7 @@ To test the workflow first we must impersonate a user with an address and order 
 9. Select the **Request Item** e.g. REQ0010002
 10. Under the **Approvers** tab, check the box and **Approve** the request.
 ![](/images/93-approve.png)
-11. Click **Workflow Context**
+11. Click **Workflow Context**  
 ![](/images/94-context.png)
 12. Go to **Workflow Transition History** and view the workflow execution
 
@@ -653,4 +656,3 @@ To test the workflow first we must impersonate a user with an address and order 
 
 ## Help & Support
 ---
-

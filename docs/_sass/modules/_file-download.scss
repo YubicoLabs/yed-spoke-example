@@ -1,0 +1,29 @@
+.file-download {
+  display: flex;
+  color: $blue-8;
+  align-items: center;
+  padding: $spacer-2 0;
+
+  + .file-download {
+    border-top: 1px solid $gray-3;
+  }
+  
+  &__icon-before {
+    margin-right: $spacer-2;
+    display: flex;
+  }
+
+  &__icon-after {
+    margin-left: auto;
+    display: flex;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}
+

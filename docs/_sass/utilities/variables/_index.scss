@@ -1,0 +1,226 @@
+// TEMP settings - TODO decide on naming conventions when we
+// have all colors from creative
+
+$gray-0: #f9f9f9;
+$gray-1: #edeeeb;
+$gray-2: #e0e1dd;
+$gray-3: #d2d4cd;
+$gray-4: #C7C7C7;
+$gray-5: #b1b4a9;
+$gray-6: #9da293;
+$gray-7: #868b79;
+$gray-8: #686f59;
+$gray-9: #3d4133;
+$gray-10: #c4c4c4;
+$green-1: #dcf4d6;
+$green-7: #209f00;
+$green-8: #197d00;
+$blue-8: #0073a5;
+$cyan-7: #009b7c;
+$lime-4: #aad24f;
+$lime-5: #8fc317;
+
+$blue-0: #F5FAFC;
+
+$color-primary: #84bd00;
+$text-color-primary: #3d4133;
+$text-color-link: $blue-8;
+$btn-bg-color-primary: $color-primary;
+$btn-bg-color-primary-hover: #aad24f;
+$btn-bg-color-secondary: $blue-8;
+$btn-bg-color-secondary-hover: #75bcdb;
+
+// Hero Background Colors
+// TODO: change hex code below
+$hero-blue-1: #3c72b1;
+$hero-blue-2: #4a7694;
+$hero-blue-3: #0073a5;
+$hero-blue-4: #007f95;
+$hero-blue-5: #206978;
+$hero-blue-6: #005572;
+$hero-green-1: #5c8211;
+$hero-green-2: #9aca3c;
+$hero-gray-1: #ecf0f2;
+$hero-gray-2: #c4c4c4;
+
+// TODO break up into separate files when necessary
+// Variables
+//
+
+//Private vars - shouldn't be used outside of this file
+$-vertical-rhythm-base: 1rem;
+
+// Color system - TODO we will wait on defining color vars
+// until we find out which will be the most common colors -
+// curently there are 130 in the pallete
+
+/*
+
+$white:    #fff;
+$gray-0:   #f8f9fa;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$grays: (
+  (
+    '100': $gray-100,
+    '200': $gray-200,
+    '300': $gray-300,
+    '400': $gray-400,
+    '500': $gray-500,
+    '600': $gray-600,
+    '700': $gray-700,
+    '800': $gray-800,
+    '900': $gray-900
+  )
+);
+
+$blue:    #007bff;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #28a745;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+
+
+$colors: (
+  (
+    'blue':       $blue,
+    'indigo':     $indigo,
+    'purple':     $purple,
+    'pink':       $pink,
+    'red':        $red,
+    'orange':     $orange,
+    'yellow':     $yellow,
+    'green':      $green,
+    'teal':       $teal,
+    'cyan':       $cyan,
+    'white':      $white,
+    'gray':       $gray-600,
+    'gray-dark':  $gray-800
+  )
+);
+
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
+
+*/
+
+//  Breakpoints
+
+$grid-breakpoints: (
+  min: 0,
+  xs: 600px,
+  // "Phone"
+  sm: 768px,
+  // "Tablet"
+  md: 1024px,
+  // "Laptop"
+  lg: 1440px,
+  // "Laptop L"
+  xl: 1920px,
+  // "Laptop XL"
+);
+
+// Containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+// TODO update these when we receive the sizes
+
+$container-max-widths: (
+  sm: 614px,
+  md: 866px,
+  lg: 1102px,
+);
+
+// Spacers
+//
+// Mostly used for padding and margin. You can add more
+// entries to the $spacers map, should you need more variation.
+
+$-spacer: $-vertical-rhythm-base / 2;
+
+$spacer-1: $-spacer;
+$spacer-2: $-spacer * 2;
+$spacer-3: $-spacer * 3;
+$spacer-4: $-spacer * 4;
+$spacer-5: $-spacer * 5;
+$spacer-6: $-spacer * 6;
+$spacer-7: $-spacer * 7;
+$spacer-8: $-spacer * 8;
+$spacer-9: $-spacer * 9;
+$spacer-10: $-spacer * 10;
+$spacer-11: $-spacer * 11;
+$spacer-12: $-spacer * 12;
+
+// Spacers map for looping over
+
+$spacers: (
+  (
+    0: 0,
+    1: $spacer-1,
+    2: $spacer-2,
+    3: $spacer-3,
+    4: $spacer-4,
+    5: $spacer-5,
+    6: $spacer-6,
+    7: $spacer-7,
+    8: $spacer-8,
+    9: $spacer-9,
+    10: $spacer-10,
+    11: $spacer-11,
+    12: $spacer-12,
+  )
+);
+
+// Aspect ratios for media
+
+$embed-responsive-aspect-ratios: ((21 9), (16 9), (4 3), (1 1));
+
+// Typography
+
+$-font-size-base: $-vertical-rhythm-base;
+$font-size-xs: $-font-size-base * 0.75;
+$font-size-sm: $-font-size-base * 0.875;
+$font-size-md: $-font-size-base;
+$font-size-lg: $-font-size-base * 1.125;
+$font-size-xl: $-font-size-base * 1.25;
+$-line-height-base: 1.5; // unitless
+$line-height-md: $-line-height-base;
+$font-stack-primary: 'Noto Sans JP', sans-serif;
+$font-stack-secondary: 'Helvetica Neue', sans-serif;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Z index
+
+$z-index-1: 10;
+$z-index-2: 20;
+$z-index-3: 30;
+$z-index-4: 40;
+$z-index-5: 50;
+
+// Pesticide degubbing - set to true to add
+// borders to all elements, each a diferent color
+
+$pesticide-debug-outline: false;
+$pesticide-debug-depth: false;

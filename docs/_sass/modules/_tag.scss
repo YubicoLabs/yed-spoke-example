@@ -1,0 +1,28 @@
+.tag {
+  font-size: $font-size-xs;
+  font-family: $font-stack-primary;
+  color: $gray-8;
+  border: 1px solid $gray-2;
+  background-color: white;
+  display: inline-block;
+  margin: ($spacer-1 / 2) $spacer-1 ($spacer-1 / 2) 0;
+  padding: ($spacer-1 / 2) $spacer-1;
+  border-radius: 5rem;
+  min-width: $spacer-5;
+  white-space: nowrap;
+
+  > * {
+    margin: 0;
+    line-height: 1;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  img {
+    max-height: $spacer-3;
+    width: auto;
+    display: block;
+  }
+}

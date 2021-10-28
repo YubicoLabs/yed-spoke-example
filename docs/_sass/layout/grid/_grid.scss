@@ -1,0 +1,108 @@
+@import 'variables';
+@import 'functions';
+
+@mixin default_grid_flow {
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(#{$maximum}, 1fr); // 12 Column Grid By Default
+}
+
+/* Class Generation
+------------------------- */
+@mixin grid_item_breakpoint_spans($name, $breakpoint, $spans, $grid_direction) {
+  // is-{col|row}-{breakpoint}-{number} --- Ex: .is-col-6-lg
+  $first_letters_of_direction: get_first_chars($grid_direction, 3);
+  .is-#{$first_letters_of_direction}-#{$spans} {
+    grid-#{$grid_direction}: span #{$spans};
+  }
+  
+  @media screen and (min-width: $breakpoint) {
+    .is-#{$first_letters_of_direction}-#{$spans}-#{$name} {
+      grid-#{$grid_direction}: span #{$spans} !important;
+    }
+  }
+}
+
+@mixin grid_item_spans($grid_direction) {
+  @for $b from 1 through length($breakpoints) {
+    @for $i from 1 through 12 {
+      @include grid_item_breakpoint_spans(#{nth($breakpoints, $b)}, #{nth($breakpoint_values, $b)}, $i, $grid_direction);
+    }
+  }
+}
+
+@mixin grid_has($grid_direction) {
+  // Generate Grid Grid Template Classes --- Ex: .has-col-6 or .has-col-4-md
+  $first_letters_of_direction: get_first_chars($grid_direction, 3);
+  
+  @for $i from 1 through $maximum {
+    .has-#{$first_letters_of_direction}-#{$i} {
+      grid-template-#{$grid_direction}: repeat($i, 1fr);
+      & > * { // Items without a .is-col class are 12 by default
+        grid-column: span #{$i};
+        @media screen and (min-width: $lg) { grid-column: span 1; }
+      }
+    }
+    
+    @for $b from 1 through length($breakpoints) {
+      .has-#{$first_letters_of_direction}-#{$i}-#{nth($breakpoints, $b)} {
+        & > * { // Items without a .is-col class are 12 by default
+          grid-column: span #{$i};
+          @media screen and (min-width: $lg) { grid-column: span 1; }
+        }
+        
+        @media screen and (min-width: #{nth($breakpoint_values, $b)}) {
+          grid-template-#{$grid_direction}: repeat($i, 1fr) !important;
+        }
+      }
+    }
+  }
+}
+
+/* Grid
+------------------------ */
+.is-grid,
+.is-grid-inline {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(#{$maximum}, 1fr); // 12 Column Grid By Default
+  direction: ltr;
+  grid-column-gap: variable('col-gap');
+  grid-row-gap: variable('row-gap');
+  
+  & > * { // Items without a .is-col class are 12 by default
+    grid-column: span #{$maximum};
+    @media screen and (min-width: $lg) { grid-column: span 1; }
+  }
+  
+  &.is-dense {
+    grid-auto-flow: dense;
+    @include default_grid_flow;
+  }
+  &.has-wrapped-row {
+    grid-auto-flow: row;
+    @include default_grid_flow;
+    
+    &.is-dense {
+      grid-auto-flow: row dense;
+      @include default_grid_flow;
+    }
+  }
+  &.has-wrapped-col {
+    grid-auto-flow: column;
+    
+    &.is-dense {
+      grid-auto-flow: column dense;
+      @include default_grid_flow;
+    }
+  }
+}
+
+.is-grid-inline {
+  display: inline-grid !important;
+}
+
+@include grid_has("rows");
+@include grid_has("columns");
+@include grid_item_spans("row");
+@include grid_item_spans("column");

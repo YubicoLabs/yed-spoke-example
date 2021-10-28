@@ -1,0 +1,29 @@
+.social-links {
+  .social-bubble {
+    @include media-breakpoint-only(sm) {
+      margin-left: $spacer-1;
+      margin-right: $spacer-1;
+    }
+
+    circle {
+      stroke: $gray-3;
+      fill: white;
+      transition: 0.2s ease;
+    }
+    path {
+      fill: $gray-8;
+      transition: 0.2s ease;
+      &.white-fill {
+        fill: white !important;
+      }
+    }
+    &:hover {
+      circle {
+        stroke: $color-primary;
+      }
+      path {
+        fill: $color-primary;
+      }
+    }
+  }
+}

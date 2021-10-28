@@ -1,0 +1,15 @@
+.breadcrumbs {
+  color: $gray-8;
+  font-size: $font-size-sm;
+  margin-top: $spacer-2;
+  margin-bottom: $spacer-2;
+  
+  &__separator {
+    padding: 0 4px;
+  }
+
+  &__item {
+    color: inherit;
+    text-decoration: underline;
+  }
+}

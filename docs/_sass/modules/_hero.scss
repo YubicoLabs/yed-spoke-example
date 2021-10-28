@@ -1,0 +1,283 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  background-color: $blue-8;
+  position: relative;
+  justify-content: center;
+
+  &__copy {
+    padding: $spacer-5 $spacer-2;
+    position: relative;
+    z-index: $z-index-1;
+    color: white;
+    min-height: 280px;
+    @include media-breakpoint-up(sm) {
+      max-width: calc(100% / 1.5 - 0.5rem); // 8/12 columns (minus 1/2 gutter)
+      min-height: 320px;
+      display: flex;
+      flex-direction: column;
+    }
+    @include media-breakpoint-up(lg) {
+      min-height: 350px;
+    }
+  }
+
+  &__overhead {
+    @extend .footnote;
+    text-transform: uppercase;
+    margin-right: $spacer-1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+      margin-right: $spacer-1;
+    }
+
+    + * {
+      margin-top: $spacer-2;
+    }
+  }
+
+  &__headline {
+    margin-bottom: 0;
+    font-weight: $font-weight-bold;
+    + * {
+      margin-top: $spacer-1;
+    }
+    + .btns {
+      margin-top: $spacer-3;
+    }
+  }
+
+  &__subheadline {
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 26px;
+    + * {
+      margin-top: $spacer-3;
+    }
+  }
+
+  &__undersubheadline {
+    margin-bottom: 0;
+    font-weight: normal;
+    + * {
+      margin-top: $spacer-3;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      filter: blur(4px);
+    }
+
+    @include media-breakpoint-up(md) {
+      img {
+        object-fit: unset;
+        right: 0;
+        max-width: none;
+        position: absolute;
+        width: auto;
+        filter: initial;
+      }
+      &--full-width {
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &__btn--alt {
+    @extend .btn--white;
+    @include media-breakpoint-down(xs) {
+      --btn-border-color: #{$blue-8};
+    }
+  }
+
+  .btn--link {
+    color: inherit;
+  }
+
+  &--bg-blue-1 {
+    background-color: $hero-blue-1;
+  }
+
+  &--bg-blue-2 {
+    background-color: $hero-blue-2;
+  }
+
+  &--bg-blue-3 {
+    background-color: $hero-blue-3;
+  }
+
+  &--bg-blue-4 {
+    background-color: $hero-blue-4;
+  }
+
+  &--bg-blue-5 {
+    background-color: $hero-blue-5;
+  }
+
+  &--bg-blue-6 {
+    background-color: $hero-blue-6;
+  }
+
+  &--bg-green-1 {
+    background-color: $hero-green-1;
+  }
+
+  &--bg-green-2 {
+    background-color: $hero-green-2;
+  }
+
+  &--bg-gray-1 {
+    background-color: $hero-gray-1;
+  }
+
+  &--bg-gray-2 {
+    background: rgba(196, 196, 196, 0.15);
+  }
+
+  &--home-page {
+    .hero__headline {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 36px;
+      color: #9ACA3C;
+    }
+    .hero__subheadline {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 40px;
+      color: #FFFFFF;
+    }
+    @include media-breakpoint-up(lg) {
+      .hero__headline {
+        font-size: 30px;
+        line-height: 40px;
+      }
+      .hero__subheadline {
+        font-size: 42px;
+        line-height: 55px;
+      }
+    } 
+  }
+  &--img-aware,
+  &--opaque-bg {
+    @include media-breakpoint-down(xs) {
+      flex-direction: column-reverse;
+    }
+
+    .hero__img {
+      img {
+        filter: unset;
+        object-fit: unset;
+        right: 0;
+        bottom: 0;
+        max-width: none;
+        position: absolute;
+        width: auto;
+      }
+      @include media-breakpoint-down(xs) {
+        position: static;
+        img {
+          height: auto;
+          position: static;
+          width: 100%;
+        }
+      }
+    }
+
+    .hero__copy {
+      min-height: unset;
+      color: #005572; // TODO replace with var once we get the color name
+      padding: $spacer-3 $spacer-2;
+      @include media-breakpoint-up(sm) {
+        max-width: 50%;
+        min-height: 300px;
+        color: white;
+        padding-top: $spacer-8;
+      }
+      @include media-breakpoint-up(md) {
+        min-height: 400px;
+        padding-top: $spacer-12;
+      }
+      @include media-breakpoint-up(lg) {
+        min-height: 500px;
+      }
+    }
+  }
+
+  &--opaque-bg {
+    .hero__img {
+      img {
+        object-fit: cover;
+        width: 100vw;
+      }
+    }
+    .hero__copy {
+      color: #005572; // TODO replace with var once we get the color name
+      @include media-breakpoint-up(sm) {
+        padding-top: 10rem;
+        max-width: 450px;
+        .hero__headline {
+          font-size: 2rem;
+          line-height: 2.5rem;
+        }
+        .hero__subheadline {
+          font-size: 1rem;
+          line-height: 1.25rem;
+        }
+      }
+      @include media-breakpoint-up(md) {
+        max-width: 500px;
+        .hero__headline {
+          font-size: 2.5rem;
+          line-height: 3rem;
+        }
+        .hero__subheadline {
+          font-size: 1.125rem;
+          line-height: 1.5rem;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        padding-top: 12rem;
+      }
+    }
+  }
+
+  &.is-style-center-image {
+    &.hero--img-aware {
+      right: -50% !important;
+      left: 50% !important;
+      .container {
+        visibility: hidden;
+        @include media-breakpoint-down(xs) {
+          height: 0;
+        }
+      }
+      img {
+        margin: 0 auto;
+        object-fit: cover;
+        width: 100%;
+        @include media-breakpoint-down(sm) {
+          height: 330px;
+        }
+      }
+    }
+  }
+}

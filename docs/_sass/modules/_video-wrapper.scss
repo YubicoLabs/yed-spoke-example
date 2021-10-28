@@ -1,0 +1,55 @@
+.video-block-wrapper {
+  display: flex;
+}
+
+.video-wrapper {
+  &--small {
+    height: 10.125rem;
+    width: 18rem;
+
+    @include media-breakpoint-up(sm){
+      height: 11.531875rem;
+      width: 20.5rem;
+    }
+
+    @include media-breakpoint-up(md){
+      height: 10.476875rem;
+      width: 18.625rem;
+    }
+
+    @include media-breakpoint-up(lg){
+      height: 14.83625rem;
+      width: 26.375rem;
+    }
+
+    @include media-breakpoint-up(xl){
+      height: 18.914375rem;
+      width: 33.625rem;
+    }
+  }
+
+  &--big {
+    height: 10.125rem;
+    width: 18rem;
+
+    @include media-breakpoint-up(sm){
+      height: 17.57875rem;
+      width: 31.25rem;
+    }
+
+    @include media-breakpoint-up(md){
+      height: 16.031875rem;
+      width: 28.5rem;
+    }
+
+    @include media-breakpoint-up(lg){
+      height: 22.64125rem;
+      width: 40.25rem;
+    }
+  
+    @include media-breakpoint-up(xl){
+      height: 28.82875rem;
+      width: 51.25rem;
+    }
+  }
+}

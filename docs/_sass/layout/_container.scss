@@ -1,0 +1,56 @@
+
+.container {
+  --container-margin: #{$spacer-2};
+  --container-margins: #{calc(var(--container-margin) * 2)};
+  margin-left: var(--container-margin);
+  margin-right: var(--container-margin);
+  align-self: center;
+  max-width: calc(100% - var(--container-margins));  // needed because flexbox doesnt include margins in 100% width
+  width: 100%;
+  flex-grow: 1;
+  
+  @include media-breakpoint-up(sm){
+   --container-margin: #{$spacer-6};
+  }
+  
+  @include media-breakpoint-up(md){
+    --container-margin: #{$spacer-8};
+    width: map-get($container-max-widths, 'md');
+  }
+  
+  @include media-breakpoint-up(lg){
+    margin-left: $spacer-8 * 2;
+    margin-right: $spacer-8 * 2;
+    width: map-get($container-max-widths, 'lg');
+  }
+
+  &--wide {
+    align-self: stretch;
+    width: auto;
+  }
+
+  &--full {
+    align-self: stretch;
+    width: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &--404 {
+    @include media-breakpoint-up(sm){
+      background-image: url("https://www.yubico.com/wp-content/uploads/2021/01/404_bg_img.svg");
+      background-position: center;
+      background-size: 111%;
+    }
+  }
+}
+
+// for breaking out of container to full width. can't be used on els
+// that have transforms or X axis rel positioning already
+.escape-container {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50vw);
+}

@@ -1,0 +1,27 @@
+
+.media-box {
+  position: relative;
+  overflow: hidden;
+
+  &--16x9 {
+    padding-top: 56.25%;
+  }
+
+  &--4x3 {
+    padding-top: 75%;
+  }
+
+  &--3x2 {
+    padding-top: 66.67%;
+  }
+
+  &__child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+}

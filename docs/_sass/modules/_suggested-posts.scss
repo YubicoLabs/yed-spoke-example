@@ -1,0 +1,114 @@
+.suggested-posts {
+  h4 {
+    font-weight: 500;
+    color: $gray-9;
+    line-height: 24px;
+    font-size: 1.25rem;
+    margin-bottom: $spacer-2;
+    @include media-breakpoint-up(sm) {
+      margin-bottom: $spacer-3;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 1.75rem;
+      line-height: 40px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 2.25rem;
+      line-height: 48px;
+    }
+  }
+
+  &-wrapper {
+    display: grid;
+    grid-gap: $spacer-2;
+    margin-bottom: $spacer-2;
+    grid-template-columns: 1;
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include media-breakpoint-up(sm) {
+      grid-gap: $spacer-3;
+      margin-bottom: $spacer-3;
+    }
+  }
+
+  .card {
+    &:first-child {
+      @include media-breakpoint-up(sm) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+    }
+
+    a,
+    a:hover {
+      text-decoration: none;
+    }
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      // -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+
+    .tags {
+      margin-bottom: $spacer-1;
+      margin-top: $spacer-1;
+      .tag {
+        margin-bottom: 0px;
+      }
+    }
+
+    &__copy > *:last-child:not(:first-child) {
+      margin-top: 0;
+    }
+
+    &__footer {
+      justify-content: flex-end;
+    }
+
+    &--split {
+      p {
+        // -webkit-line-clamp: 2;
+        max-height: 96px;
+      }
+      .card__copy {
+        @include media-breakpoint-up(sm) {
+          width: 100%;
+        }
+      }
+
+      &-vert {
+        padding: 0;
+        width: 100%;
+        display: inline-flex;
+        .card {
+          h3 {
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            font-weight: 700;
+          }
+          p {
+            height: 64px;
+            font-weight: 400;
+            font-size: 0.875rem;
+            line-height: 1rem;
+          }
+          &__copy {
+            padding: 0 $spacer-3 $spacer-3;
+            min-height: 148px;
+          }
+          &__header {
+            margin-bottom: 0;
+          }
+          &__split-img {
+            height: 168px;
+            min-width: 0px !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+
+.btn {
+  --btn-text-color: white;
+  --btn-bg-color: #{$btn-bg-color-primary};
+  --btn-border-color: var(--btn-bg-color);
+  font: #{$font-size-lg}/1.333 $font-stack-secondary;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  padding: $spacer-1 $spacer-3;
+  border-radius: 5rem;
+  color: var(--btn-text-color);
+  background-color: var(--btn-bg-color);
+  border: 1px solid var(--btn-border-color);
+  display: inline-block;
+  transition: background-color 0.2s ease;
+  text-align: center;
+
+  &:hover {
+    --btn-bg-color: #{$btn-bg-color-primary-hover};
+  }
+
+  &--secondary {
+    --btn-bg-color:  #{$btn-bg-color-secondary};
+    &:hover {
+       --btn-bg-color: #{$btn-bg-color-secondary-hover};
+    }
+  }
+
+  &--white {
+    --btn-text-color: #{$blue-8};
+    --btn-bg-color:  white;
+    --btn-border-color: #{$btn-bg-color-secondary};
+    &:hover {
+      --btn-bg-color: var(--btn-border-color);
+      --btn-bg-color: #{$btn-bg-color-secondary};
+      --btn-text-color: white;
+    }
+  }
+
+  &--outline {
+    --btn-text-color: #{$btn-bg-color-secondary};
+    --btn-bg-color: transparent;
+    --btn-border-color: #{$btn-bg-color-secondary};
+    &:hover {
+      --btn-bg-color: var(--btn-border-color);
+      --btn-text-color: white;
+    }
+  }
+
+  &--hero {
+    --btn-text-color: white;
+    --btn-bg-color: rgba(255, 255, 255, 0.3);
+    --btn-border-color: rgba(255, 255, 255, 0.3);
+    border: rgba(255, 255, 255, 0.3);
+    &:hover {
+      --btn-bg-color: rgba(255, 255, 255, 0.6);
+      --btn-border-color: rgba(255, 255, 255, 0.6);
+      border: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &--flex-width {
+    width: auto;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--sm {
+    padding: $spacer-1 / 2 $spacer-2;
+    font-size: $font-size-md;
+    line-height: $line-height-md;
+  }
+
+  &--lg {
+    padding: $spacer-1 $spacer-4;
+    font-size: $font-size-xl;
+    line-height: 1.6;
+  }
+
+  &--link {
+    --btn-bg-color: transparent;
+    --btn-text-color: #{$text-color-link};
+    padding-left: 0;
+    padding-right: 0;
+    &:hover {
+      --btn-bg-color: transparent;
+      --btn-text-color: #{$text-color-link};
+    }
+  }
+  
+  // not compatible with other btn sizes - for svgs/icons only
+  &--circle {
+    border-radius: 100%;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &--circle-sm {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  .btn {
+    margin-right: $spacer-3;
+  }
+}
+
+
+.btn--white.btn--outline {
+  background-color: white;
+  &:hover {
+    background-color: $btn-bg-color-secondary;
+  }
+}

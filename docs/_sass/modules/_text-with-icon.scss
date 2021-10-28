@@ -1,0 +1,10 @@
+.text-with-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__image {
+    max-height: 1em;
+    padding-right: 1em;
+  }  
+}

@@ -1,0 +1,27 @@
+
+// Utilities for common `flex` options values
+// Ex. .justify-content-m--center
+
+$justify-content: flex-start, center, flex-end, space-around, space-between;
+$align-items: flex-start, center, flex-end, stretch, baseline;
+$flex-direction: row, column, row-reverse, column-reverse;
+$flex-wrap: wrap, nowrap;
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $value in $justify-content {
+      .justify-content#{$infix}--#{$value} { justify-content: $value; }
+    }
+    @each $value in $align-items {
+      .align-items#{$infix}--#{$value} { align-items: $value; }
+    }
+    @each $value in $flex-direction {
+      .flex-direction#{$infix}--#{$value} { flex-direction: $value; }
+    }
+    @each $value in $flex-wrap {
+      .flex-wrap#{$infix}--#{$value} { flex-wrap: $value; }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+// Helpers that don't fit in anywhere else. Add sparingly
+
+// Hide visually, but make it readable for screenreaders
+.screen-reader-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.round { border-radius: 100%; }
+
+// can use directly on image, or on wrapping el
+.rounded-corners {
+  border-radius: $spacer-1;
+  > img:only-child {
+    border-radius: $spacer-1;
+  }
+}
+
+// can use directly on image, or on wrapping el
+.img--cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.text--white { color: white; }
+.text--gray { color: $gray-8; }
+.text--highlighted { background: $green-1; }
+.text--uppercase { text-transform: uppercase; }
+
+.font-weight--light { font-weight: $font-weight-light; }
+.font-weight--normal { font-weight: $font-weight-normal; }
+.font-weight--bold { font-weight: $font-weight-bold; }
+
+.font--xs { font-size: $font-size-xs; }
+.font--sm { font-size: $font-size-sm; }
+.font--md { font-size: $font-size-md; }
+.font--lg { font-size: $font-size-lg; }
+.font--xl { font-size: $font-size-xl; }

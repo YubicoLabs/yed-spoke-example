@@ -1,0 +1,39 @@
+.site-wrapper {
+  align-self: stretch;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 100%;
+}
+
+.sidebar {
+  box-shadow: 0px 9px 74px rgba(0, 0, 0, 0.07), 
+              0px 3.75998px 30.9154px rgba(0, 0, 0, 0.0503198), 
+              0px 2.01027px 16.5289px rgba(0, 0, 0, 0.0417275), 
+              0px 1.12694px 9.26595px rgba(0, 0, 0, 0.035), 
+              0px 0.598509px 4.92108px rgba(0, 0, 0, 0.0282725), 
+              0px 0.249053px 2.04777px rgba(0, 0, 0, 0.0196802); // copied from Figma, may need revision
+  border-radius: $spacer-1;
+  padding: $spacer-4;
+  position: sticky;
+  background-color: white;
+  z-index: 1000;
+  top: calc(var(--headerHeight) + #{$spacer-3});
+  z-index: $z-index-2;
+  background: white;
+
+  .btn {
+    width: 100%;
+  }
+}
+
+.ui-bar { 
+  @extend .sidebar;
+  &--static {
+    position: initial;
+    top: initial;  
+  }
+}

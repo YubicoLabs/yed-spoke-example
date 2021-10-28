@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  gap: $spacer-1;
+  &__item {
+    color: inherit;
+    padding: $spacer-1;
+  }
+  &--pill {
+    .nav__item {
+      border-radius: $spacer-1;
+      border: 1px solid transparent;
+      &:hover {
+        background-color: $lime-4;
+      }
+      &:active {
+        background-color: $lime-5;
+      }
+    }
+
+    .nav__item-on {
+      border-radius: $spacer-1;
+      border: 2px solid $lime-4;
+    }
+  }
+}

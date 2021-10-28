@@ -1,0 +1,172 @@
+// Blog, press release, and other posts
+
+.before-post {
+  justify-content: space-between;
+}
+.before-post,
+.after-post {
+  display: flex; 
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.post__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 56px;
+    color: #3D4133;
+}
+
+.meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    margin-right: $spacer-2;
+  }
+
+  &__body {
+    color: $gray-8;
+     a {
+       color: inherit;
+     }
+  }
+
+  &__author {
+    display: block;
+    > * {
+      margin-bottom: 0;
+    }
+  }
+
+  &__reading-time:before {
+    .single-post & {
+      content: "\2022";
+      padding-right: $spacer-1 / 2;
+    }
+  }
+}
+
+.post,
+.blog {
+
+  &__featured-img {
+    width: 100%;
+    margin-bottom: $spacer-2;
+  }
+}
+
+.related-posts {
+  display: grid;
+  grid-gap: $spacer-2;
+  @include media-breakpoint-up(sm){
+    grid-gap: $spacer-3;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  > .post-summary {
+    &:first-child {
+      @include media-breakpoint-up(sm){
+        grid-area: 1 / 1 / 2 / 4;
+        display: flex;
+
+        > * {
+          flex: 1 1 50%;
+        }
+
+        .post-summary__body {
+          padding-top: 0;
+          padding-left: $spacer-2; 
+        }
+      }
+    }
+  }
+}
+
+.post-summary {
+  flex: 1 1 0;
+
+  &__body {
+    padding-top: $spacer-2;
+  }
+
+  &__date {
+    color: $gray-8;
+  }
+
+  &__content {
+    color: $gray-9;
+    font-size: $font-size-lg;
+  }
+}
+
+// Social
+
+.share-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.linkedin-circle .linkedin-hover {
+  display:none;
+  z-index: 99;
+}
+
+.linkedin-circle:hover .linkedin-hover{
+  display: inline;
+}
+
+.linkedin-circle:hover .linkedin-regular {
+  display:none;
+}
+
+.twitter-circle .twitter-hover {
+  display:none;
+  z-index: 99;
+}
+
+.twitter-circle:hover .twitter-hover{
+  display: inline;
+}
+
+.twitter-circle:hover .twitter-regular {
+  display:none;
+}
+
+.email-circle .email-hover {
+  display:none;
+  z-index: 99;
+}
+
+.email-circle:hover .email-hover{
+  display: inline;
+}
+
+.email-circle:hover .email-regular {
+  display:none;
+}
+
+.fb-circle .fb-hover {
+  display:none;
+  z-index: 99;
+}
+
+.fb-circle:hover .fb-hover{
+  display: inline;
+}
+
+.fb-circle:hover .fb-regular {
+  display:none;
+}
+
+.logo-circle {
+  margin: $spacer-1;
+}

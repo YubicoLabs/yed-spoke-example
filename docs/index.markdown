@@ -13,3 +13,7 @@ layout: docs
 In this example we will walk through the process of creating a YED API Spoke and focus on adding a YubiKey to the service catalog and sending a shipment request to YED when the user checks out of their cart.
 
 **Note** - This example is a proof of concept to demonstrate the ability to integrate the YED API into ServiceNow, and is not meant to run as-is in production.
+
+<div class="btns">
+  <a class="btn" href="/learn/prerequisites">Get Started</a>
+</div>

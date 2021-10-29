@@ -2,7 +2,7 @@
 Example ServiceNow IntegrationHub spoke to interact with Yubico Enterprise Delivery API
 
 ### Tutorial
-A full walk through of this tutorial can be found at [this location](https://literate-chainsaw-5b39e494.pages.github.io/)
+A full walk through of this tutorial can be found at [this location](https://yubicolabs.github.io/yed-spoke-example/)
 
 # Table of Contents
 * [Overview](#overview)

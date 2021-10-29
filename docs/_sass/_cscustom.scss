@@ -41,6 +41,10 @@ img {
     display: block;
 }
 
+div.nav-toc {
+    padding-left: 1em;
+}
+
 ul.table-of-contents {
     border-left: 3px solid $blue-8;
 }
@@ -49,9 +53,8 @@ ul.table-of-contents li {
     margin-bottom: .5rem;
 }
 
-.highlight {
-    padding: 1em .5em 0em .5em;
-    background-color: #f0f0f0;
+.nav-active {
+    color: $color-primary
 }
 
 .btns {
@@ -59,6 +62,11 @@ ul.table-of-contents li {
 }
 .btns a {
     margin: 1em;
+}
+
+.highlight {
+    padding: 1em .5em 0em .5em;
+    background-color: #f0f0f0;
 }
 
 .highlight .hll { background-color: #ffc; }

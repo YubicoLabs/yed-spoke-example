@@ -5,17 +5,17 @@
     <title>YED Spoke Example</title>
     <link rel="stylesheet" href="/assets/css/bulma.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/assets/js/cscustom.js"></script>
   </head>
   <body>
     {% include heading.html %}
     <div class="columns">
-        <div class="column is-2">
+        <div class="column is-3">
             {% include navigation.html %}
         </div>
-        <div class="column is-10">
-            <div class="container">
+        <div class="column is-8">
                 {{ content }}
-            </div>
         </div>
     </div>
   </body>

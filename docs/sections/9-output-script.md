@@ -48,6 +48,6 @@ Right now, the Action has sent the shipment request to the REST endpoint and rec
 6. **Save** the Script step
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/rest-step">Previous</a>
-  <a class="btn" href="/learn/action-outputs">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/rest-step">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/action-outputs">Next</a>
 </div>

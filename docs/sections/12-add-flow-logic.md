@@ -41,6 +41,6 @@ Let's handle shipment failures by sending an email to the administrator.
 Challenge: If the shipment fails, return the Shipment State Message and Shipment Messages to the user to fix any errors.
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/create-shipment-request-flow">Previous</a>
-  <a class="btn" href="/learn/test-flow">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/create-shipment-request-flow">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/test-flow">Next</a>
 </div>

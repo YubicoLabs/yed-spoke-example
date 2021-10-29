@@ -21,5 +21,5 @@ Additional information about this tutorial can be found in our **GitHub** reposi
 This tutorial has been brought to you by the Yubico Developer Program! For more guides and tutorials please visit [developers.yubico.com](https://developers.yubico.com/)
 
 <div class="btns">
-  <a class="btn" href="/learn/prerequisites">Get Started</a>
+  <a class="btn" href="/yed-spoke-example/learn/prerequisites">Get Started</a>
 </div>

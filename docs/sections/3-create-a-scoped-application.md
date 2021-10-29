@@ -23,6 +23,6 @@ The first step when building a new Spoke is to create a Scoped Application. The 
   ![](/assets/images/4-continue.png)
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/prerequisites">Previous</a>
-  <a class="btn" href="/learn/add-to-service-catalog">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/prerequisites">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/add-to-service-catalog">Next</a>
 </div>

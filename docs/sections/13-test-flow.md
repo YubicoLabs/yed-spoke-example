@@ -30,6 +30,6 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 7. Click the **YED Shipment Request** action. The Steps section will show the list of steps executed inside of the action, and the step configuration details
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/add-flow-logic">Previous</a>
-  <a class="btn" href="/learn/call-flow-from-workflow">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/add-flow-logic">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/call-flow-from-workflow">Next</a>
 </div>

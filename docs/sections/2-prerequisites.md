@@ -24,6 +24,6 @@ Once you have your Developer Instance, please ensure that IntegrationHub is acti
 A Yubico Enterprise Delivery account is needed for this tutorial as you will need an API key from your organizational instance. To get access to your Yubico Delivery Account please contact your organization's Yubico Enterprise Owner or contact your [Yubico sales person](https://pages.yubico.com/contact))
 
 <div class="btns">
-  <a class="btn--secondary" href="/">Previous</a>
-  <a class="btn" href="/learn/create-a-scoped-application">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/create-a-scoped-application">Next</a>
 </div>

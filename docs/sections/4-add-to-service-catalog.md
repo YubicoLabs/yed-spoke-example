@@ -44,6 +44,6 @@ Let's add a YubiKey 5 NFC to the service catalog.
   ![](/assets/images/18-service-catalog-yubikey.png)
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/create-a-scoped-application">Previous</a>
-  <a class="btn" href="/learn/create-action">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/create-a-scoped-application">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/create-action">Next</a>
 </div>

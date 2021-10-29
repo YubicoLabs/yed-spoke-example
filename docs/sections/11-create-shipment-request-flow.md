@@ -61,6 +61,6 @@ Now it's time to add the Action to the Flow.
 4. Click **Done**
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/action-outputs">Previous</a>
-  <a class="btn" href="/learn/add-flow-logic">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/action-outputs">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/add-flow-logic">Next</a>
 </div>

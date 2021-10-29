@@ -47,6 +47,6 @@ Action inputs should always have human-friendly names.
 3. **Save** the Action
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/create-action">Previous</a>
-  <a class="btn" href="/learn/input-script">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/create-action">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/input-script">Next</a>
 </div>

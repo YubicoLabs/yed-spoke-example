@@ -28,11 +28,11 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
   | Shipment State Message | shipment_state_message | String | off |
   | Shipment Messages | shipment_messages | String | off |
 
-  ![](/assets/images/33-create-action-output.png)
+  ![]({{site.baseurl}}/assets/images/33-create-action-output.png)
 
 5. Click the **Exit Edit Mode** button
 6. Using the Data Pill Picker, set the **Value** of the Script Output Variables to the associated output variables
-  ![](/assets/images/34-action-output.png)
+  ![]({{site.baseurl}}/assets/images/34-action-output.png)
 7. **Save** the Action
 
 ### Test the Action
@@ -51,14 +51,14 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
   | Inventory Product Id | 15 |
   | Shipment Product Quantity | 1 |
 
-  ![](/assets/images/35-test-input.png)
+  ![]({{site.baseurl}}/assets/images/35-test-input.png)
   
 3. Click **Run Test**
-  ![](/assets/images/35-test.png)
+  ![]({{site.baseurl}}/assets/images/35-test.png)
 4. Wait for the processing to complete and click **Your test has finished running. View the action execution details.**
-  ![](/assets/images/36-test-finished.png)
+  ![]({{site.baseurl}}/assets/images/36-test-finished.png)
 5. In the **Output Data** verify the **Shipment Message** is equal to "Awaiting Validation"
-  ![](/assets/images/36-test-validate.png)
+  ![]({{site.baseurl}}/assets/images/36-test-validate.png)
 
 ### Publish the Action
 If everything looks good, click the **Publish** button on the action to make it available for all flows.

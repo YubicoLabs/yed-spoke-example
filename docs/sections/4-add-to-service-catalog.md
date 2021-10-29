@@ -21,27 +21,27 @@ Let's add a YubiKey 5 NFC to the service catalog.
   * **Model categories:** Computer Peripheral, Hardware
   * **Model number:** 1 (Use the response from YED API GET /products to map the product_id of the "YubiKey 5 NFC" to the hardware model number)
 
-    ![](/assets/images/10-hardware-model-general.png)
+    ![]({{site.baseurl}}/assets/images/10-hardware-model-general.png)
 
   **Product catalog**
   * **Description:** The YubiKey 5 Series is a hardware based authentication solution that provides superior defense against phishing, eliminates account takeovers, and enables compliance requirements for strong authentication.
 
-    ![](/assets/images/11-hardware-model-product-catalog.png)
+    ![]({{site.baseurl}}/assets/images/11-hardware-model-product-catalog.png)
   
 4. Click **Submit**
 5. In Hardware Models, search for `YubiKey`, and click **YubiKey 5 NFC**
-  ![](/assets/images/12-hardware-models-search.png)
+  ![]({{site.baseurl}}/assets/images/12-hardware-models-search.png)
 6. Under **Related Links** click **Publish to Hardware Catalog**
-  ![](/assets/images/13-hardware-model-publish.png)
+  ![]({{site.baseurl}}/assets/images/13-hardware-model-publish.png)
 7. Select the **Peripherals** catalog and click **OK**
-  ![](/assets/images/14-hardware-model-publish-category.png)
+  ![]({{site.baseurl}}/assets/images/14-hardware-model-publish-category.png)
 8. Under the **Images** tab, upload an [official Yubico image](https://brandfolder.yubico.com/yubico/press-room-images-logos)
-  ![](/assets/images/15-hardware-model-image.png)
+  ![]({{site.baseurl}}/assets/images/15-hardware-model-image.png)
 9. Navigate to **Self-Service > Service Catalog > Peripherals**
-  ![](/assets/images/16-service-catalog.png)
-  ![](/assets/images/17-service-catalog-peripherals.png)
+  ![]({{site.baseurl}}/assets/images/16-service-catalog.png)
+  ![]({{site.baseurl}}/assets/images/17-service-catalog-peripherals.png)
 10. Confirm the **YubiKey 5 NFC** is present.
-  ![](/assets/images/18-service-catalog-yubikey.png)
+  ![]({{site.baseurl}}/assets/images/18-service-catalog-yubikey.png)
 
 <div class="btns">
   <a class="btn--secondary" href="/yed-spoke-example/learn/create-a-scoped-application">Previous</a>

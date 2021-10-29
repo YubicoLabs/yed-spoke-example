@@ -42,7 +42,7 @@ Action inputs should always have human-friendly names.
   | Inventory Product ID | Integer | on |
   | Shipment Product Quantity | Integer | on |
   
-  ![](/assets/images/22-1-create-input.png)
+  ![]({{site.baseurl}}/assets/images/22-1-create-input.png)
 
 3. **Save** the Action
 

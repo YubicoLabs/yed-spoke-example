@@ -9,15 +9,15 @@ permalink: /learn/output-script
 Right now, the Action has sent the shipment request to the REST endpoint and received the response body but doesn't know if the request was successful. In this step, you will parse the output of the REST step.
 
 1. Add a new Action Step after the REST step. 
-  ![](/assets/images/29-add-output-script.png)
+  ![]({{site.baseurl}}/assets/images/29-add-output-script.png)
 2. When prompted, choose the **Script** step
-  ![](/assets/images/30-script.png)
+  ![]({{site.baseurl}}/assets/images/30-script.png)
 
 ### Script Input Variables
 1. In the **Input Variables** widget, click the **+ Create Variable** button
 2. Set the **Name** to `responseBody`
 3. Drag the **Response Body** data pill from the data pane to the **Value** field. You can now reference the Response Body in your scripts as `inputs.responseBody`
-  ![](/assets/images/31-input-variables.png)
+  ![]({{site.baseurl}}/assets/images/31-input-variables.png)
 4. Set the script to
 
 ```javascript
@@ -43,7 +43,7 @@ Right now, the Action has sent the shipment request to the REST endpoint and rec
   | Shipment State Message | shipment_state_message | String | off |
   | Shipment Messages | shipment_messages | String | off |
 
-  ![](/assets/images/32-output-variables.png)
+  ![]({{site.baseurl}}/assets/images/32-output-variables.png)
 
 6. **Save** the Script step
 

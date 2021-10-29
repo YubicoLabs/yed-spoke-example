@@ -9,9 +9,9 @@ Let's add a YubiKey 5 NFC to the service catalog.
 
 ### Create product catalog hardware model
 1. Navigate to **Product Catalog > Hardware Models**
-  ![](/assets/images/8-hardware-models.png)
+  ![]({{site.baseurl}}/assets/images/8-hardware-models.png)
 2. Click **New**
-  ![](/assets/images/9-hardware-models-new.png)
+  ![]({{site.baseurl}}/assets/images/9-hardware-models-new.png)
 3. Fill out the hardware form with the following values
 
   **General tab**

@@ -84,6 +84,6 @@ Similar to Script Input Variables, Script Output Variables allow you to pass dat
 4. **Save** the Script step
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/define-action-inputs">Previous</a>
-  <a class="btn" href="/learn/rest-step">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/define-action-inputs">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/rest-step">Next</a>
 </div>

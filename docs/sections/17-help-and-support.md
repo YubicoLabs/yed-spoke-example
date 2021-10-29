@@ -12,5 +12,5 @@ Questions and corrections for this guide can be directed to our **GitHub** repos
 For more guides and tutorials by the Yubico Developer Program please visit [developers.yubico.com](https://developers.yubico.com/)
 
 <div class="btns">
-    <a class="btn--secondary" href="/references">References</a>
+    <a class="btn--secondary" href="/yed-spoke-example/references">References</a>
 </div>

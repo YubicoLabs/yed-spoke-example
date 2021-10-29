@@ -64,6 +64,6 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
 If everything looks good, click the **Publish** button on the action to make it available for all flows.
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/output-script">Previous</a>
-  <a class="btn" href="/learn/create-shipment-request-flow">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/output-script">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/create-shipment-request-flow">Next</a>
 </div>

@@ -25,6 +25,6 @@ To test the workflow first we must impersonate a user with an address and order 
 12. Go to **Workflow Transition History** and view the workflow execution
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/call-flow-from-workflow">Previous</a>
-    <a class="btn" href="/references">References</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/call-flow-from-workflow">Previous</a>
+    <a class="btn" href="/yed-spoke-example/references">References</a>
 </div>

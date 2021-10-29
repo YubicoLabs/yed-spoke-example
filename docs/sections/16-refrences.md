@@ -13,5 +13,5 @@ permalink: /references
 
 <div class="btns">
     <a class="btn--secondary" href="/learn/test-workflow">Previous</a>
-    <a class="btn" href="/help-and-support">Help and Support</a>
+    <a class="btn" href="/yed-spoke-example/help-and-support">Help and Support</a>
 </div>

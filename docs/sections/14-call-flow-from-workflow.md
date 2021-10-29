@@ -132,6 +132,6 @@ function shipYubiKey() {
 ![](/assets/images/88-set-workflow.png)
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/test-flow">Previous</a>
-  <a class="btn" href="/learn/test-workflow">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/test-flow">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/test-workflow">Next</a>
 </div>

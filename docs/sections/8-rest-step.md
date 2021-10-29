@@ -47,6 +47,6 @@ Whenever possible, you should use a Connection Alias when designing your step. T
 7. **Save** the Rest step
 
 <div class="btns">
-  <a class="btn--secondary" href="/learn/input-script">Previous</a>
-  <a class="btn" href="/learn/output-script">Next</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/input-script">Previous</a>
+  <a class="btn" href="/yed-spoke-example/learn/output-script">Next</a>
 </div>

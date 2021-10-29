@@ -1,22 +1,25 @@
 # yed-spoke-example
 Example ServiceNow IntegrationHub spoke to interact with Yubico Enterprise Delivery API
 
+### Tutorial
+A full walk through of this tutorial can be found at [this location](https://literate-chainsaw-5b39e494.pages.github.io/)
+
 # Table of Contents
 * [Overview](#overview)
 * [Prerequisites](#prerequisites)
 * [Create a Scoped Application](#create-a-scoped-application)
 * [Add a YubiKey to the Service Catalog](#add-a-yubikey-to-the-service-catalog)
-* [Create the action](#create-the-action)
-* [Define action inputs](#define-action-inputs)
-* [The input script step](#the-input-script-step)
-* [The REST step](#the-rest-step)
-* [The output script step](#the-output-script-step)
-* [Action outputs](#action-outputs)
-* [Create the shipment request flow](#create-the-shipment-request-flow)
+* [Create the Action](#create-the-action)
+* [Define Action Inputs](#define-action-inputs)
+* [The Input Script Step](#the-input-script-step)
+* [The REST Step](#the-rest-step)
+* [The Output Script Step](#the-output-script-step)
+* [Action Outputs](#action-outputs)
+* [Create the Shipment Request Flow](#create-the-shipment-request-flow)
 * [Add the Flow Logic to the Flow](#add-the-flow-logic-to-the-flow)
-* [Test the flow](#test-the-flow)
-* [Call the flow from a workflow](#call-the-flow-from-a-workflow)
-* [Test the workflow](#test-the-workflow)
+* [Test the Flow](#test-the-flow)
+* [Call the Flow From a Workflow](#call-the-flow-from-a-workflow)
+* [Test the Workflow](#test-the-workflow)
 
 ## Overview
 ---
@@ -30,7 +33,7 @@ In this example we will walk through the process of creating a YED API Spoke and
 
 ## Prerequisites
 ---
-* [Free Personal ServiceNow Developer Instance](https://developer.servicenow.com/dev.do#!/learn/learning-plans/orlando/technology_partner_program/app_store_learnv2_buildmyfirstapp_orlando_personal_developer_instances) (Requires signing up to the ServiceNow Developer Program)
+* [Free Personal ServiceNow Developer Instance](https://developer.servicenow.com/dev.do#!/learn/learning-plans/rome/new_to_servicenow/app_store_learnv2_buildmyfirstapp_rome_personal_developer_instances) (Requires signing up to the ServiceNow Developer Program)
   * [IntegrationHub active on the personal developer instance](https://developer.servicenow.com/dev.do#!/learn/learning-plans/quebec/servicenow_application_developer/app_store_learnv2_rest_quebec_activating_integrationhub)
 * A Yubico Enterprise Delivery account (See your organization's Yubico Enterprise Owner or contact your [Yubico sales person](https://pages.yubico.com/contact))
 
@@ -91,7 +94,7 @@ Let's add a YubiKey 5 NFC to the service catalog.
 10. Confirm the **YubiKey 5 NFC** is present.
   ![](/images/18-service-catalog-yubikey.png)
 
-## Create the action
+## Create the Action
 ---
 Now that you have a scoped app and a YubiKey in the catalog, it's time to create the shipment request action.  All of the actions in this example will be created in the Yubico Enterprise API Spoke.
 
@@ -116,7 +119,7 @@ This opens a new UI where you will manage and build Actions, Flows, and Subflows
 3. Click the **Submit** button and you will be taken to the new/empty Action
   ![](/images/21-action-ui.png)
 
-## Define action inputs
+## Define Action Inputs
 ---
 Action Inputs allow you (and users of the Flow Designer) to pass data into your actions. You can think of inputs as method parameters.
 
@@ -158,7 +161,7 @@ Action inputs should always have human-friendly names.
 
 3. **Save** the Action
 
-## The input script step
+## The Input Script Step
 ---
 At this point, the Action is getting the shipment address, product, and quantity. Now you will use a Script Step to process the input data and create a shipment exact request payload.
 
@@ -236,7 +239,7 @@ Similar to Script Input Variables, Script Output Variables allow you to pass dat
 3. You will now see a new data pill in the **Script step** section of the Data Pane
 4. **Save** the Script step
 
-## The REST step
+## The REST Step
 ---
 The REST step is exclusive to IntegrationHub, and is only available after activating the IntegrationHub Installer plugin.
 
@@ -278,7 +281,7 @@ Whenever possible, you should use a Connection Alias when designing your step. T
   ![](/images/28-request-content.png)
 7. **Save** the Rest step
 
-## The output script step
+## The Output Script Step
 ---
 Right now, the Action has sent the shipment request to the REST endpoint and received the response body but doesn't know if the request was successful. In this step, you will parse the output of the REST step.
 
@@ -321,7 +324,7 @@ Right now, the Action has sent the shipment request to the REST endpoint and rec
 
 6. **Save** the Script step
 
-## Action outputs
+## Action Outputs
 ---
 Use Action Outputs to return data from the action to Flow Designer. The Script Output variables we just defined are intentionally "private" to the action and are intended for use by scripts or other action steps (this, the camel case naming convention).
 
@@ -380,7 +383,7 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
 ### Publish the Action
 If everything looks good, click the **Publish** button on the action to make it available for all flows.
 
-## Create the shipment request flow
+## Create the Shipment Request Flow
 ---
 Now that you have the Action, lets put it into a Flow and test it.
 
@@ -471,7 +474,7 @@ Let's handle shipment failures by sending an email to the administrator.
 
 Challenge: If the shipment fails, return the Shipment State Message and Shipment Messages to the user to fix any errors.
 
-## Test the flow
+## Test the Flow
 ---
 To test the flow first we must impersonate a user with an address and order a Yubikey
 
@@ -497,7 +500,7 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 7. Click the **YED Shipment Request** action. The Steps section will show the list of steps executed inside of the action, and the step configuration details
 
 
-## Call the flow from a workflow
+## Call the Flow from a Workflow
 ---
 
 ### Create the workflow
@@ -625,7 +628,7 @@ function shipYubiKey() {
 ![](/images/88-set-workflow.png)
 
 
-## Test the workflow
+## Test the Workflow
 ---
 To test the workflow first we must impersonate a user with an address and order a Yubikey
 

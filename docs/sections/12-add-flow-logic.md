@@ -1,10 +1,11 @@
 ---
-layout: page
+layout: docs
 title: Add the Flow Logic to the Flow
 permalink: /learn/add-flow-logic
 ---
 
 ## Add the Flow Logic to the Flow
+---
 Let's handle shipment failures by sending an email to the administrator. 
 
 1. Click the **Select to add an Action, Flow Logic, or Subflow** link
@@ -38,3 +39,8 @@ Let's handle shipment failures by sending an email to the administrator.
 17. Click **Activate**
 
 Challenge: If the shipment fails, return the Shipment State Message and Shipment Messages to the user to fix any errors.
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/create-shipment-request-flow">Previous</a>
+  <a class="btn" href="/learn/test-flow">Next</a>
+</div>

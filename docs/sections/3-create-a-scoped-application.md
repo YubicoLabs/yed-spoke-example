@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 title: Create a Scoped Application
 permalink: /learn/create-a-scoped-application
 ---
@@ -21,3 +21,8 @@ The first step when building a new Spoke is to create a Scoped Application. The 
 5. Click the **Create** button
 6. In the subsequent dialog click the **Continue in Studio (Advanced)** link
   ![](/assets/images/4-continue.png)
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/prerequisites">Previous</a>
+  <a class="btn" href="/learn/add-to-service-catalog">Next</a>
+</div>

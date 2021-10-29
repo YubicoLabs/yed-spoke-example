@@ -1,10 +1,10 @@
 ---
-layout: page
-title: The output script step
+layout: docs
+title: The Output Script Step
 permalink: /learn/output-script
 ---
 
-## The output script step
+## The Output Script Step
 ---
 Right now, the Action has sent the shipment request to the REST endpoint and received the response body but doesn't know if the request was successful. In this step, you will parse the output of the REST step.
 
@@ -46,3 +46,8 @@ Right now, the Action has sent the shipment request to the REST endpoint and rec
   ![](/assets/images/32-output-variables.png)
 
 6. **Save** the Script step
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/rest-step">Previous</a>
+  <a class="btn" href="/learn/action-outputs">Next</a>
+</div>

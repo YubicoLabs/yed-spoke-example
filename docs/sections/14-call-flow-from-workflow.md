@@ -1,10 +1,10 @@
 ---
-layout: page
-title: Call the flow from a workflow
+layout: docs
+title: Call the Flow From a Workflow
 permalink: /learn/call-flow-from-workflow
 ---
 
-## Call the flow from a workflow
+## Call the Flow From a Workflow
 ---
 
 ### Create the workflow
@@ -130,3 +130,8 @@ function shipYubiKey() {
 3. Set the **Workflow** to "Service Catalog YubiKey Request"
 4. Click **Update**
 ![](/assets/images/88-set-workflow.png)
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/test-flow">Previous</a>
+  <a class="btn" href="/learn/test-workflow">Next</a>
+</div>

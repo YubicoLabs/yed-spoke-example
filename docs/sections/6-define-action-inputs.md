@@ -1,10 +1,10 @@
 ---
-layout: page
-title: Define action inputs
+layout: docs
+title: Define Action Inputs
 permalink: /learn/define-action-inputs
 ---
 
-## Define action inputs
+## Define Action Inputs
 ---
 Action Inputs allow you (and users of the Flow Designer) to pass data into your actions. You can think of inputs as method parameters.
 
@@ -45,3 +45,8 @@ Action inputs should always have human-friendly names.
   ![](/assets/images/22-1-create-input.png)
 
 3. **Save** the Action
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/create-action">Previous</a>
+  <a class="btn" href="/learn/input-script">Next</a>
+</div>

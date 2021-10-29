@@ -9,9 +9,9 @@ permalink: /learn/input-script
 At this point, the Action is getting the shipment address, product, and quantity. Now you will use a Script Step to process the input data and create a shipment exact request payload.
 
 1. Add a new Action Step. When prompted, choose the **Script** step
-  ![](/assets/images/23-add-new-step.png)
+  ![]({{site.baseurl}}/assets/images/23-add-new-step.png)
 2. When prompted, choose the **Script** step
-  ![](/assets/images/24-script.png)
+  ![]({{site.baseurl}}/assets/images/24-script.png)
 
 ### Script input variables
 The script step gets its own set of input variables. This allows you to map data from the data pane into script-friendly variables.
@@ -21,7 +21,7 @@ The script step gets its own set of input variables. This allows you to map data
 3. Drag the **Delivery Type** data pill from the data pane to the **Value** field. You can now reference the Delivery Type in your script as `inputs.delivery_type`.
 4. Repeat steps 1-3 for each of the action input variables
 
-  ![](/assets/images/23-script-input.png)
+  ![]({{site.baseurl}}/assets/images/23-script-input.png)
 
 5. Set the script to the following. 
    Note: Ensure the input variable names match the script variables below otherwise the input values will not be mapped.
@@ -79,7 +79,7 @@ Similar to Script Input Variables, Script Output Variables allow you to pass dat
 
 1. In the **Output Variables** widget, click the **+ Create Variable** button
 2. Set the **Label** and **Name** to "Shipment Exact Request". Leave the **Type** as String
-  ![](/assets/images/24-script-output.png)
+  ![]({{site.baseurl}}/assets/images/24-script-output.png)
 3. You will now see a new data pill in the **Script step** section of the Data Pane
 4. **Save** the Script step
 

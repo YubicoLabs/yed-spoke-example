@@ -12,9 +12,9 @@ The IntegrationHub Installer Plugin can be installed following [these steps](htt
 
 ### Add the shipment request REST step to the Action
 1. Click the + button underneath the Script step you added earlier
-  ![](/assets/images/25-add-new-step.png)
+  ![]({{site.baseurl}}/assets/images/25-add-new-step.png)
 2. Click the REST step in the **Integrations** section of the dialog
-  ![](/assets/images/26-rest.png)
+  ![]({{site.baseurl}}/assets/images/26-rest.png)
 3. You will be presented with the REST step UI
 
 ### Define Connection Information
@@ -40,10 +40,10 @@ Whenever possible, you should use a Connection Alias when designing your step. T
   | Content-Type | application/json |
   | Authorization | Bearer *paste your YED API token here* |
 
-  ![](/assets/images/27-rest-connection-headers.png)
+  ![]({{site.baseurl}}/assets/images/27-rest-connection-headers.png)
  
 6. Drag the **Shipment Exact Request** data pill from the data pane to the **Request Content Request Body [Text]** field 
-  ![](/assets/images/28-request-content.png)
+  ![]({{site.baseurl}}/assets/images/28-request-content.png)
 7. **Save** the Rest step
 
 <div class="btns">

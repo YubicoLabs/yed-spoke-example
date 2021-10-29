@@ -9,28 +9,28 @@ permalink: /learn/create-shipment-request-flow
 Now that you have the Action, lets put it into a Flow and test it.
 
 1. Click the **+ New** button, and then click **Flow** in the resulting menu
-  ![](/assets/images/37-new-flow.png)
+  ![]({{site.baseurl}}/assets/images/37-new-flow.png)
 2. Name the Flow "Yubico YED API Create a Shipment"
 3. Set **Run As** to "System User"
-  ![](/assets/images/38-flow-properties.png)
+  ![]({{site.baseurl}}/assets/images/38-flow-properties.png)
 4. Click the **Submit** button
 
 ### Add a Trigger
 Flows run when a Trigger condition is met. For this example, we will run a flow on the Service Catalog.
 
 1. Click the **Select to add a trigger** button
-  ![](/assets/images/39-add-trigger.png)
+  ![]({{site.baseurl}}/assets/images/39-add-trigger.png)
 2. Under the **Application** section, click **Service Catalog**
-  ![](/assets/images/40-service-catalog-trigger.png)
+  ![]({{site.baseurl}}/assets/images/40-service-catalog-trigger.png)
 3. Click **Done**
-![](/assets/images/41-trigger-done.png)
+![]({{site.baseurl}}/assets/images/41-trigger-done.png)
 
 ### Add the Action to the Flow
 Now it's time to add the Action to the Flow.
 
 1. Click the **Select to add an Action, Flow Logic, or Subflow** link
 2. Click the **Action** button. Click the **Yubico Enterprise Delivery API** Spoke. Click the **YED Shipment Request** Action.
-![](/assets/images/42-add-action.png)
+![]({{site.baseurl}}/assets/images/42-add-action.png)
 3. The Action is now part of the Flow.
 
 ### Map service catalog fields to action input variables
@@ -56,7 +56,7 @@ Now it's time to add the Action to the Flow.
   | Inventory Product Id | 15 |
   | Shipment Product Quantity | Trigger > Requested Item Record > Quantity  |
   
-  ![](/assets/images/43-map-action-inputs.png)
+  ![]({{site.baseurl}}/assets/images/43-map-action-inputs.png)
   
 4. Click **Done**
 

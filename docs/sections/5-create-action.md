@@ -1,10 +1,10 @@
 ---
-layout: page
-title: Create the action
+layout: docs
+title: Create the Action
 permalink: /learn/create-action
 ---
 
-## Create the action
+## Create the Action
 ---
 Now that you have a scoped app and a YubiKey in the catalog, it's time to create the shipment request action.  All of the actions in this example will be created in the Yubico Enterprise API Spoke.
 
@@ -28,3 +28,8 @@ This opens a new UI where you will manage and build Actions, Flows, and Subflows
   ![](/assets/images/20-action-properties.png)
 3. Click the **Submit** button and you will be taken to the new/empty Action
   ![](/assets/images/21-action-ui.png)
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/add-to-service-catalog">Previous</a>
+  <a class="btn" href="/learn/define-action-inputs">Next</a>
+</div>

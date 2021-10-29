@@ -1,9 +1,10 @@
 ---
-layout: page
+layout: docs
 title: Add a YubiKey to the Service Catalog
 permalink: /learn/add-to-service-catalog
 ---
 ## Add a YubiKey to the Service Catalog
+---
 Let's add a YubiKey 5 NFC to the service catalog.
 
 ### Create product catalog hardware model
@@ -41,3 +42,8 @@ Let's add a YubiKey 5 NFC to the service catalog.
   ![](/assets/images/17-service-catalog-peripherals.png)
 10. Confirm the **YubiKey 5 NFC** is present.
   ![](/assets/images/18-service-catalog-yubikey.png)
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/create-a-scoped-application">Previous</a>
+  <a class="btn" href="/learn/create-action">Next</a>
+</div>

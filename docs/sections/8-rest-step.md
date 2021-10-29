@@ -1,10 +1,10 @@
 ---
-layout: page
-title: The REST step
+layout: docs
+title: The REST Step
 permalink: /learn/rest-step
 ---
 
-## The REST step
+## The REST Step
 ---
 The REST step is exclusive to IntegrationHub, and is only available after activating the IntegrationHub Installer plugin.
 
@@ -45,3 +45,8 @@ Whenever possible, you should use a Connection Alias when designing your step. T
 6. Drag the **Shipment Exact Request** data pill from the data pane to the **Request Content Request Body [Text]** field 
   ![](/assets/images/28-request-content.png)
 7. **Save** the Rest step
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/input-script">Previous</a>
+  <a class="btn" href="/learn/output-script">Next</a>
+</div>

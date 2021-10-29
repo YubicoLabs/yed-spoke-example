@@ -1,10 +1,10 @@
 ---
-layout: page
-title: Action outputs
+layout: docs
+title: Action Outputs
 permalink: /learn/action-outputs
 ---
 
-## Action outputs
+## Action Outputs
 ---
 Use Action Outputs to return data from the action to Flow Designer. The Script Output variables we just defined are intentionally "private" to the action and are intended for use by scripts or other action steps (this, the camel case naming convention).
 
@@ -62,3 +62,8 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
 
 ### Publish the Action
 If everything looks good, click the **Publish** button on the action to make it available for all flows.
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/output-script">Previous</a>
+  <a class="btn" href="/learn/create-shipment-request-flow">Next</a>
+</div>

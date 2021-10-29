@@ -1,10 +1,10 @@
 ---
-layout: page
-title: The input script step
+layout: docs
+title: The Input Script Step
 permalink: /learn/input-script
 ---
 
-## The input script step
+## The Input Script Step
 ---
 At this point, the Action is getting the shipment address, product, and quantity. Now you will use a Script Step to process the input data and create a shipment exact request payload.
 
@@ -82,3 +82,8 @@ Similar to Script Input Variables, Script Output Variables allow you to pass dat
   ![](/assets/images/24-script-output.png)
 3. You will now see a new data pill in the **Script step** section of the Data Pane
 4. **Save** the Script step
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/define-action-inputs">Previous</a>
+  <a class="btn" href="/learn/rest-step">Next</a>
+</div>

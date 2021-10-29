@@ -1,10 +1,10 @@
 ---
-layout: page
-title: Test the flow
+layout: docs
+title: Test the Flow
 permalink: /learn/test-flow
 ---
 
-## Test the flow
+## Test the Flow
 ---
 To test the flow first we must impersonate a user with an address and order a Yubikey
 
@@ -28,3 +28,8 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 5. Click **Your test has finished running. View the flow execution details.**
 6. This will open the Execution Details for the test run
 7. Click the **YED Shipment Request** action. The Steps section will show the list of steps executed inside of the action, and the step configuration details
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/add-flow-logic">Previous</a>
+  <a class="btn" href="/learn/call-flow-from-workflow">Next</a>
+</div>

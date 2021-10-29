@@ -7,25 +7,16 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
-    <h1>{{ page.title }}</h1>
+    {% include heading.html %}
     <div class="columns">
-        <div class="column is-3">
-            <div class="container">
-                <ol>
-                    <li>123</li>
-                    <li>123</li>
-                    <li>123</li>
-                </ol>
-            </div>
+        <div class="column is-2">
+            {% include navigation.html %}
         </div>
-        <div class="column is-9">
+        <div class="column is-10">
             <div class="container">
-                <section>
-                    {{ content }}
-                </section>
+                {{ content }}
             </div>
         </div>
     </div>
-    {% include footer.html %}
   </body>
 </html>

@@ -1,10 +1,10 @@
 ---
-layout: page
-title: Create the shipment request flow
+layout: docs
+title: Create the Shipment Request Flow
 permalink: /learn/create-shipment-request-flow
 ---
 
-## Create the shipment request flow
+## Create the Shipment Request Flow
 ---
 Now that you have the Action, lets put it into a Flow and test it.
 
@@ -59,3 +59,8 @@ Now it's time to add the Action to the Flow.
   ![](/assets/images/43-map-action-inputs.png)
   
 4. Click **Done**
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/action-outputs">Previous</a>
+  <a class="btn" href="/learn/add-flow-logic">Next</a>
+</div>

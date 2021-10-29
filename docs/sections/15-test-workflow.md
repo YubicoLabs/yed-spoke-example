@@ -1,9 +1,9 @@
 ---
-layout: page
-title: Test the workflow
+layout: docs
+title: Test the Workflow
 permalink: /learn/test-workflow
 ---
-## Test the workflow
+## Test the Workflow
 ---
 To test the workflow first we must impersonate a user with an address and order a Yubikey
 
@@ -23,3 +23,8 @@ To test the workflow first we must impersonate a user with an address and order 
 11. Click **Workflow Context**  
 ![](/assets/images/94-context.png)
 12. Go to **Workflow Transition History** and view the workflow execution
+
+<div class="btns">
+  <a class="btn--secondary" href="/learn/call-flow-from-workflow">Previous</a>
+    <a class="btn" href="/references">References</a>
+</div>

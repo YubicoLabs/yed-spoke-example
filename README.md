@@ -17,6 +17,7 @@ A full walk through of this tutorial can be found at [this location](https://yub
 * [Action Outputs](#action-outputs)
 * [Create the Shipment Request Flow](#create-the-shipment-request-flow)
 * [Add the Flow Logic to the Flow](#add-the-flow-logic-to-the-flow)
+* [Add the Flow to the Catalog Item](#add-the-flow-to-the-catalog-item)
 * [Test the Flow](#test-the-flow)
 * [Call the Flow From a Workflow](#call-the-flow-from-a-workflow)
 * [Test the Workflow](#test-the-workflow)
@@ -56,6 +57,7 @@ The first step when building a new Spoke is to create a Scoped Application. The 
   ![](/images/4-continue.png)
 
 ## Create a Catalog Item for your YubiKey Order
+---
 Let's create a Catalog Item to order your YubiKey 5NFC
 
 ### Create Catalog Item
@@ -477,7 +479,11 @@ Now it's time to add the Action to the Flow.
   
 4. Click **Done**
 
+
+
+
 ## Add the Flow Logic to the Flow
+---
 Let's handle shipment failures by sending an email to the administrator. 
 
 1. Click the **Select to add an Action, Flow Logic, or Subflow** link
@@ -512,6 +518,20 @@ Let's handle shipment failures by sending an email to the administrator.
 
 Challenge: If the shipment fails, return the Shipment State Message and Shipment Messages to the user to fix any errors.
 
+## Add the Flow to the Catalog Item
+---
+Now we will add the flow to the Catalog Item that we created so that the flow launches whenever the Catalog Item is submitted
+
+1. Navigate to **Service Catalog > Catalog Builder** link
+  ![](/images/97-catalog-builder.png)
+2. Click on the **Catalog items** tab on the top of the screen. Find your **YubiKey 5NFC** Catalog Item. Select it and Click **Edit**  
+  ![](/images/111-edit-catalog-item.png)
+3. Click on the Fulfillment Tab
+4. Change Selected Flow to **Yubico YED API Create a Shipment**  
+  ![](/images/112-edit-selected-flow.png)
+5. Click **Save**
+6. Click into the **Review and Submit** tab, click **Submit**
+
 ## Test the Flow
 ---
 To test the flow first we must impersonate a user with an address and order a Yubikey
@@ -520,7 +540,7 @@ To test the flow first we must impersonate a user with an address and order a Yu
 1. Click **System Administrator** dropdown menu then click **Impersonate User**
 2. Click **Search for user** and select "Adela Cervantsz"
 3. Click **Service Catalog** then click **Peripherals**
-4. Click **Yubikey 5 NFC**
+4. Click **Yubikey 5NFC**
 5. Click **Order Now**
 6. Take note of the **Request Number** e.g. REQ0010001
 7. Click **Adela Cervantsz** and then select **End Impersonation**
@@ -660,10 +680,11 @@ function shipYubiKey() {
 
 1. Go to **Service Catalog** > **Catalog Definitions** > **Maintain Items**
 ![](/images/87-maintain-items.png)
-2. Select the **Yubikey 5 NFC**
+2. Select the **Yubikey 5NFC**
+3. Select the tab **Process Engine**
 3. Set the **Workflow** to "Service Catalog YubiKey Request"
 4. Click **Update**
-![](/images/88-set-workflow.png)
+![](/images/88-2-set-workflow.png)
 
 
 ## Test the Workflow
@@ -673,8 +694,8 @@ To test the workflow first we must impersonate a user with an address and order 
 ### Order a YubiKey from the Service Catalog
 1. Click **System Administrator** dropdown menu then click **Impersonate User**
 2. Click **Search for user** and select "Adela Cervantsz"
-3. Click **Service Catalog** then click **Peripherals**
-4. Click **Yubikey 5 NFC**
+3. Click **Service Catalog** then click **Hardware**
+4. Click **Yubikey 5NFC**
 5. Click **Order Now**
 6. Take note of the **Request Number** e.g. REQ0010002
 7. Click **Adela Cervantsz** and then select **End Impersonation**

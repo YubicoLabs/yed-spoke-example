@@ -8,7 +8,7 @@ A full walk through of this tutorial can be found at [this location](https://yub
 * [Overview](#overview)
 * [Prerequisites](#prerequisites)
 * [Create a Scoped Application](#create-a-scoped-application)
-* [Add a YubiKey to the Service Catalog](#add-a-yubikey-to-the-service-catalog)
+* [Create a Catalog Item for your YubiKey Order](#create-a-catalog-item-for-your-yubikey-order)
 * [Create the Action](#create-the-action)
 * [Define Action Inputs](#define-action-inputs)
 * [The Input Script Step](#the-input-script-step)
@@ -89,8 +89,8 @@ This section will determine what categories your Catalog Item will appear in
 ### Add a hidden question
 This section will describe how to set a hidden value to default the Product ID of the key you want your users to order
 
-1. Click **Insert new question**
-  ![](/images/104-insert-qx.png)
+1. Click **Insert new question**  
+![](/images/104-insert-qx.png)
 2. In the form select the following values
 * **Question type:** Choice
 * **Question subtype:** Radio
@@ -178,11 +178,11 @@ Action inputs should always have human-friendly names.
   | City | String | on |
   | Region | String | off |
   | Postal Code | String | on |
-  | Product ID | Integer | on |
+  | Product ID | String | on |
   | Inventory Product ID | Integer | on |
   | Shipment Product Quantity | Integer | on |
   
-  ![](/images/22-1-create-input.png)
+  ![](/images/22-2-create-input.png)
 
 3. **Save** the Action
 
@@ -429,6 +429,19 @@ Flows run when a Trigger condition is met. For this example, we will run a flow 
 3. Click **Done**
 ![](/images/41-trigger-done.png)
 
+### Add the Form Variables
+This step will allow you to use the Product ID that was defaulted in Catalog Item step
+
+1. Click the **Select to add an Action, Flow Logic, or Subflow** link
+2. Click the **Action** button. Click the **ServiceNow Core** option. Click the **Get Catalog Variables** button.  
+  ![](/images/109-get-catalog-var.png)
+3. Drag the **Requested Item Records** pill from the table on the right into the **Submitted Request [Requested Item]** Field
+4. For the field **Template Catalog Items and Variable Sets**, click the dropdown and select the Catalog Item you created **YubiKey 5NFC**.
+5. Use the right facing arrow to move the yubikey_product_id field to the Selected Column  
+  ![](/images/110-get-catalog-var.png)
+6. Click **Done**
+
+
 ### Add the Action to the Flow
 Now it's time to add the Action to the Flow.
 
@@ -456,11 +469,11 @@ Now it's time to add the Action to the Flow.
   | City | Trigger > Requested Item Record > Requested for > Location > City |
   | Region | Trigger > Requested Item Record > Requested for > Location > State / Province |
   | Postal Code| Trigger > Requested Item Record > Requested for > Location > Zip / Postal Code |
-  | Product ID | Trigger > Requested Item Record > Item > Model > Model Number |
+  | Product ID | yubikey_product_id |
   | Inventory Product Id | 15 |
   | Shipment Product Quantity | Trigger > Requested Item Record > Quantity  |
   
-  ![](/images/43-map-action-inputs.png)
+  ![](/images/43-2-map-action-inputs.png)
   
 4. Click **Done**
 

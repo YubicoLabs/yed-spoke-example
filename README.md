@@ -55,44 +55,69 @@ The first step when building a new Spoke is to create a Scoped Application. The 
 6. In the subsequent dialog click the **Continue in Studio (Advanced)** link
   ![](/images/4-continue.png)
 
-## Add a YubiKey to the Service Catalog
-Let's add a YubiKey 5 NFC to the service catalog.
+## Create a Catalog Item for your YubiKey Order
+Let's create a Catalog Item to order your YubiKey 5NFC
 
-### Create product catalog hardware model
-1. Navigate to **Product Catalog > Hardware Models**
-  ![](/images/8-hardware-models.png)
-2. Click **New**
-  ![](/images/9-hardware-models-new.png)
-3. Fill out the hardware form with the following values
+### Create Catalog Item
+1. Navigate to **Service Catalog > Catalog Builder** link
+  ![](/images/97-catalog-builder.png)
+2. Click Create a new catalog item
+  ![](/images/98-create-catalog-item.png)
+3. Click Continue
+4. You will be asked to select a template. Choose the **'Standard items in Service Catalog'** template. Once selected choose **Use this item template**
+  ![](/images/100-select-template.png)
 
-  **General tab**
-  * **Name:** YubiKey 5 NFC
-  * **Manufacturer:** Click the magnifying glass icon, create a new manufacturer named 'Yubico', and click Submit
-  * **Short description:** Yubico YubiKey 5 NFC
-  * **Model categories:** Computer Peripheral, Hardware
-  * **Model number:** 1 (Use the response from YED API GET /products to map the product_id of the "YubiKey 5 NFC" to the hardware model number)
+### Add the Catalog Item Details
+Fill out the detail form with the following values
+  ![](/images/101-catalog-item-detail.png)
+1. **Item name:** YubiKey 5NFC
+2. **Short description:** Order your YubiKey 5 NFC
+3. **Image:** Feel free to select an YubiKey 5NFC image from the [official Yubico image library](https://brandfolder.yubico.com/yubico/press-room-images-logos)
+4. **Description:** The YubiKey 5 Series is a hardware based authentication solution that provides superior defense against phishing, eliminates account takeovers, and enables compliance requirements for strong authentication.
+5. Click **Continue to Location**
 
-    ![](/images/10-hardware-model-general.png)
+### Add Catalog Item Location Information
+This section will determine what categories your Catalog Item will appear in  
 
-  **Product catalog**
-  * **Description:** The YubiKey 5 Series is a hardware based authentication solution that provides superior defense against phishing, eliminates account takeovers, and enables compliance requirements for strong authentication.
+1. Under Categories click the **Edit** button next to Selected Categories
+  ![](/images/102-location-cats.png)
+2. Using the Left Pointed Arrow, remove categories, leaving only Hardware, and Peripherals in the Selected column.
+  ![](/images/103-select-cats.png)
+3. Click Save selections
+4. Once returned to the Location Tab, click **Continue to Questions**
 
-    ![](/images/11-hardware-model-product-catalog.png)
-  
-4. Click **Submit**
-5. In Hardware Models, search for `YubiKey`, and click **YubiKey 5 NFC**
-  ![](/images/12-hardware-models-search.png)
-6. Under **Related Links** click **Publish to Hardware Catalog**
-  ![](/images/13-hardware-model-publish.png)
-7. Select the **Peripherals** catalog and click **OK**
-  ![](/images/14-hardware-model-publish-category.png)
-8. Under the **Images** tab, upload an [official Yubico image](https://brandfolder.yubico.com/yubico/press-room-images-logos)
-  ![](/images/15-hardware-model-image.png)
-9. Navigate to **Self-Service > Service Catalog > Peripherals**
-  ![](/images/16-service-catalog.png)
-  ![](/images/17-service-catalog-peripherals.png)
-10. Confirm the **YubiKey 5 NFC** is present.
-  ![](/images/18-service-catalog-yubikey.png)
+### Add a hidden question
+This section will describe how to set a hidden value to default the Product ID of the key you want your users to order
+
+1. Click **Insert new question**
+  ![](/images/104-insert-qx.png)
+2. In the form select the following values
+* **Question type:** Choice
+* **Question subtype:** Radio
+* **Question label:** YubiKey Product ID
+* **Name:** yubikey_product_id
+  ![](/images/105-qx-details.png)
+* Select the **Hidden** checkbox
+* Click **Continue to Choices**
+3. In the **Choices** tab, click on the + in Available Choices. Insert the following details
+* **Display Name:** yubikey_5nfc
+*  **Value:** 1
+  ![](/images/106-qx-choices.png)
+4. Click **Insert Question**
+5. Once back to the questions tab, click **Fulfillment** tab
+  ![](/images/107-qx-next-step.png)
+
+### Choose the selected Flow to process this item
+This will select the ServiceNow Flow that will be triggered when the Catalog Item is submitted. You will create this at a later stage, for now select **Service Catalog item request**  
+
+  ![](/images/108-select-flow.png)
+
+Then click **Continue to Review and Submit**
+
+### Finalize the Catalog Item
+1. Review your items and click **Submit**
+
+Your Catalog Item has been created. We will now proceed to create the action to handle your submission.
 
 ## Create the Action
 ---

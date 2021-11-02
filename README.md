@@ -61,7 +61,7 @@ The first step when building a new Spoke is to create a Scoped Application. The 
 Let's create a Catalog Item to order your YubiKey 5NFC
 
 ### Create Catalog Item
-1. Navigate to **Service Catalog > Catalog Builder** link
+1. Navigate to **Service Catalog > Catalog Builder** link  
   ![](/images/97-catalog-builder.png)
 2. Click Create a new catalog item
   ![](/images/98-create-catalog-item.png)
@@ -522,7 +522,7 @@ Challenge: If the shipment fails, return the Shipment State Message and Shipment
 ---
 Now we will add the flow to the Catalog Item that we created so that the flow launches whenever the Catalog Item is submitted
 
-1. Navigate to **Service Catalog > Catalog Builder** link
+1. Navigate to **Service Catalog > Catalog Builder** link  
   ![](/images/97-catalog-builder.png)
 2. Click on the **Catalog items** tab on the top of the screen. Find your **YubiKey 5NFC** Catalog Item. Select it and Click **Edit**  
   ![](/images/111-edit-catalog-item.png)
@@ -707,6 +707,182 @@ To test the workflow first we must impersonate a user with an address and order 
 11. Click **Workflow Context**  
 ![](/images/94-context.png)
 12. Go to **Workflow Transition History** and view the workflow execution
+
+## Create the GET Shipments Action
+We will now create an action that will allow us to get information about the current shipment, which we will use to update the flow and send **Tracking Information** to the user before closing the ticket
+
+### Launch the flow designer
+To launch the flow designer, navigate to **Flow Designer > Designer**
+  ![](/images/6-flow-designer.png)
+
+### Create the shipment request action
+1. Click the **+ New** button, and then click **Action** in the resulting menu
+  ![](/images/19-new-action.png)
+2. Fill out the Action Properties form
+
+  * **Name:** YED Get Shipment
+  * **Application:** Yubico Enterprise Delivery API Spoke
+  * **Description:** Get information about a specific shipment
+
+  ![](/images/117-action-properties.png)
+3. Click the **Submit** button and you will be taken to the new/empty Action
+
+### Add the shipment request inputs
+1. Click the **Inputs** section at the top of the **Action Outline**
+2. Click the **Create Input** button and add the following based on the create shipment request object ([POST /shipments_exact](https://console.dev.in.yubico.org/apidocs/#operation/CreateShipmentExact))
+
+  | **Label** | **Type** | **Mandatory** |
+  | --------- | -------- | ------------- |
+  | Shipment ID | String | on|
+  
+  ![](/images/118-create-input.png)
+
+### Add the shipment request REST step to the Action
+1. Click the + button underneath the Script step you added earlier
+  ![](/images/25-add-new-step.png)
+2. Click the REST step in the **Integrations** section of the dialog
+  ![](/images/26-rest.png)
+3. You will be presented with the REST step UI
+4. For the connection details use the same Connection Alias that you created for the previous action
+* **Connection:** Use Connection Alias
+* **Connection Alias:** Select your connection alias
+
+3. Set the **Resource Path** to `/shipments_exact/` and drag the **Shipment ID** pill to the end of the URL
+4. Set the **HTTP Method** to GET
+5. Click the + button under Headers and add the following
+
+  | **Name** | **VALUE** |
+  | -------- | --------- |
+  | Accept | application/json |
+  | Content-Type | application/json |
+
+  ![](/images/27-rest-connection-headers.png)
+
+### Configure the Output Script
+1. Add a new Action Step after the REST step. 
+2. When prompted, choose the **Script** step
+  ![](/images/30-script.png)
+
+### Script Input Variables
+1. In the **Input Variables** widget, click the **+ Create Variable** button
+2. Set the **Name** to `responseBody`
+3. Drag the **Response Body** data pill from the data pane to the **Value** field. You can now reference the Response Body in your scripts as `inputs.responseBody`
+  ![](/images/31-input-variables.png)
+4. Set the script to
+
+```javascript
+(function execute(inputs, outputs) {
+  outputs.shipment_response = inputs.responseBody;
+  const response = JSON.parse(inputs.responseBody);
+  outputs.shipment_request_id = response.shipment_id;
+  outputs.shipment_state_id = response.shipment_state_id;
+  outputs.shipment_state_message = response.shipment_state_message;
+  outputs.tracking_link = response.tracking_link;
+  const messages = (response.shipment_messages === undefined) ? "" : JSON.stringify(response.shipment_messages);
+  outputs.shipment_messages = messages;
+})(inputs, outputs);
+```
+
+### Script Output Variables
+1. In the **Output Variables** widget, click the **+ Create Variable** button and add the following
+
+  | **Label** | **Name** | **Type** | **Mandatory** |
+  | --------- | -------- | -------- | ------------- |
+  | Shipment Response | shipment_response | String| off |
+  | Shipment Request ID | shipment_request_id | String | off |
+  | Shipment State ID | shipment_state_id | Integer | off |
+  | Shipment State Message | shipment_state_message | String | off |
+  | Shipment Messages | shipment_messages | String | off |
+  | Tracking Link | tracking_link | String | off |
+
+  ![](/images/119-output-variables.png)
+
+6. **Save** the Script step
+
+### Create Action Outputs
+1. Click the **Outputs** section in the **Action Outline**
+2. Click the **+ Create Output** button
+3. Set the following outputs
+
+  | **Label** | **Name** | **Type** | **Mandatory** |
+  | --------- | -------- | -------- | ------------- |
+  | HTTP Status Code | http_status_code| String | off |
+  | HTTP Error Code | http_error_code| String | off |
+  | HTTP Error Message | http_error_message | String | off |
+  | Shipment Request ID | shipment_request_id | String | off |
+  | Shipment State ID | shipment_state_id | Integer | off |
+  | Shipment State Message | shipment_state_message | String | off |
+  | Shipment Messages | shipment_messages | String | off |
+  | Tracking Link | tracking_link | String | off |
+
+  ![](/images/120-create-action-output.png)
+
+5. Click the **Exit Edit Mode** button
+6. Using the Data Pill Picker, set the **Value** of the Script Output Variables to the associated output variables
+  ![](/images/121-action-output.png)
+7. **Save** the Action
+
+### Test the Action
+1. Click the **Test** button
+2. Set the following variables
+
+  | **Name** | **VALUE** |
+  | -------- | --------- |
+  | Shipment ID | *Use a shipment ID in your YED portal |
+
+  ![](/images/35-test-input.png)
+  
+3. Click **Run Test**
+  ![](/images/35-test.png)
+4. Wait for the processing to complete and click **Your test has finished running. View the action execution details.**
+  ![](/images/36-test-finished.png)
+5. In the **Output Data** verify the **Shipment Message** is equal to "Awaiting Validation"
+  ![](/images/36-test-validate.png)
+
+### Save and Publish
+You've created your action - Be sure to **Save** the **Publish**
+
+
+## Update the Flow to Send Shipment Tracking Information
+We will now update the flow to send Shipment Tracking Information to the customer who requested the YubiKey. We will add a loop to the end of the existing flow to continuously check the created shipment for a shipping link to be sent to the customer
+
+1. Launch the flow designer, navigate to **Flow Designer > Designer**
+  ![](/images/6-flow-designer.png)
+2. Return back to your flow **Yubico YED API Create a Shipment**
+
+### End the Flow of Shipment Creation Failure
+1. Click the plus sign under **Send Email**
+2. Click Flow Login, then select **End**  
+  ![](/images/114-end-flow.png)
+
+### Create Flow Variables
+We will need to create new variables to persist some form of state that can be referenced as the flow loops
+
+1. Click the 3 dots **...** on the right side of the screen
+2. Click **Flow Variables**
+3. Click the + sign twice, you will need 2 variables
+4. The variables should follow this format
+  | **LABEL** | **NAME** | **TYPE** |
+  | -------- | --------- | -------- |
+  | Shipment ID | curr_shipment_id | String |
+  | Shipment Status | curr_shipment_status | String |  
+  ![](/images/115-create-flow-vars.png)
+5. Exit the pop-up
+6. Click **Add an Action, Flow Logic, or Subflow**
+7. Click Flow Logic, then select **Set Flow Variables**
+![](/images/113-set-flow-vars.png)
+8. Click the plus sign on the right **twice**, you will need two variables
+9. Create the first variable - This will be used to persist the Shipment ID
+* **Name:** curr_shipment_id
+* **Data:** Drag the **Shipment Request ID** pill from 2 - YED Shipment Request
+10. Create the second variable, this will be used to track the latest status of the shipment
+* **Name:** status
+* **Data:** Drag the **Shipment State ID** pill from 2 - YED Shipment Request OR set it to 3 since we're assuming success  
+![](/images/116-set-flow-vars.png)
+11. Click Done
+
+### Create the GET Shipment Loop
+
 
 ## References
 ---

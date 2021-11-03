@@ -134,7 +134,7 @@ This opens a new UI where you will manage and build Actions, Flows, and Subflows
   ![](/images/7-flow-designer-ui.png)
 
 ### Create the shipment request action
-1. Click the **+ New** button, and then click **Action** in the resulting menu
+1. Click the **+ New** button, and then click **Action** in the resulting menu  
   ![](/images/19-new-action.png)
 2. Fill out the Action Properties form
 
@@ -312,7 +312,7 @@ Whenever possible, you should use a Connection Alias when designing your step. T
 ---
 Right now, the Action has sent the shipment request to the REST endpoint and received the response body but doesn't know if the request was successful. In this step, you will parse the output of the REST step.
 
-1. Add a new Action Step after the REST step. 
+1. Add a new Action Step after the REST step.  
   ![](/images/29-add-output-script.png)
 2. When prompted, choose the **Script** step
   ![](/images/30-script.png)
@@ -400,7 +400,7 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
 
   ![](/images/35-test-input.png)
   
-3. Click **Run Test**
+3. Click **Run Test**  
   ![](/images/35-test.png)
 4. Wait for the processing to complete and click **Your test has finished running. View the action execution details.**
   ![](/images/36-test-finished.png)
@@ -424,7 +424,7 @@ Now that you have the Action, lets put it into a Flow and test it.
 ### Add a Trigger
 Flows run when a Trigger condition is met. For this example, we will run a flow on the Service Catalog.
 
-1. Click the **Select to add a trigger** button
+1. Click the **Select to add a trigger** button  
   ![](/images/39-add-trigger.png)
 2. Under the **Application** section, click **Service Catalog**
   ![](/images/40-service-catalog-trigger.png)
@@ -584,8 +584,8 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 
   ![](/images/75-delete.png)
 
-6. Click the **Core** tab and 
-![](/images/76-core.png)
+6. Click the **Core** tab and  
+  ![](/images/76-core.png)
 7. Drag the **Run Script** to the Workflow canvas
 8. Set the fields of the Run Script activities properties to the following:
 
@@ -699,14 +699,17 @@ To test the workflow first we must impersonate a user with an address and order 
 5. Click **Order Now**
 6. Take note of the **Request Number** e.g. REQ0010002
 7. Click **Adela Cervantsz** and then select **End Impersonation**
-8. Open the **Service Catalog** > **Open Records** > **Items**
-![](/images/92-open-record.png)
+8. Open the **Service Catalog** > **Open Records** > **Items**  
+  ![](/images/92-open-record.png)
 9. Select the **Request Item** e.g. REQ0010002
 10. Under the **Approvers** tab, check the box and **Approve** the request.
 ![](/images/93-approve.png)
 11. Click **Workflow Context**  
 ![](/images/94-context.png)
 12. Go to **Workflow Transition History** and view the workflow execution
+
+## Bonus Lab - Send your users an email with the tracking link information
+Now that you have created a workflow to create a Shipment to YED, let's use the API to return a tracking link to the customer. The following two sections will use concepts taught in the previous sections such as creating as action, updating and configuring a flow, as well as calling the YED API
 
 ## Create the GET Shipments Action
 We will now create an action that will allow us to get information about the current shipment, which we will use to update the flow and send **Tracking Information** to the user before closing the ticket
@@ -716,7 +719,7 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
   ![](/images/6-flow-designer.png)
 
 ### Create the shipment request action
-1. Click the **+ New** button, and then click **Action** in the resulting menu
+1. Click the **+ New** button, and then click **Action** in the resulting menu  
   ![](/images/19-new-action.png)
 2. Fill out the Action Properties form
 
@@ -730,7 +733,7 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 
 ### Add the shipment request inputs
 1. Click the **Inputs** section at the top of the **Action Outline**
-2. Click the **Create Input** button and add the following based on the create shipment request object ([GET /shipments_exact](https://console.dev.in.yubico.org/apidocs/#operation/CreateShipmentExact))
+2. Click the **Create Input** button and add the following based on the create shipment request object ([GET /shipments_exact](https://console.yubico.com/help/api-req.html))
 
   | **Label** | **Type** | **Mandatory** |
   | --------- | -------- | ------------- |
@@ -829,11 +832,8 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 
   | **Name** | **VALUE** |
   | -------- | --------- |
-  | Shipment ID | *Use a shipment ID in your YED portal |
-
-  ![](/images/35-test-input.png)
-  
-3. Click **Run Test**
+  | Shipment ID | *Use a shipment ID in your YED portal |  
+3. Click **Run Test**  
   ![](/images/35-test.png)
 4. Wait for the processing to complete and click **Your test has finished running. View the action execution details.**
   ![](/images/36-test-finished.png)
@@ -862,17 +862,18 @@ We will need to create new variables to persist some form of state that can be r
 2. Click **Flow Variables**
 3. Click the + sign twice, you will need 3 variables
 4. The variables should follow this format
+
   | **LABEL** | **NAME** | **TYPE** |
-  | -------- | --------- | -------- |
+  | -------- | --------- | --------- |
   | Shipment ID | curr_shipment_id | String |
   | Shipment Status | curr_shipment_status | String | 
-  | Tracking Link | tracking_link | String | 
-
+  | Tracking Link | tracking_link | String |  
+  
   ![](/images/115-create-flow-vars.png)
 5. Exit the pop-up
 6. Click **Add an Action, Flow Logic, or Subflow**
-7. Click Flow Logic, then select **Set Flow Variables**
-![](/images/113-set-flow-vars.png)
+7. Click Flow Logic, then select **Set Flow Variables**  
+  ![](/images/113-set-flow-vars.png)
 8. Click the plus sign on the right **twice**, you will need two variables
 9. Create the first variable - This will be used to persist the Shipment ID
 * **Name:** curr_shipment_id
@@ -912,8 +913,8 @@ The reason why there is a delay in time before calling to the API is because a S
 8. Click Done  
   ![](/images/126-flow-request.png)
 7. Click **Add an Action, Flow Logic, or Subflow**
-8. Click Flow Logic, then select **Set Flow Variables**
-![](/images/113-set-flow-vars.png)
+8. Click Flow Logic, then select **Set Flow Variables**  
+  ![](/images/113-set-flow-vars.png)
 9. Click the plus sign on the right **twice**, you will need two variables
 10. Create the first variable - This will be used to persist the Shipment ID
 * **Name:** tracking_link

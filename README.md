@@ -12,6 +12,7 @@ A full walk through of this tutorial can be found at [this location](https://yub
 * [Create the Action](#create-the-action)
 * [Define Action Inputs](#define-action-inputs)
 * [The Input Script Step](#the-input-script-step)
+* [Create a Connection Alias](#create-a-connection-alias)
 * [The REST Step](#the-rest-step)
 * [The Output Script Step](#the-output-script-step)
 * [Action Outputs](#action-outputs)
@@ -21,6 +22,9 @@ A full walk through of this tutorial can be found at [this location](https://yub
 * [Test the Flow](#test-the-flow)
 * [Call the Flow From a Workflow](#call-the-flow-from-a-workflow)
 * [Test the Workflow](#test-the-workflow)
+* [Bonus Lab - Send your users an email with the tracking link information](#bonus-lab---send-your-users-an-email-with-the-tracking-link-information)
+* [Create the GET Shipments Action](#create-the-get-shipments-action)
+* [Update the Flow to Send Shipment Tracking Information](#update-the-flow-to-send-shipment-tracking-information)
 
 ## Overview
 ---
@@ -271,9 +275,9 @@ When configuring a REST step there are two options for defining an endpoint conn
 * Use Connection Alias
 * Define Connection Inline
 
-Connection InLine is great for quick prototyping, or when the request needs to be dynamic. 
+Connection Inline is great for quick prototyping, or when the request needs to be dynamic. 
 
-A Connection Alias offers better security by minimizing the footprint of where you store your secret, and will allow for your ServiceNow admins to make YED API calls consistantly across the platform.
+A Connection Alias offers better security by minimizing the footprint of where you store your secret, and will allow for your ServiceNow admins to make YED API calls consistently across the platform.
 
 Below are the steps for configuring a Connection Alias, which will be used in the following step
 
@@ -299,7 +303,7 @@ Below are the steps for configuring a Connection Alias, which will be used in th
 5. Fill out the form with the following values
 * **Name:** YED API Connection
 * **API Key:** Bearer {your YED API Secret here}  
-  ![](/images/131-cred-form-png)
+  ![](/images/131-cred-form.png)
 6. Click Submit
 
 ### Configure the Connection

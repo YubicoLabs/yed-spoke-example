@@ -8,18 +8,23 @@ A full walk through of this tutorial can be found at [this location](https://yub
 * [Overview](#overview)
 * [Prerequisites](#prerequisites)
 * [Create a Scoped Application](#create-a-scoped-application)
-* [Add a YubiKey to the Service Catalog](#add-a-yubikey-to-the-service-catalog)
+* [Create a Catalog Item for your YubiKey Order](#create-a-catalog-item-for-your-yubikey-order)
 * [Create the Action](#create-the-action)
 * [Define Action Inputs](#define-action-inputs)
 * [The Input Script Step](#the-input-script-step)
+* [Create a Connection Alias](#create-a-connection-alias)
 * [The REST Step](#the-rest-step)
 * [The Output Script Step](#the-output-script-step)
 * [Action Outputs](#action-outputs)
 * [Create the Shipment Request Flow](#create-the-shipment-request-flow)
 * [Add the Flow Logic to the Flow](#add-the-flow-logic-to-the-flow)
+* [Add the Flow to the Catalog Item](#add-the-flow-to-the-catalog-item)
 * [Test the Flow](#test-the-flow)
 * [Call the Flow From a Workflow](#call-the-flow-from-a-workflow)
 * [Test the Workflow](#test-the-workflow)
+* [Bonus Lab - Send your users an email with the tracking link information](#bonus-lab---send-your-users-an-email-with-the-tracking-link-information)
+* [Create the GET Shipments Action](#create-the-get-shipments-action)
+* [Update the Flow to Send Shipment Tracking Information](#update-the-flow-to-send-shipment-tracking-information)
 
 ## Overview
 ---
@@ -55,44 +60,70 @@ The first step when building a new Spoke is to create a Scoped Application. The 
 6. In the subsequent dialog click the **Continue in Studio (Advanced)** link
   ![](/images/4-continue.png)
 
-## Add a YubiKey to the Service Catalog
-Let's add a YubiKey 5 NFC to the service catalog.
+## Create a Catalog Item for your YubiKey Order
+---
+Let's create a Catalog Item to order your YubiKey 5NFC
 
-### Create product catalog hardware model
-1. Navigate to **Product Catalog > Hardware Models**
-  ![](/images/8-hardware-models.png)
-2. Click **New**
-  ![](/images/9-hardware-models-new.png)
-3. Fill out the hardware form with the following values
+### Create Catalog Item
+1. Navigate to **Service Catalog > Catalog Builder** link  
+  ![](/images/97-catalog-builder.png)
+2. Click Create a new catalog item
+  ![](/images/98-create-catalog-item.png)
+3. Click Continue
+4. You will be asked to select a template. Choose the **'Standard items in Service Catalog'** template. Once selected choose **Use this item template**
+  ![](/images/100-select-template.png)
 
-  **General tab**
-  * **Name:** YubiKey 5 NFC
-  * **Manufacturer:** Click the magnifying glass icon, create a new manufacturer named 'Yubico', and click Submit
-  * **Short description:** Yubico YubiKey 5 NFC
-  * **Model categories:** Computer Peripheral, Hardware
-  * **Model number:** 1 (Use the response from YED API GET /products to map the product_id of the "YubiKey 5 NFC" to the hardware model number)
+### Add the Catalog Item Details
+Fill out the detail form with the following values
+  ![](/images/101-catalog-item-detail.png)
+1. **Item name:** YubiKey 5NFC
+2. **Short description:** Order your YubiKey 5 NFC
+3. **Image:** Feel free to select an YubiKey 5NFC image from the [official Yubico image library](https://brandfolder.yubico.com/yubico/press-room-images-logos)
+4. **Description:** The YubiKey 5 Series is a hardware based authentication solution that provides superior defense against phishing, eliminates account takeovers, and enables compliance requirements for strong authentication.
+5. Click **Continue to Location**
 
-    ![](/images/10-hardware-model-general.png)
+### Add Catalog Item Location Information
+This section will determine what categories your Catalog Item will appear in  
 
-  **Product catalog**
-  * **Description:** The YubiKey 5 Series is a hardware based authentication solution that provides superior defense against phishing, eliminates account takeovers, and enables compliance requirements for strong authentication.
+1. Under Categories click the **Edit** button next to Selected Categories
+  ![](/images/102-location-cats.png)
+2. Using the Left Pointed Arrow, remove categories, leaving only Hardware, and Peripherals in the Selected column.
+  ![](/images/103-select-cats.png)
+3. Click Save selections
+4. Once returned to the Location Tab, click **Continue to Questions**
 
-    ![](/images/11-hardware-model-product-catalog.png)
-  
-4. Click **Submit**
-5. In Hardware Models, search for `YubiKey`, and click **YubiKey 5 NFC**
-  ![](/images/12-hardware-models-search.png)
-6. Under **Related Links** click **Publish to Hardware Catalog**
-  ![](/images/13-hardware-model-publish.png)
-7. Select the **Peripherals** catalog and click **OK**
-  ![](/images/14-hardware-model-publish-category.png)
-8. Under the **Images** tab, upload an [official Yubico image](https://brandfolder.yubico.com/yubico/press-room-images-logos)
-  ![](/images/15-hardware-model-image.png)
-9. Navigate to **Self-Service > Service Catalog > Peripherals**
-  ![](/images/16-service-catalog.png)
-  ![](/images/17-service-catalog-peripherals.png)
-10. Confirm the **YubiKey 5 NFC** is present.
-  ![](/images/18-service-catalog-yubikey.png)
+### Add a hidden question
+This section will describe how to set a hidden value to default the Product ID of the key you want your users to order
+
+1. Click **Insert new question**  
+![](/images/104-insert-qx.png)
+2. In the form select the following values
+* **Question type:** Choice
+* **Question subtype:** Radio
+* **Question label:** YubiKey Product ID
+* **Name:** yubikey_product_id
+  ![](/images/105-qx-details.png)
+* Select the **Hidden** checkbox
+* Click **Continue to Choices**
+3. In the **Choices** tab, click on the + in Available Choices. Insert the following details
+* **Display Name:** yubikey_5nfc
+*  **Value:** 1
+  ![](/images/106-qx-choices.png)
+4. Click **Insert Question**
+5. Once back to the questions tab, click **Fulfillment** tab
+  ![](/images/107-qx-next-step.png)
+
+### Choose the selected Flow to process this item
+This will select the ServiceNow Flow that will be triggered when the Catalog Item is submitted. You will create this at a later stage, for now select **Service Catalog item request**  
+
+  ![](/images/108-select-flow.png)
+
+Then click **Continue to Review and Submit**
+
+### Finalize the Catalog Item
+1. Review your items and click **Submit**
+
+Your Catalog Item has been created. We will now proceed to create the action to handle your submission.
 
 ## Create the Action
 ---
@@ -107,7 +138,7 @@ This opens a new UI where you will manage and build Actions, Flows, and Subflows
   ![](/images/7-flow-designer-ui.png)
 
 ### Create the shipment request action
-1. Click the **+ New** button, and then click **Action** in the resulting menu
+1. Click the **+ New** button, and then click **Action** in the resulting menu  
   ![](/images/19-new-action.png)
 2. Fill out the Action Properties form
 
@@ -153,11 +184,11 @@ Action inputs should always have human-friendly names.
   | City | String | on |
   | Region | String | off |
   | Postal Code | String | on |
-  | Product ID | Integer | on |
+  | Product ID | String | on |
   | Inventory Product ID | Integer | on |
   | Shipment Product Quantity | Integer | on |
   
-  ![](/images/22-1-create-input.png)
+  ![](/images/22-2-create-input.png)
 
 3. **Save** the Action
 
@@ -239,6 +270,58 @@ Similar to Script Input Variables, Script Output Variables allow you to pass dat
 3. You will now see a new data pill in the **Script step** section of the Data Pane
 4. **Save** the Script step
 
+## Create a Connection Alias
+When configuring a REST step there are two options for defining an endpoint connection 
+* Use Connection Alias
+* Define Connection Inline
+
+Connection Inline is great for quick prototyping, or when the request needs to be dynamic. 
+
+A Connection Alias offers better security by minimizing the footprint of where you store your secret, and will allow for your ServiceNow admins to make YED API calls consistently across the platform.
+
+Below are the steps for configuring a Connection Alias, which will be used in the following step
+
+**Note** - Do not close your Action Configuration window as we will be returning to it, complete this action in another tab if possible
+
+### Configure the Connection & Credential Alias
+1. Navigate back to the ServiceNow dashboard and find **Connections & Credentials**
+2. First we will select **Connections & Credentials Alias**  
+  ![](/images/129-cred-conn-find.png)
+3. Click New
+4. Set **Name** to yed_api_alias
+5. Leave all other fields on their defaults, click **Submit**
+6. Once you return to the main screen, take note of the ID on the row with **yed_api_alias**  
+  ![](/images/132-cca-config.png)
+
+### Configure the Credentials
+1. Navigate back to the ServiceNow dashboard and find **Connections & Credentials**
+2. First we will select **Credentials**  
+  ![](/images/129-cred-conn-find.png)
+3. Click New
+4. Select **API Key Credentials**  
+  ![](/images/130-type-cred.png)
+5. Fill out the form with the following values
+* **Name:** YED API Connection
+* **API Key:** Bearer {your YED API Secret here}  
+  ![](/images/131-cred-form.png)
+6. Click Submit
+
+### Configure the Connection
+1. On the menu on the left hand side select **Connections**
+2. Click New
+3. Select **HTTP(s) Connection**  
+  ![](/images/133-conn-type.png)
+4. Configure the Form with the following information
+* **Name:** yed_api
+* **Credential:** YED API Connection (this is the one created in the previous step)
+* **Connection alias:** Choose the Connection Alias ID that you created in the previous state
+* **Connection URL:** Your YED API URL  
+  ![](/images/134-config-conn.png)
+5. Click Submit
+
+You can now return to the Flow Designer to configure the REST step - The Alias for your connection will be automatically configured.
+
+
 ## The REST Step
 ---
 The REST step is exclusive to IntegrationHub, and is only available after activating the IntegrationHub Installer plugin.
@@ -252,19 +335,9 @@ The IntegrationHub Installer Plugin can be installed following [these steps](htt
   ![](/images/26-rest.png)
 3. You will be presented with the REST step UI
 
-### Define Connection Information
-When configuring a REST step, there are two options for defining the endpoint you will connect to:
-* Use Connection Alias
-* Define Connection Inline
-
-Whenever possible, you should use a Connection Alias when designing your step. There are two primary reasons to define connections inline:
-* Quick prototyping/testing
-* When connection info is dynamic and will be passed into the action as an input or otherwise dynamically determined.
-
-**In this example**, we will start with an **inline connection**. You can convert the action to use a Connection Alias at a later time.
-
-1. Change the **Connection** choice to "Define Connection Inline"
-2. Set the **Base URL** to `https://api.console.yubico.com/v1/`
+### Define Connection Details
+1. Change the **Connection** choice to "Connection Alias"
+2. Change the connection alias to the one created in the previous step
 3. Set the **Resource Path** to `/shipments_exact`
 4. Set the **HTTP Method** to POST
 5. Click the + button under Headers and add the following
@@ -273,9 +346,8 @@ Whenever possible, you should use a Connection Alias when designing your step. T
   | -------- | --------- |
   | Accept | application/json |
   | Content-Type | application/json |
-  | Authorization | Bearer *paste your YED API token here* |
 
-  ![](/images/27-rest-connection-headers.png)
+  ![](/images/27-2-rest-connection-headers.png)
  
 6. Drag the **Shipment Exact Request** data pill from the data pane to the **Request Content Request Body [Text]** field 
   ![](/images/28-request-content.png)
@@ -285,7 +357,7 @@ Whenever possible, you should use a Connection Alias when designing your step. T
 ---
 Right now, the Action has sent the shipment request to the REST endpoint and received the response body but doesn't know if the request was successful. In this step, you will parse the output of the REST step.
 
-1. Add a new Action Step after the REST step. 
+1. Add a new Action Step after the REST step.  
   ![](/images/29-add-output-script.png)
 2. When prompted, choose the **Script** step
   ![](/images/30-script.png)
@@ -373,7 +445,7 @@ The same naming considerations we used for Action Inputs also apply to Action Ou
 
   ![](/images/35-test-input.png)
   
-3. Click **Run Test**
+3. Click **Run Test**  
   ![](/images/35-test.png)
 4. Wait for the processing to complete and click **Your test has finished running. View the action execution details.**
   ![](/images/36-test-finished.png)
@@ -397,12 +469,25 @@ Now that you have the Action, lets put it into a Flow and test it.
 ### Add a Trigger
 Flows run when a Trigger condition is met. For this example, we will run a flow on the Service Catalog.
 
-1. Click the **Select to add a trigger** button
+1. Click the **Select to add a trigger** button  
   ![](/images/39-add-trigger.png)
 2. Under the **Application** section, click **Service Catalog**
   ![](/images/40-service-catalog-trigger.png)
 3. Click **Done**
 ![](/images/41-trigger-done.png)
+
+### Add the Form Variables
+This step will allow you to use the Product ID that was defaulted in Catalog Item step
+
+1. Click the **Select to add an Action, Flow Logic, or Subflow** link
+2. Click the **Action** button. Click the **ServiceNow Core** option. Click the **Get Catalog Variables** button.  
+  ![](/images/109-get-catalog-var.png)
+3. Drag the **Requested Item Records** pill from the table on the right into the **Submitted Request [Requested Item]** Field
+4. For the field **Template Catalog Items and Variable Sets**, click the dropdown and select the Catalog Item you created **YubiKey 5NFC**.
+5. Use the right facing arrow to move the yubikey_product_id field to the Selected Column  
+  ![](/images/110-get-catalog-var.png)
+6. Click **Done**
+
 
 ### Add the Action to the Flow
 Now it's time to add the Action to the Flow.
@@ -431,15 +516,19 @@ Now it's time to add the Action to the Flow.
   | City | Trigger > Requested Item Record > Requested for > Location > City |
   | Region | Trigger > Requested Item Record > Requested for > Location > State / Province |
   | Postal Code| Trigger > Requested Item Record > Requested for > Location > Zip / Postal Code |
-  | Product ID | Trigger > Requested Item Record > Item > Model > Model Number |
+  | Product ID | yubikey_product_id |
   | Inventory Product Id | 15 |
   | Shipment Product Quantity | Trigger > Requested Item Record > Quantity  |
   
-  ![](/images/43-map-action-inputs.png)
+  ![](/images/43-2-map-action-inputs.png)
   
 4. Click **Done**
 
+
+
+
 ## Add the Flow Logic to the Flow
+---
 Let's handle shipment failures by sending an email to the administrator. 
 
 1. Click the **Select to add an Action, Flow Logic, or Subflow** link
@@ -474,6 +563,20 @@ Let's handle shipment failures by sending an email to the administrator.
 
 Challenge: If the shipment fails, return the Shipment State Message and Shipment Messages to the user to fix any errors.
 
+## Add the Flow to the Catalog Item
+---
+Now we will add the flow to the Catalog Item that we created so that the flow launches whenever the Catalog Item is submitted
+
+1. Navigate to **Service Catalog > Catalog Builder** link  
+  ![](/images/97-catalog-builder.png)
+2. Click on the **Catalog items** tab on the top of the screen. Find your **YubiKey 5NFC** Catalog Item. Select it and Click **Edit**  
+  ![](/images/111-edit-catalog-item.png)
+3. Click on the Fulfillment Tab
+4. Change Selected Flow to **Yubico YED API Create a Shipment**  
+  ![](/images/112-edit-selected-flow.png)
+5. Click **Save**
+6. Click into the **Review and Submit** tab, click **Submit**
+
 ## Test the Flow
 ---
 To test the flow first we must impersonate a user with an address and order a Yubikey
@@ -482,7 +585,7 @@ To test the flow first we must impersonate a user with an address and order a Yu
 1. Click **System Administrator** dropdown menu then click **Impersonate User**
 2. Click **Search for user** and select "Adela Cervantsz"
 3. Click **Service Catalog** then click **Peripherals**
-4. Click **Yubikey 5 NFC**
+4. Click **Yubikey 5NFC**
 5. Click **Order Now**
 6. Take note of the **Request Number** e.g. REQ0010001
 7. Click **Adela Cervantsz** and then select **End Impersonation**
@@ -526,8 +629,8 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 
   ![](/images/75-delete.png)
 
-6. Click the **Core** tab and 
-![](/images/76-core.png)
+6. Click the **Core** tab and  
+  ![](/images/76-core.png)
 7. Drag the **Run Script** to the Workflow canvas
 8. Set the fields of the Run Script activities properties to the following:
 
@@ -622,10 +725,11 @@ function shipYubiKey() {
 
 1. Go to **Service Catalog** > **Catalog Definitions** > **Maintain Items**
 ![](/images/87-maintain-items.png)
-2. Select the **Yubikey 5 NFC**
+2. Select the **Yubikey 5NFC**
+3. Select the tab **Process Engine**
 3. Set the **Workflow** to "Service Catalog YubiKey Request"
 4. Click **Update**
-![](/images/88-set-workflow.png)
+![](/images/88-2-set-workflow.png)
 
 
 ## Test the Workflow
@@ -635,19 +739,255 @@ To test the workflow first we must impersonate a user with an address and order 
 ### Order a YubiKey from the Service Catalog
 1. Click **System Administrator** dropdown menu then click **Impersonate User**
 2. Click **Search for user** and select "Adela Cervantsz"
-3. Click **Service Catalog** then click **Peripherals**
-4. Click **Yubikey 5 NFC**
+3. Click **Service Catalog** then click **Hardware**
+4. Click **Yubikey 5NFC**
 5. Click **Order Now**
 6. Take note of the **Request Number** e.g. REQ0010002
 7. Click **Adela Cervantsz** and then select **End Impersonation**
-8. Open the **Service Catalog** > **Open Records** > **Items**
-![](/images/92-open-record.png)
+8. Open the **Service Catalog** > **Open Records** > **Items**  
+  ![](/images/92-open-record.png)
 9. Select the **Request Item** e.g. REQ0010002
 10. Under the **Approvers** tab, check the box and **Approve** the request.
 ![](/images/93-approve.png)
 11. Click **Workflow Context**  
 ![](/images/94-context.png)
 12. Go to **Workflow Transition History** and view the workflow execution
+
+## Bonus Lab - Send your users an email with the tracking link information
+Now that you have created a workflow to create a Shipment to YED, let's use the API to return a tracking link to the customer. The following two sections will use concepts taught in the previous sections such as creating as action, updating and configuring a flow, as well as calling the YED API
+
+## Create the GET Shipments Action
+We will now create an action that will allow us to get information about the current shipment, which we will use to update the flow and send **Tracking Information** to the user before closing the ticket
+
+### Launch the flow designer
+To launch the flow designer, navigate to **Flow Designer > Designer**
+  ![](/images/6-flow-designer.png)
+
+### Create the shipment request action
+1. Click the **+ New** button, and then click **Action** in the resulting menu  
+  ![](/images/19-new-action.png)
+2. Fill out the Action Properties form
+
+  * **Name:** YED Get Shipment
+  * **Application:** Yubico Enterprise Delivery API Spoke
+  * **Description:** Get information about a specific shipment  
+  ![](/images/117-action-properties.png)  
+
+3. Click the **Submit** button and you will be taken to the new/empty Action  
+
+
+### Add the shipment request inputs
+1. Click the **Inputs** section at the top of the **Action Outline**
+2. Click the **Create Input** button and add the following based on the create shipment request object ([GET /shipments_exact](https://console.yubico.com/help/api-req.html))
+
+  | **Label** | **Type** | **Mandatory** |
+  | --------- | -------- | ------------- |
+  | Shipment ID | String | on|
+  
+  ![](/images/118-create-input.png)
+
+### Add the shipment request REST step to the Action
+1. Click the + button underneath the Script step you added earlier
+  ![](/images/25-add-new-step.png)
+2. Click the REST step in the **Integrations** section of the dialog
+  ![](/images/26-rest.png)
+3. You will be presented with the REST step UI
+4. For the connection details use the same Connection Alias that you created for the previous action
+* **Connection:** Use Connection Alias
+* **Connection Alias:** Select your connection alias
+
+3. Set the **Resource Path** to `/shipments_exact/` and drag the **Shipment ID** pill to the end of the URL
+4. Set the **HTTP Method** to GET
+5. Click the + button under Headers and add the following
+
+  | **Name** | **VALUE** |
+  | -------- | --------- |
+  | Accept | application/json |
+  | Content-Type | application/json |
+
+  ![](/images/122-rest-connection-headers.png)
+
+### Configure the Output Script
+1. Add a new Action Step after the REST step. 
+2. When prompted, choose the **Script** step
+  ![](/images/30-script.png)
+
+### Script Input Variables
+1. In the **Input Variables** widget, click the **+ Create Variable** button
+2. Set the **Name** to `responseBody`
+3. Drag the **Response Body** data pill from the data pane to the **Value** field. You can now reference the Response Body in your scripts as `inputs.responseBody`
+  ![](/images/31-input-variables.png)
+4. Set the script to
+
+```javascript
+(function execute(inputs, outputs) {
+  outputs.shipment_response = inputs.responseBody;
+  const response = JSON.parse(inputs.responseBody);
+  outputs.shipment_request_id = response.shipment_id;
+  outputs.shipment_state_id = response.shipment_state_id;
+  outputs.shipment_state_message = response.shipment_state_message;
+  outputs.tracking_link = response.tracking_link;
+  const messages = (response.shipment_messages === undefined) ? "" : JSON.stringify(response.shipment_messages);
+  outputs.shipment_messages = messages;
+})(inputs, outputs);
+```
+
+### Script Output Variables
+1. In the **Output Variables** widget, click the **+ Create Variable** button and add the following
+
+  | **Label** | **Name** | **Type** | **Mandatory** |
+  | --------- | -------- | -------- | ------------- |
+  | Shipment Response | shipment_response | String| off |
+  | Shipment Request ID | shipment_request_id | String | off |
+  | Shipment State ID | shipment_state_id | Integer | off |
+  | Shipment State Message | shipment_state_message | String | off |
+  | Shipment Messages | shipment_messages | String | off |
+  | Tracking Link | tracking_link | String | off |
+
+  ![](/images/119-output-variables.png)
+
+6. **Save** the Script step
+
+### Create Action Outputs
+1. Click the **Outputs** section in the **Action Outline**
+2. Click the **+ Create Output** button
+3. Set the following outputs
+
+  | **Label** | **Name** | **Type** | **Mandatory** |
+  | --------- | -------- | -------- | ------------- |
+  | HTTP Status Code | http_status_code| String | off |
+  | HTTP Error Code | http_error_code| String | off |
+  | HTTP Error Message | http_error_message | String | off |
+  | Shipment Request ID | shipment_request_id | String | off |
+  | Shipment State ID | shipment_state_id | Integer | off |
+  | Shipment State Message | shipment_state_message | String | off |
+  | Shipment Messages | shipment_messages | String | off |
+  | Tracking Link | tracking_link | String | off |
+
+  ![](/images/120-create-action-output.png)
+
+5. Click the **Exit Edit Mode** button
+6. Using the Data Pill Picker, set the **Value** of the Script Output Variables to the associated output variables
+  ![](/images/121-action-output.png)
+7. **Save** the Action
+
+### Test the Action
+1. Click the **Test** button
+2. Set the following variables
+
+  | **Name** | **VALUE** |
+  | -------- | --------- |
+  | Shipment ID | *Use a shipment ID in your YED portal |  
+3. Click **Run Test**  
+  ![](/images/35-test.png)
+4. Wait for the processing to complete and click **Your test has finished running. View the action execution details.**
+  ![](/images/36-test-finished.png)
+5. In the **Output Data** verify the information is the same as found in the YED Console
+
+### Save and Publish
+You've created your action - Be sure to **Save** the **Publish**
+
+
+## Update the Flow to Send Shipment Tracking Information
+We will now update the flow to send Shipment Tracking Information to the customer who requested the YubiKey. We will add a loop to the end of the existing flow to continuously check the created shipment for a shipping link to be sent to the customer
+
+1. Launch the flow designer, navigate to **Flow Designer > Designer**
+  ![](/images/6-flow-designer.png)
+2. Return back to your flow **Yubico YED API Create a Shipment**
+
+### End the Flow of Shipment Creation Failure
+1. Click the plus sign under **Send Email**
+2. Click Flow Login, then select **End**  
+  ![](/images/114-end-flow.png)
+
+### Create Flow Variables
+We will need to create new variables to persist some form of state that can be referenced as the flow loops
+
+1. Click the 3 dots **...** on the right side of the screen
+2. Click **Flow Variables**
+3. Click the + sign twice, you will need 3 variables
+4. The variables should follow this format  
+  ![](/images/115-create-flow-vars.png)
+
+  | **LABEL** | **NAME** | **TYPE** |
+  | -------- | --------- | --------- |
+  | Shipment ID | curr_shipment_id | String |
+  | Shipment Status | curr_shipment_status | String | 
+  | Tracking Link | tracking_link | String |  
+
+5. Exit the pop-up
+6. Click **Add an Action, Flow Logic, or Subflow**
+7. Click Flow Logic, then select **Set Flow Variables**  
+  ![](/images/113-set-flow-vars.png)
+8. Click the plus sign on the right **twice**, you will need two variables
+9. Create the first variable - This will be used to persist the Shipment ID
+* **Name:** curr_shipment_id
+* **Data:** Drag the **Shipment Request ID** pill from 2 - YED Shipment Request
+10. Create the second variable, this will be used to track the latest status of the shipment
+* **Name:** status
+* **Data:** Drag the **Shipment State ID** pill from 2 - YED Shipment Request OR set it to 3 since we're assuming success  
+![](/images/116-set-flow-vars.png)
+11. Click Done
+
+### Create the GET Shipment Loop
+We will now create the loop that will iterate until shipping information is available to send to the customer.
+
+1. Click **Add an Action, Flow Logic, or Subflow**
+2. Click **Flow Logic**, then select **Do the following until**  
+  ![](/images/123-flow-loop.png)
+3. You will need to set the condition that the loop will iterate until the Shipment Status changes to 103 ([defined in the API spec as Shipment Shipped](https://console.yubico.com/help/api-req.html#table-4))
+* Drag the flow variable **Shipment Status** pill to Condition 1
+* Leave the condition as **is**
+* Set the condition value as 103  
+  ![](/images/124-flow-condition.png)
+4. Click Done
+
+### Create the loop logic
+Now we will set what will be done in the loop, this will consist of two actions - Waiting X amount of time, then calling to the GET /shipments_exact API using the Action that was just created. 
+
+The reason why there is a delay in time before calling to the API is because a Shipment will not be immediately available once it is created
+
+1. Within the loop click **Add an Action, Flow Logic, or Subflow**
+2. Click **Flow Logic**, then select **Wait for a duration of time**
+3. Set the **Wait for** value to 24 hrs (or to whatever time fits your requirements)  
+  ![](/images/125-flow-wait.png)  
+4. Click done
+5. Within the loop click **Add an Action, Flow Logic, or Subflow**
+6. Click **Action**, then select **YED Get Shipment**
+7. Drag the flow variable pill **Shipment ID** into the Shipment ID field
+8. Click Done  
+  ![](/images/126-flow-request.png)
+7. Click **Add an Action, Flow Logic, or Subflow**
+8. Click Flow Logic, then select **Set Flow Variables**  
+  ![](/images/113-set-flow-vars.png)
+9. Click the plus sign on the right **twice**, you will need two variables
+10. Create the first variable - This will be used to persist the Shipment ID
+* **Name:** tracking_link
+* **Data:** Drag the **Tracking Link** pill from 9 - YED Get Shipment  
+  ![](/images/127-set-track-link.png)
+11. Click Done
+
+### Create the email
+We will now create the template for the email that will be sent to the user with the tracking information
+
+1. Click **Action**. Click **ServiceNow Core**. Under **Default** click **Send Email**.
+2. Set **To** using the pill Trigger - Service Catalog > Requested Item Record > Requested For > Email
+3. Set **Subject** to "Your YubiKey has Shipped!"
+4. Set **Body** to 
+
+  ```
+  Your order has been shipped
+
+  You can track your shipment using this link
+
+  Thank you
+  ```
+5. Drag the **Shipment ID** data pill from the Flow Variable data pane next to the **Your order** text 
+6. Drag the **Tracking Link** data pill from the Flow Variable data pane next to the **link** text  
+    ![](/images/128-set-close-email.png)
+8. Click **Done**
+9. Click **Activate**
+
 
 ## References
 ---

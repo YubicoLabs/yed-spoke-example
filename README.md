@@ -266,6 +266,58 @@ Similar to Script Input Variables, Script Output Variables allow you to pass dat
 3. You will now see a new data pill in the **Script step** section of the Data Pane
 4. **Save** the Script step
 
+## Create a Connection Alias
+When configuring a REST step there are two options for defining an endpoint connection 
+* Use Connection Alias
+* Define Connection Inline
+
+Connection InLine is great for quick prototyping, or when the request needs to be dynamic. 
+
+A Connection Alias offers better security by minimizing the footprint of where you store your secret, and will allow for your ServiceNow admins to make YED API calls consistantly across the platform.
+
+Below are the steps for configuring a Connection Alias, which will be used in the following step
+
+**Note** - Do not close your Action Configuration window as we will be returning to it, complete this action in another tab if possible
+
+### Configure the Connection & Credential Alias
+1. Navigate back to the ServiceNow dashboard and find **Connections & Credentials**
+2. First we will select **Connections & Credentials Alias**  
+  ![](/images/129-cred-conn-find.png)
+3. Click New
+4. Set **Name** to yed_api_alias
+5. Leave all other fields on their defaults, click **Submit**
+6. Once you return to the main screen, take note of the ID on the row with **yed_api_alias**  
+  ![](/images/132-cca-config.png)
+
+### Configure the Credentials
+1. Navigate back to the ServiceNow dashboard and find **Connections & Credentials**
+2. First we will select **Credentials**  
+  ![](/images/129-cred-conn-find.png)
+3. Click New
+4. Select **API Key Credentials**  
+  ![](/images/130-type-cred.png)
+5. Fill out the form with the following values
+* **Name:** YED API Connection
+* **API Key:** Bearer {your YED API Secret here}  
+  ![](/images/131-cred-form-png)
+6. Click Submit
+
+### Configure the Connection
+1. On the menu on the left hand side select **Connections**
+2. Click New
+3. Select **HTTP(s) Connection**  
+  ![](/images/133-conn-type.png)
+4. Configure the Form with the following information
+* **Name:** yed_api
+* **Credential:** YED API Connection (this is the one created in the previous step)
+* **Connection alias:** Choose the Connection Alias ID that you created in the previous state
+* **Connection URL:** Your YED API URL  
+  ![](/images/134-config-conn.png)
+5. Click Submit
+
+You can now return to the Flow Designer to configure the REST step - The Alias for your connection will be automatically configured.
+
+
 ## The REST Step
 ---
 The REST step is exclusive to IntegrationHub, and is only available after activating the IntegrationHub Installer plugin.
@@ -279,19 +331,9 @@ The IntegrationHub Installer Plugin can be installed following [these steps](htt
   ![](/images/26-rest.png)
 3. You will be presented with the REST step UI
 
-### Define Connection Information
-When configuring a REST step, there are two options for defining the endpoint you will connect to:
-* Use Connection Alias
-* Define Connection Inline
-
-Whenever possible, you should use a Connection Alias when designing your step. There are two primary reasons to define connections inline:
-* Quick prototyping/testing
-* When connection info is dynamic and will be passed into the action as an input or otherwise dynamically determined.
-
-**In this example**, we will start with an **inline connection**. You can convert the action to use a Connection Alias at a later time.
-
-1. Change the **Connection** choice to "Define Connection Inline"
-2. Set the **Base URL** to `https://api.console.yubico.com/v1/`
+### Define Connection Details
+1. Change the **Connection** choice to "Connection Alias"
+2. Change the connection alias to the one created in the previous step
 3. Set the **Resource Path** to `/shipments_exact`
 4. Set the **HTTP Method** to POST
 5. Click the + button under Headers and add the following
@@ -300,9 +342,8 @@ Whenever possible, you should use a Connection Alias when designing your step. T
   | -------- | --------- |
   | Accept | application/json |
   | Content-Type | application/json |
-  | Authorization | Bearer *paste your YED API token here* |
 
-  ![](/images/27-rest-connection-headers.png)
+  ![](/images/27-2-rest-connection-headers.png)
  
 6. Drag the **Shipment Exact Request** data pill from the data pane to the **Request Content Request Body [Text]** field 
   ![](/images/28-request-content.png)

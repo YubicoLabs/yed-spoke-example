@@ -861,15 +861,15 @@ We will need to create new variables to persist some form of state that can be r
 1. Click the 3 dots **...** on the right side of the screen
 2. Click **Flow Variables**
 3. Click the + sign twice, you will need 3 variables
-4. The variables should follow this format
+4. The variables should follow this format  
+  ![](/images/115-create-flow-vars.png)
 
   | **LABEL** | **NAME** | **TYPE** |
   | -------- | --------- | --------- |
   | Shipment ID | curr_shipment_id | String |
   | Shipment Status | curr_shipment_status | String | 
   | Tracking Link | tracking_link | String |  
-  
-  ![](/images/115-create-flow-vars.png)
+
 5. Exit the pop-up
 6. Click **Add an Action, Flow Logic, or Subflow**
 7. Click Flow Logic, then select **Set Flow Variables**  

@@ -722,14 +722,15 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
 
   * **Name:** YED Get Shipment
   * **Application:** Yubico Enterprise Delivery API Spoke
-  * **Description:** Get information about a specific shipment
+  * **Description:** Get information about a specific shipment  
+  ![](/images/117-action-properties.png)  
 
-  ![](/images/117-action-properties.png)
-3. Click the **Submit** button and you will be taken to the new/empty Action
+3. Click the **Submit** button and you will be taken to the new/empty Action  
+
 
 ### Add the shipment request inputs
 1. Click the **Inputs** section at the top of the **Action Outline**
-2. Click the **Create Input** button and add the following based on the create shipment request object ([POST /shipments_exact](https://console.dev.in.yubico.org/apidocs/#operation/CreateShipmentExact))
+2. Click the **Create Input** button and add the following based on the create shipment request object ([GET /shipments_exact](https://console.dev.in.yubico.org/apidocs/#operation/CreateShipmentExact))
 
   | **Label** | **Type** | **Mandatory** |
   | --------- | -------- | ------------- |
@@ -756,7 +757,7 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
   | Accept | application/json |
   | Content-Type | application/json |
 
-  ![](/images/27-rest-connection-headers.png)
+  ![](/images/122-rest-connection-headers.png)
 
 ### Configure the Output Script
 1. Add a new Action Step after the REST step. 
@@ -836,8 +837,7 @@ To launch the flow designer, navigate to **Flow Designer > Designer**
   ![](/images/35-test.png)
 4. Wait for the processing to complete and click **Your test has finished running. View the action execution details.**
   ![](/images/36-test-finished.png)
-5. In the **Output Data** verify the **Shipment Message** is equal to "Awaiting Validation"
-  ![](/images/36-test-validate.png)
+5. In the **Output Data** verify the information is the same as found in the YED Console
 
 ### Save and Publish
 You've created your action - Be sure to **Save** the **Publish**
@@ -860,12 +860,14 @@ We will need to create new variables to persist some form of state that can be r
 
 1. Click the 3 dots **...** on the right side of the screen
 2. Click **Flow Variables**
-3. Click the + sign twice, you will need 2 variables
+3. Click the + sign twice, you will need 3 variables
 4. The variables should follow this format
   | **LABEL** | **NAME** | **TYPE** |
   | -------- | --------- | -------- |
   | Shipment ID | curr_shipment_id | String |
-  | Shipment Status | curr_shipment_status | String |  
+  | Shipment Status | curr_shipment_status | String | 
+  | Tracking Link | tracking_link | String | 
+
   ![](/images/115-create-flow-vars.png)
 5. Exit the pop-up
 6. Click **Add an Action, Flow Logic, or Subflow**
@@ -882,6 +884,63 @@ We will need to create new variables to persist some form of state that can be r
 11. Click Done
 
 ### Create the GET Shipment Loop
+We will now create the loop that will iterate until shipping information is available to send to the customer.
+
+1. Click **Add an Action, Flow Logic, or Subflow**
+2. Click **Flow Logic**, then select **Do the following until**  
+  ![](/images/123-flow-loop.png)
+3. You will need to set the condition that the loop will iterate until the Shipment Status changes to 103 ([defined in the API spec as Shipment Shipped](https://console.yubico.com/help/api-req.html#table-4))
+* Drag the flow variable **Shipment Status** pill to Condition 1
+* Leave the condition as **is**
+* Set the condition value as 103  
+  ![](/images/124-flow-condition.png)
+4. Click Done
+
+### Create the loop logic
+Now we will set what will be done in the loop, this will consist of two actions - Waiting X amount of time, then calling to the GET /shipments_exact API using the Action that was just created. 
+
+The reason why there is a delay in time before calling to the API is because a Shipment will not be immediately available once it is created
+
+1. Within the loop click **Add an Action, Flow Logic, or Subflow**
+2. Click **Flow Logic**, then select **Wait for a duration of time**
+3. Set the **Wait for** value to 24 hrs (or to whatever time fits your requirements)  
+  ![](/images/125-flow-wait.png)  
+4. Click done
+5. Within the loop click **Add an Action, Flow Logic, or Subflow**
+6. Click **Action**, then select **YED Get Shipment**
+7. Drag the flow variable pill **Shipment ID** into the Shipment ID field
+8. Click Done  
+  ![](/images/126-flow-request.png)
+7. Click **Add an Action, Flow Logic, or Subflow**
+8. Click Flow Logic, then select **Set Flow Variables**
+![](/images/113-set-flow-vars.png)
+9. Click the plus sign on the right **twice**, you will need two variables
+10. Create the first variable - This will be used to persist the Shipment ID
+* **Name:** tracking_link
+* **Data:** Drag the **Tracking Link** pill from 9 - YED Get Shipment  
+  ![](/images/127-set-track-link.png)
+11. Click Done
+
+### Create the email
+We will now create the template for the email that will be sent to the user with the tracking information
+
+1. Click **Action**. Click **ServiceNow Core**. Under **Default** click **Send Email**.
+2. Set **To** using the pill Trigger - Service Catalog > Requested Item Record > Requested For > Email
+3. Set **Subject** to "Your YubiKey has Shipped!"
+4. Set **Body** to 
+
+  ```
+  Your order has been shipped
+
+  You can track your shipment using this link
+
+  Thank you
+  ```
+5. Drag the **Shipment ID** data pill from the Flow Variable data pane next to the **Your order** text 
+6. Drag the **Tracking Link** data pill from the Flow Variable data pane next to the **link** text  
+    ![](/images/128-set-close-email.png)
+8. Click **Done**
+9. Click **Activate**
 
 
 ## References

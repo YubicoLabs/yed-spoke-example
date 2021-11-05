@@ -106,5 +106,5 @@ We will now create the template for the email that will be sent to the user with
 
 <div class="btns">
   <a class="btn--secondary" href="/yed-spoke-example/learn/create-the-get-shipments-action">Previous</a>
-    <a class="btn" href="/yed-spoke-example/References">References</a>
+    <a class="btn" href="/yed-spoke-example/references">References</a>
 </div>

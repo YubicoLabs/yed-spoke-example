@@ -11,7 +11,7 @@ To test the workflow first we must impersonate a user with an address and order 
 1. Click **System Administrator** dropdown menu then click **Impersonate User**
 2. Click **Search for user** and select "Adela Cervantsz"
 3. Click **Service Catalog** then click **Peripherals**
-4. Click **Yubikey 5 NFC**
+4. Click **Yubikey 5NFC**
 5. Click **Order Now**
 6. Take note of the **Request Number** e.g. REQ0010002
 7. Click **Adela Cervantsz** and then select **End Impersonation**
@@ -26,5 +26,5 @@ To test the workflow first we must impersonate a user with an address and order 
 
 <div class="btns">
   <a class="btn--secondary" href="/yed-spoke-example/learn/call-flow-from-workflow">Previous</a>
-    <a class="btn" href="/yed-spoke-example/references">References</a>
+    <a class="btn" href="/yed-spoke-example/learn/bonus-lab">Next</a>
 </div>

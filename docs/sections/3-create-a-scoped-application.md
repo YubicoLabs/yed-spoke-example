@@ -24,5 +24,5 @@ The first step when building a new Spoke is to create a Scoped Application. The 
 
 <div class="btns">
   <a class="btn--secondary" href="/yed-spoke-example/learn/prerequisites">Previous</a>
-  <a class="btn" href="/yed-spoke-example/learn/add-to-service-catalog">Next</a>
+  <a class="btn" href="/yed-spoke-example/learn/create-a-catalog-item-for-your-yubikey-order">Next</a>
 </div>

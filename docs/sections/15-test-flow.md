@@ -12,7 +12,7 @@ To test the flow first we must impersonate a user with an address and order a Yu
 1. Click **System Administrator** dropdown menu then click **Impersonate User**
 2. Click **Search for user** and select "Adela Cervantsz"
 3. Click **Service Catalog** then click **Peripherals**
-4. Click **Yubikey 5 NFC**
+4. Click **Yubikey 5NFC**
 5. Click **Order Now**
 6. Take note of the **Request Number** e.g. REQ0010001
 7. Click **Adela Cervantsz** and then select **End Impersonation**

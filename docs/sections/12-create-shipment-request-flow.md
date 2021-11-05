@@ -25,6 +25,18 @@ Flows run when a Trigger condition is met. For this example, we will run a flow 
 3. Click **Done**
 ![]({{site.baseurl}}/assets/images/41-trigger-done.png)
 
+### Add the Form Variables
+This step will allow you to use the Product ID that was defaulted in Catalog Item step
+
+1. Click the **Select to add an Action, Flow Logic, or Subflow** link
+2. Click the **Action** button. Click the **ServiceNow Core** option. Click the **Get Catalog Variables** button.  
+  ![]({{site.baseurl}}/assets/images/109-get-catalog-var.png)
+3. Drag the **Requested Item Records** pill from the table on the right into the **Submitted Request [Requested Item]** Field
+4. For the field **Template Catalog Items and Variable Sets**, click the dropdown and select the Catalog Item you created **YubiKey 5NFC**.
+5. Use the right facing arrow to move the yubikey_product_id field to the Selected Column  
+  ![]({{site.baseurl}}/assets/images/110-get-catalog-var.png)
+6. Click **Done**
+
 ### Add the Action to the Flow
 Now it's time to add the Action to the Flow.
 
@@ -52,7 +64,7 @@ Now it's time to add the Action to the Flow.
   | City | Trigger > Requested Item Record > Requested for > Location > City |
   | Region | Trigger > Requested Item Record > Requested for > Location > State / Province |
   | Postal Code| Trigger > Requested Item Record > Requested for > Location > Zip / Postal Code |
-  | Product ID | Trigger > Requested Item Record > Item > Model > Model Number |
+  | Product ID | yubikey_product_id |
   | Inventory Product Id | 15 |
   | Shipment Product Quantity | Trigger > Requested Item Record > Quantity  |
   

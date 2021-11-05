@@ -38,11 +38,11 @@ Action inputs should always have human-friendly names.
   | City | String | on |
   | Region | String | off |
   | Postal Code | String | on |
-  | Product ID | Integer | on |
+  | Product ID | String | on |
   | Inventory Product ID | Integer | on |
   | Shipment Product Quantity | Integer | on |
   
-  ![]({{site.baseurl}}/assets/images/22-1-create-input.png)
+  ![]({{site.baseurl}}/assets/images/22-2-create-input.png)
 
 3. **Save** the Action
 

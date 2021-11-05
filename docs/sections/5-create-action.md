@@ -30,6 +30,6 @@ This opens a new UI where you will manage and build Actions, Flows, and Subflows
   ![]({{site.baseurl}}/assets/images/21-action-ui.png)
 
 <div class="btns">
-  <a class="btn--secondary" href="/yed-spoke-example/learn/add-to-service-catalog">Previous</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/create-a-catalog-item-for-your-yubikey-order">Previous</a>
   <a class="btn" href="/yed-spoke-example/learn/define-action-inputs">Next</a>
 </div>

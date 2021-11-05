@@ -126,7 +126,7 @@ function shipYubiKey() {
 
 1. Go to **Service Catalog** > **Catalog Definitions** > **Maintain Items**
 ![]({{site.baseurl}}/assets/images/87-maintain-items.png)
-2. Select the **Yubikey 5 NFC**
+2. Select the **Yubikey 5NFC**
 3. Set the **Workflow** to "Service Catalog YubiKey Request"
 4. Click **Update**
 ![]({{site.baseurl}}/assets/images/88-set-workflow.png)

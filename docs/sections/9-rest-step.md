@@ -17,19 +17,9 @@ The IntegrationHub Installer Plugin can be installed following [these steps](htt
   ![]({{site.baseurl}}/assets/images/26-rest.png)
 3. You will be presented with the REST step UI
 
-### Define Connection Information
-When configuring a REST step, there are two options for defining the endpoint you will connect to:
-* Use Connection Alias
-* Define Connection Inline
-
-Whenever possible, you should use a Connection Alias when designing your step. There are two primary reasons to define connections inline:
-* Quick prototyping/testing
-* When connection info is dynamic and will be passed into the action as an input or otherwise dynamically determined.
-
-**In this example**, we will start with an **inline connection**. You can convert the action to use a Connection Alias at a later time.
-
-1. Change the **Connection** choice to "Define Connection Inline"
-2. Set the **Base URL** to `https://api.console.yubico.com/v1/`
+### Define Connection Details
+1. Change the **Connection** choice to "Connection Alias"
+2. Change the connection alias to the one created in the previous step
 3. Set the **Resource Path** to `/shipments_exact`
 4. Set the **HTTP Method** to POST
 5. Click the + button under Headers and add the following
@@ -38,15 +28,14 @@ Whenever possible, you should use a Connection Alias when designing your step. T
   | -------- | --------- |
   | Accept | application/json |
   | Content-Type | application/json |
-  | Authorization | Bearer *paste your YED API token here* |
 
-  ![]({{site.baseurl}}/assets/images/27-rest-connection-headers.png)
+  ![]({{site.baseurl}}/assets/images/27-2-rest-connection-headers.png)
  
 6. Drag the **Shipment Exact Request** data pill from the data pane to the **Request Content Request Body [Text]** field 
-  ![]({{site.baseurl}}/assets/images/28-request-content.png)
+  ![](/images/28-request-content.png)
 7. **Save** the Rest step
 
 <div class="btns">
-  <a class="btn--secondary" href="/yed-spoke-example/learn/input-script">Previous</a>
+  <a class="btn--secondary" href="/yed-spoke-example/learn/create-a-connection-alias">Previous</a>
   <a class="btn" href="/yed-spoke-example/learn/output-script">Next</a>
 </div>

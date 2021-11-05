@@ -12,6 +12,6 @@ permalink: /references
 * This example is based off of the ServiceNow [Building Your First Spoke guidebook](https://developer.servicenow.com/connect.do#!/event/knowledge2020/CCW2510)
 
 <div class="btns">
-    <a class="btn--secondary" href="/learn/update-the-flow-to-send-shipment-tracking-information">Previous</a>
+    <a class="btn--secondary" href="/yed-spoke-example/learn/update-the-flow-to-send-shipment-tracking-information">Previous</a>
     <a class="btn" href="/yed-spoke-example/help-and-support">Help and Support</a>
 </div>

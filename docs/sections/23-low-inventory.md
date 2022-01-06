@@ -4,7 +4,7 @@ title: Monitor for Low Inventory
 permalink: /error-handling/low-inventory
 ---
 
-## Overview
+## Monitor for Low Inventory
 
 ---
 

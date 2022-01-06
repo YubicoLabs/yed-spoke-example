@@ -4,6 +4,10 @@ title: Monitor for Low Inventory - Define Flow
 permalink: /error-handling/low-inventory-flow
 ---
 
+# Monitor for Low Inventory - Define Flow
+
+---
+
 ## Create the Inventory Request Flow
 
 ---

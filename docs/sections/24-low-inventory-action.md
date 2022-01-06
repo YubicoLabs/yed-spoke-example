@@ -4,6 +4,10 @@ title: Monitor for Low Inventory - Define Action
 permalink: /error-handling/low-inventory-action
 ---
 
+# Monitor for Low Inventory - Define Action
+
+---
+
 ## Create the Action
 
 ---
@@ -40,7 +44,7 @@ Here we will define the inputs needed by the action. For this action the only in
 ### Add the request inputs
 
 1. Click the **Inputs** section at the top of the **Action Outline**
-2. Click the **Create Input** button and add the following based on the create shipment request object ([POST /shipments_exact](https://console.dev.in.yubico.org/apidocs/#operation/CreateShipmentExact))
+2. Click the **Create Input** button and add the following
 
 | **Label**           | **Type** | **Mandatory** |
 | ------------------- | -------- | ------------- |

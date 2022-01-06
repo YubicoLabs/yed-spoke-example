@@ -36,7 +36,7 @@ The IntegrationHub Installer Plugin can be installed following [these steps](htt
 ![]({{site.baseurl}}/assets/images/27-3-rest-connection-headers.png)
 
 6. Drag the **Shipment Exact Request** data pill from the data pane to the **Request Content Request Body [Text]** field
-   ![](/images/28-request-content.png)
+   ![](/assets/images/28-request-content.png)
 7. **Save** the Rest step
 
 <div class="btns">

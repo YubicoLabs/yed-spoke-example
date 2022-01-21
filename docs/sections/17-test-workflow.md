@@ -3,11 +3,15 @@ layout: docs
 title: Test the Workflow
 permalink: /learn/test-workflow
 ---
+
 ## Test the Workflow
+
 ---
+
 To test the workflow first we must impersonate a user with an address and order a Yubikey
 
 ### Order a YubiKey from the Service Catalog
+
 1. Click **System Administrator** dropdown menu then click **Impersonate User**
 2. Click **Search for user** and select "Adela Cervantsz"
 3. Click **Service Catalog** then click **Peripherals**
@@ -16,13 +20,17 @@ To test the workflow first we must impersonate a user with an address and order 
 6. Take note of the **Request Number** e.g. REQ0010002
 7. Click **Adela Cervantsz** and then select **End Impersonation**
 8. Open the **Service Catalog** > **Open Records** > **Items**
-![]({{site.baseurl}}/assets/images/92-open-record.png)
+   ![]({{site.baseurl}}/assets/images/92-open-record.png)
 9. Select the **Request Item** e.g. REQ0010002
 10. Under the **Approvers** tab, check the box and **Approve** the request.
-![]({{site.baseurl}}/assets/images/93-approve.png)
+    ![]({{site.baseurl}}/assets/images/93-approve.png)
 11. Click **Workflow Context**  
-![]({{site.baseurl}}/assets/images/94-context.png)
+    ![]({{site.baseurl}}/assets/images/94-context.png)
 12. Go to **Workflow Transition History** and view the workflow execution
+
+### Delete Test Order
+
+After every test it is important that you delete any orders directly in the YED Console - See more information here - [Cancelling Your Test Orders](#cancelling-your-test-orders)
 
 <div class="btns">
   <a class="btn--secondary" href="/yed-spoke-example/learn/call-flow-from-workflow">Previous</a>

@@ -1,0 +1,3155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-rome-06-23-2021__patch1-hotfix1-09-15-2021_09-16-2021_1434.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Check the remaining amounts of your YED inventory</description>
+        <ih_action>true</ih_action>
+        <internal_name>yed_inventory_monitor</internal_name>
+        <label_cache>[{"name":"{{action.inventory_threshold}}","label":"action➛inventory_threshold","type":"action","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[c7f35d92-7622-440b-821b-b35b6d03cba7].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[c7f35d92-7622-440b-821b-b35b6d03cba7].inventory}}","label":"step➛Script step➛inventory","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].error_code}}","label":"step➛REST step➛Error Code","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}}]</label_cache>
+        <master_snapshot>b65d15431b700110b72e99f7b04bcbde</master_snapshot>
+        <name>YED Inventory Monitor</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 15:57:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>281f85471b300110b72e99f7b04bcbf8</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>YED Inventory Monitor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_281f85471b300110b72e99f7b04bcbf8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:54</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=281f85471b300110b72e99f7b04bcbf8"/>
+    <sys_variable_value action="delete_multiple" query="document_key=281f85471b300110b72e99f7b04bcbf8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>281f85471b300110b72e99f7b04bcbf8</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>1616d98b1b300110b72e99f7b04bcb20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">5616d98b1b300110b72e99f7b04bcb16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>281f85471b300110b72e99f7b04bcbf8</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>d616d98b1b300110b72e99f7b04bcb20</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:32:36</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FD1616d98b36300110eaa9a8dd7a856b0d":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD1616d98b36300110eaa9a8dd7a856b0d.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"7232fc30-be90-4069-9992-7b7d9b0826cc\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD1616d98b36300110eaa9a8dd7a856b0d\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">d216d98b1b300110b72e99f7b04bcb10</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=281f85471b300110b72e99f7b04bcbf8"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_error_code</field>
+        <id>281f85471b300110b72e99f7b04bcbf8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:38:54</sys_created_on>
+        <sys_id>28989d0f1b300110b72e99f7b04bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:38:54</sys_updated_on>
+        <table>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</table>
+        <value>{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].error_code}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_error_message</field>
+        <id>281f85471b300110b72e99f7b04bcbf8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:38:54</sys_created_on>
+        <sys_id>64989d0f1b300110b72e99f7b04bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:38:54</sys_updated_on>
+        <table>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</table>
+        <value>{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_status_code</field>
+        <id>281f85471b300110b72e99f7b04bcbf8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:38:54</sys_created_on>
+        <sys_id>a0989d0f1b300110b72e99f7b04bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:38:54</sys_updated_on>
+        <table>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</table>
+        <value>{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].status_code}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>inventory_message</field>
+        <id>281f85471b300110b72e99f7b04bcbf8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:38:54</sys_created_on>
+        <sys_id>e8989d0f1b300110b72e99f7b04bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:38:54</sys_updated_on>
+        <table>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</table>
+        <value>{{step[c7f35d92-7622-440b-821b-b35b6d03cba7].inventory}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>281f85471b300110b72e99f7b04bcbf8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>9216d98b1b300110b72e99f7b04bcb20</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <table>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>281f85471b300110b72e99f7b04bcbf8</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>de16d98b1b300110b72e99f7b04bcb1f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <table>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=281f85471b300110b72e99f7b04bcbf8^sys_idNOT IN002799cb1b300110b72e99f7b04bcb6e,4616998b1b300110b72e99f7b04bcbdd"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</action>
+        <cid>c7f35d92-7622-440b-821b-b35b6d03cba7</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:32:35</sys_created_on>
+        <sys_id>002799cb1b300110b72e99f7b04bcb6e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:47</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=002799cb1b300110b72e99f7b04bcb6e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>002799cb1b300110b72e99f7b04bcb6e</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:32:36</sys_created_on>
+        <sys_id>182799cb1b300110b72e99f7b04bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:32:36</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>002799cb1b300110b72e99f7b04bcb6e</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:32:36</sys_created_on>
+        <sys_id>d82799cb1b300110b72e99f7b04bcb86</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:47</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  const response = JSON.parse(inputs.responseBody);
+  const org_prod_inv = response.organization_product_inventory;
+  var below_threshold = "";
+  for(var i = 0; i &lt; org_prod_inv.length; i++) {
+    var item = org_prod_inv[i];
+    if(item.organization_product_quantity &lt; inputs.inventory_threshold) {
+      var newMessage = item.product_name + ": Remaining Inventory - " + item.organization_product_quantity + ", ";
+      below_threshold += newMessage;
+    }
+  }
+  if(below_threshold === "") {
+    below_threshold = "All your inventory items are above the threshold";
+  }
+  outputs.inventory= below_threshold;
+})(inputs, outputs);</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=002799cb1b300110b72e99f7b04bcb6e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>002799cb1b300110b72e99f7b04bcb6e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:32:36</sys_created_on>
+        <sys_id>d02799cb1b300110b72e99f7b04bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:32:36</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>inventory_threshold</field>
+        <id>002799cb1b300110b72e99f7b04bcb6e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:32:36</sys_created_on>
+        <sys_id>982799cb1b300110b72e99f7b04bcb87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:32:36</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_002799cb1b300110b72e99f7b04bcb6e</table>
+        <value>{{action.inventory_threshold}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>responseBody</field>
+        <id>002799cb1b300110b72e99f7b04bcb6e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:32:36</sys_created_on>
+        <sys_id>d42799cb1b300110b72e99f7b04bcb87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:32:36</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_002799cb1b300110b72e99f7b04bcb6e</table>
+        <value>{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>002799cb1b300110b72e99f7b04bcb6e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:32:36</sys_created_on>
+        <sys_id>942799cb1b300110b72e99f7b04bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:32:36</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_002799cb1b300110b72e99f7b04bcb6e^id=002799cb1b300110b72e99f7b04bcb6e"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=002799cb1b300110b72e99f7b04bcb6e"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=002799cb1b300110b72e99f7b04bcb6e^sys_idNOT IN4c2799cb1b300110b72e99f7b04bcb74,842799cb1b300110b72e99f7b04bcb79"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>responseBody</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">002799cb1b300110b72e99f7b04bcb6e</model>
+        <model_id>002799cb1b300110b72e99f7b04bcb6e</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_002799cb1b300110b72e99f7b04bcb6e</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:32:36</sys_created_on>
+        <sys_id>4c2799cb1b300110b72e99f7b04bcb74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:32:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inventory_threshold</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">002799cb1b300110b72e99f7b04bcb6e</model>
+        <model_id>002799cb1b300110b72e99f7b04bcb6e</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_002799cb1b300110b72e99f7b04bcb6e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:32:36</sys_created_on>
+        <sys_id>842799cb1b300110b72e99f7b04bcb79</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:35:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=002799cb1b300110b72e99f7b04bcb6e^sys_idNOT IN882799cb1b300110b72e99f7b04bcb7d"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c777307e-f2d0-4746-b924-60995c7496a6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inventory</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>inventory</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">002799cb1b300110b72e99f7b04bcb6e</model>
+        <model_id>002799cb1b300110b72e99f7b04bcb6e</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_002799cb1b300110b72e99f7b04bcb6e</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:32:36</sys_created_on>
+        <sys_id>882799cb1b300110b72e99f7b04bcb7d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:32:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_002799cb1b300110b72e99f7b04bcb6e^sys_idNOT IN102799cb1b300110b72e99f7b04bcb82"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inventory</element>
+        <help/>
+        <hint/>
+        <label>inventory</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_002799cb1b300110b72e99f7b04bcb6e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:32:36</sys_created_on>
+        <sys_id>102799cb1b300110b72e99f7b04bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:32:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</action>
+        <cid>56055e77-9fd8-45c6-b14d-34acd0a5c6c4</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>REST step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:05</sys_created_on>
+        <sys_id>4616998b1b300110b72e99f7b04bcbdd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:39:40</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4616998b1b300110b72e99f7b04bcbdd"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4616998b1b300110b72e99f7b04bcbdd</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>1216d98b1b300110b72e99f7b04bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <value>/inventory</value>
+        <variable display_value="Resource Path">3d090af03b23320057a4a2e334efc455</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4616998b1b300110b72e99f7b04bcbdd</document_key>
+        <order>12</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>1e16d98b1b300110b72e99f7b04bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4616998b1b300110b72e99f7b04bcbdd</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:38:54</sys_created_on>
+        <sys_id>20989d0f1b300110b72e99f7b04bcb2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:38:54</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="Query Parameters">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4616998b1b300110b72e99f7b04bcbdd</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>5216d98b1b300110b72e99f7b04bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <value>ef751ff07301330025d71afe2ff6a7f9</value>
+        <variable display_value="Retry Policy">37be397587c03300a8cc7d5e27cb0ba2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4616998b1b300110b72e99f7b04bcbdd</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>5a16d98b1b300110b72e99f7b04bcb08</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:39:40</sys_updated_on>
+        <value>https://api.console.stage.yubico.com/v1/</value>
+        <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4616998b1b300110b72e99f7b04bcbdd</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>5e16d98b1b300110b72e99f7b04bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <value>f34e34f21b700110b72e99f7b04bcb1d</value>
+        <variable display_value="Connection Alias">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4616998b1b300110b72e99f7b04bcbdd</document_key>
+        <order>13</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>9616d98b1b300110b72e99f7b04bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <value>18409d8007482000dada43c0d1021e8f</value>
+        <variable display_value="Capabilities">c30a451d2f201300a09a839fb18c95b4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4616998b1b300110b72e99f7b04bcbdd</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>9a16d98b1b300110b72e99f7b04bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Honor Duplicate Query Params">58715a1c53f22010d3a8ddeeff7b1248</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4616998b1b300110b72e99f7b04bcbdd</document_key>
+        <order>30</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>d216d98b1b300110b72e99f7b04bcb08</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:39:40</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Accept","value":"application/json"},{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Content-Type","value":"application/json"},{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Cookie","value":"GCP_IAAP_AUTH_TOKEN_832CBF3DB3196123=eyJhbGciOiJSUzI1NiIsImtpZCI6ImQwMWMxYWJlMjQ5MjY5ZjcyZWY3Y2EyNjEzYTg2YzlmMDVlNTk1NjciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI3NDY0NzgyOTM4OTAtdm0zbTBpaTZwcHFnN2I2NnFtZTFmczI3N2w4dTM3aGouYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI3NDY0NzgyOTM4OTAtdm0zbTBpaTZwcHFnN2I2NnFtZTFmczI3N2w4dTM3aGouYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDI5MjAzOTA0Mjg5NjQ0MTM4MTIiLCJoZCI6Inl1Ymljby5jb20iLCJlbWFpbCI6ImMuc2FsYXNAeXViaWNvLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiZUxqR1R1SWxmcTJ0T1VIYkJGeUdDZyIsImdvb2dsZSI6eyJnaWMiOiJBR09vNTJqMEV1WmlLUEVRZXF4STV2aU9PNmdYUnBvS3piNm5MWmZfODNZUDN3Wjl6ZU1DNGdoOVltMjBndUpGMVkzTVpuTExobXRnbVBRblMxam9jX1ZSZ0QtTWFDZTcycDA4S0RWcUdCZ2xvZ1IzQ0YzWER5SnBGVHFzdjZXQ29CV0YtNXFWd3p4dzlBbjNlTnNMTzJvS3FkSUdNSkFKcUN0empLVmY0enZMaGNvUUROdzNRdWNkNkdFdUk2MVFDTnRrc0xJSlRYM0Q2ZlllUW5ILXZMOG52NU40UmFfa3FFRSJ9LCJpYXQiOjE2NDEzMTc0MzUsImV4cCI6MTY0MTMyMTAzNX0.OZ73INaNPTri-kvjgWPDLKJ5KnAUFIiEBeAm3EzATWXMLjCqyTGepBdicS5ipziX_yFhmxVnorJWsKkltlZsXQ2_oiYoVpuhGImjmyt1pDHmOgB4iEgy_zzfgvya1nyu66-w0MqXB7_riIdYZsZJuloEjvsscMDje50VjKCDrRjPHUueyf8jD81sKy7un7dPrmgyC-kuQxEbALUP3mVL5LeZLfol5oXVA81UOI8dxMBLj-vrLcarQLH-MrywM5H_T3EEmLRFaApDs102jAe3-su2BSBt4kbdh1pzkUjyA101Qwesy7YZddc_cVYGrQCfm23kKeGKzJwNVWG5VPK5zA;GCP_IAP_UID=832CBF3DB3196123"}]}</value>
+        <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4616998b1b300110b72e99f7b04bcbdd</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>de16d98b1b300110b72e99f7b04bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <value/>
+        <variable display_value="Connection Timeout">7a59009bc7522010820469467ec260c0</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_4616998b1b300110b72e99f7b04bcbdd^id=4616998b1b300110b72e99f7b04bcbdd"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129^id=4616998b1b300110b72e99f7b04bcbdd"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=4616998b1b300110b72e99f7b04bcbdd^sys_idNOT INd216998b1b300110b72e99f7b04bcbf9"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true,uiType=password2,uiTypeLabel=Password (2 Way Encrypted),uiUniqueId=ead7fc6f-eb67-4a8f-8874-2fe1323f24e5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sn_auth_token</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">password2</internal_type>
+        <label>Credential Value</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="REST step">4616998b1b300110b72e99f7b04bcbdd</model>
+        <model_id>4616998b1b300110b72e99f7b04bcbdd</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_4616998b1b300110b72e99f7b04bcbdd</name>
+        <next_element/>
+        <order>7</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:05</sys_created_on>
+        <sys_id>d216998b1b300110b72e99f7b04bcbf9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:32:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_4616998b1b300110b72e99f7b04bcbdd^sys_idNOT IN1216998b1b300110b72e99f7b04bcbfe"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sn_auth_token</element>
+        <help/>
+        <hint/>
+        <label>Credential Value</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_4616998b1b300110b72e99f7b04bcbdd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:05</sys_created_on>
+        <sys_id>1216998b1b300110b72e99f7b04bcbfe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:05</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=281f85471b300110b72e99f7b04bcbf8^sys_idNOT IN5eb5d1831b300110b72e99f7b04bcbb1"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=e6e3ba8e-a13a-4380-9fc4-f2ba1d305398</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inventory_threshold</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>inventory_threshold</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</model>
+        <model_id>281f85471b300110b72e99f7b04bcbf8</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_281f85471b300110b72e99f7b04bcbf8</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:26:28</sys_created_on>
+        <sys_id>5eb5d1831b300110b72e99f7b04bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:26:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_output action="delete_multiple" query="model=281f85471b300110b72e99f7b04bcbf8^sys_idNOT IN34c7910f1b300110b72e99f7b04bcbec,5616d98b1b300110b72e99f7b04bcb16,b0c7910f1b300110b72e99f7b04bcbe7,b4c7910f1b300110b72e99f7b04bcbf1,c622ad471b700110b72e99f7b04bcbe1,d216d98b1b300110b72e99f7b04bcb10"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=332c7b42-cde6-4747-af29-68fa416f96e7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>http_error_code</element>
+        <element_prototype display_value="Error Code" element="error_code" name="var__m_sys_flow_step_definition_output_07a762fb47222200b4fad7527c9a7129">d1744b7347622200b4fad7527c9a7105</element_prototype>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>HTTP Error Code</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</model>
+        <model_id>281f85471b300110b72e99f7b04bcbf8</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:35:22</sys_created_on>
+        <sys_id>34c7910f1b300110b72e99f7b04bcbec</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=bd29c181-73e6-461e-95c4-449d89047b3b,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</model>
+        <model_id>281f85471b300110b72e99f7b04bcbf8</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>5616d98b1b300110b72e99f7b04bcb16</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=6725bc77-bd21-47c9-8fe7-e9aa318bd70d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>http_status_code</element>
+        <element_prototype display_value="Status Code" element="status_code" name="var__m_sys_flow_step_definition_output_07a762fb47222200b4fad7527c9a7129">a053077347622200b4fad7527c9a716e</element_prototype>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>HTTP Status Code</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</model>
+        <model_id>281f85471b300110b72e99f7b04bcbf8</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:35:22</sys_created_on>
+        <sys_id>b0c7910f1b300110b72e99f7b04bcbe7</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=275197e5-7d63-44c9-ba07-19e7461d761b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>http_error_message</element>
+        <element_prototype display_value="Error Message" element="error_message" name="var__m_sys_flow_step_definition_output_07a762fb47222200b4fad7527c9a7129">26a48b7347622200b4fad7527c9a71c0</element_prototype>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>HTTP Error Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</model>
+        <model_id>281f85471b300110b72e99f7b04bcbf8</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:35:22</sys_created_on>
+        <sys_id>b4c7910f1b300110b72e99f7b04bcbf1</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=3577eb01-d594-4338-a295-dc50f8ceec2e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inventory_message</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Inventory Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</model>
+        <model_id>281f85471b300110b72e99f7b04bcbf8</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 17:20:47</sys_created_on>
+        <sys_id>c622ad471b700110b72e99f7b04bcbe1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:47</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c622ad471b700110b72e99f7b04bcbe1^sys_idNOT IN9e22ad471b700110b72e99f7b04bcbf4"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>inventory_message</input_name>
+        <instance>c622ad471b700110b72e99f7b04bcbe1</instance>
+        <referenced_table>sys_hub_action_output</referenced_table>
+        <script>{"inventory_message":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 17:20:47</sys_created_on>
+        <sys_id>9e22ad471b700110b72e99f7b04bcbf4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:47</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FD1616d98b36300110eaa9a8dd7a856b0d,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=7232fc30-be90-4069-9992-7b7d9b0826cc</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</model>
+        <model_id>281f85471b300110b72e99f7b04bcbf8</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>d216d98b1b300110b72e99f7b04bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=281f85471b300110b72e99f7b04bcbf8^sys_idNOT INa6b5558b1b300110b72e99f7b04bcbc0"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:26:28</sys_created_on>
+        <sys_id>a6b5558b1b300110b72e99f7b04bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:26:28</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_281f85471b300110b72e99f7b04bcbf8^sys_idNOT IN22b5558b1b300110b72e99f7b04bcbbc"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inventory_threshold</element>
+        <help/>
+        <hint/>
+        <label>inventory_threshold</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_281f85471b300110b72e99f7b04bcbf8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:26:28</sys_created_on>
+        <sys_id>22b5558b1b300110b72e99f7b04bcbbc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:26:28</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8^sys_idNOT IN4a22ad471b700110b72e99f7b04bcbe5,70c7910f1b300110b72e99f7b04bcbeb,74c7910f1b300110b72e99f7b04bcbf5,9216d98b1b300110b72e99f7b04bcb15,d216d98b1b300110b72e99f7b04bcb1d,f0c7910f1b300110b72e99f7b04bcbf0"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inventory_message</element>
+        <help/>
+        <hint/>
+        <label>Inventory Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 17:20:47</sys_created_on>
+        <sys_id>4a22ad471b700110b72e99f7b04bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:47</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>http_status_code</element>
+        <help/>
+        <hint/>
+        <label>HTTP Status Code</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:35:22</sys_created_on>
+        <sys_id>70c7910f1b300110b72e99f7b04bcbeb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:35:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>http_error_message</element>
+        <help/>
+        <hint/>
+        <label>HTTP Error Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:35:22</sys_created_on>
+        <sys_id>74c7910f1b300110b72e99f7b04bcbf5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:35:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>9216d98b1b300110b72e99f7b04bcb15</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:28:06</sys_created_on>
+        <sys_id>d216d98b1b300110b72e99f7b04bcb1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:28:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>http_error_code</element>
+        <help/>
+        <hint/>
+        <label>HTTP Error Code</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_281f85471b300110b72e99f7b04bcbf8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:35:22</sys_created_on>
+        <sys_id>f0c7910f1b300110b72e99f7b04bcbf0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:35:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=281f85471b300110b72e99f7b04bcbf8^sys_idNOT IN6f5d95431b700110b72e99f7b04bcb43"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"6f5d95431b700110b72e99f7b04bcb43","name":"plan","plan_signature":null}}</plan>
+        <snapshot>b32221871b700110b72e99f7b04bcb92</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6f5d95431b700110b72e99f7b04bcb43</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:56</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Check the remaining amounts of your YED inventory</description>
+        <internal_name>yed_inventory_monitor</internal_name>
+        <label_cache>[{"name":"{{action.inventory_threshold}}","label":"action➛inventory_threshold","type":"action","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[c7f35d92-7622-440b-821b-b35b6d03cba7].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[c7f35d92-7622-440b-821b-b35b6d03cba7].inventory}}","label":"step➛Script step➛inventory","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].status_code}}","label":"step➛REST step➛Status Code","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].error_code}}","label":"step➛REST step➛Error Code","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].error_message}}","label":"step➛REST step➛Error Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}}]</label_cache>
+        <master>true</master>
+        <name>YED Inventory Monitor</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="YED Inventory Monitor">281f85471b300110b72e99f7b04bcbf8</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b65d15431b700110b72e99f7b04bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=b65d15431b700110b72e99f7b04bcbde"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b65d15431b700110b72e99f7b04bcbde"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>b65d15431b700110b72e99f7b04bcbde</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>035d55431b700110b72e99f7b04bcb74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">365d55431b700110b72e99f7b04bcb48</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>b65d15431b700110b72e99f7b04bcbde</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>c35d55431b700110b72e99f7b04bcb74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDf65d55432b700110eabcd68d3a3cb940":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDf65d55432b700110eabcd68d3a3cb940.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"7232fc30-be90-4069-9992-7b7d9b0826cc\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDf65d55432b700110eabcd68d3a3cb940\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">7a5d55431b700110b72e99f7b04bcb42</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b65d15431b700110b72e99f7b04bcbde"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_error_code</field>
+        <id>b65d15431b700110b72e99f7b04bcbde</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>0b5d55431b700110b72e99f7b04bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</table>
+        <value>{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].error_code}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_error_message</field>
+        <id>b65d15431b700110b72e99f7b04bcbde</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>475d55431b700110b72e99f7b04bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</table>
+        <value>{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].error_message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>http_status_code</field>
+        <id>b65d15431b700110b72e99f7b04bcbde</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>cf5d55431b700110b72e99f7b04bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</table>
+        <value>{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].status_code}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>inventory_message</field>
+        <id>b65d15431b700110b72e99f7b04bcbde</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>cb5d55431b700110b72e99f7b04bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</table>
+        <value>{{step[c7f35d92-7622-440b-821b-b35b6d03cba7].inventory}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>b65d15431b700110b72e99f7b04bcbde</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>8f5d55431b700110b72e99f7b04bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>b65d15431b700110b72e99f7b04bcbde</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>835d55431b700110b72e99f7b04bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=b65d15431b700110b72e99f7b04bcbde^sys_idNOT IN725d55431b700110b72e99f7b04bcb01,7e5d15431b700110b72e99f7b04bcbe7"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="YED Inventory Monitor">b65d15431b700110b72e99f7b04bcbde</action>
+        <cid>c7f35d92-7622-440b-821b-b35b6d03cba7</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>725d55431b700110b72e99f7b04bcb01</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:53</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=725d55431b700110b72e99f7b04bcb01"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>725d55431b700110b72e99f7b04bcb01</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>365d55431b700110b72e99f7b04bcb3d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:53</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  const response = JSON.parse(inputs.responseBody);
+  const org_prod_inv = response.organization_product_inventory;
+  var below_threshold = "";
+  for(var i = 0; i &lt; org_prod_inv.length; i++) {
+    var item = org_prod_inv[i];
+    if(item.organization_product_quantity &lt; inputs.inventory_threshold) {
+      var newMessage = item.product_name + ": Remaining Inventory - " + item.organization_product_quantity + ", ";
+      below_threshold += newMessage;
+    }
+  }
+  if(below_threshold === "") {
+    below_threshold = "All your inventory items are above the threshold";
+  }
+  outputs.inventory= below_threshold;
+})(inputs, outputs);</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>725d55431b700110b72e99f7b04bcb01</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>725d55431b700110b72e99f7b04bcb3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=725d55431b700110b72e99f7b04bcb01"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>725d55431b700110b72e99f7b04bcb01</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>3e5d55431b700110b72e99f7b04bcb3c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>inventory_threshold</field>
+        <id>725d55431b700110b72e99f7b04bcb01</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>725d55431b700110b72e99f7b04bcb3e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_725d55431b700110b72e99f7b04bcb01</table>
+        <value>{{action.inventory_threshold}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>responseBody</field>
+        <id>725d55431b700110b72e99f7b04bcb01</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>be5d55431b700110b72e99f7b04bcb3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_725d55431b700110b72e99f7b04bcb01</table>
+        <value>{{step[56055e77-9fd8-45c6-b14d-34acd0a5c6c4].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>725d55431b700110b72e99f7b04bcb01</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>fe5d55431b700110b72e99f7b04bcb3c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_725d55431b700110b72e99f7b04bcb01^id=725d55431b700110b72e99f7b04bcb01"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=725d55431b700110b72e99f7b04bcb01"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=725d55431b700110b72e99f7b04bcb01^sys_idNOT IN365d55431b700110b72e99f7b04bcb04,b25d55431b700110b72e99f7b04bcb2f"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>responseBody</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>responseBody</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">725d55431b700110b72e99f7b04bcb01</model>
+        <model_id>725d55431b700110b72e99f7b04bcb01</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_725d55431b700110b72e99f7b04bcb01</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>365d55431b700110b72e99f7b04bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inventory_threshold</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>inventory_threshold</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">725d55431b700110b72e99f7b04bcb01</model>
+        <model_id>725d55431b700110b72e99f7b04bcb01</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_725d55431b700110b72e99f7b04bcb01</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>b25d55431b700110b72e99f7b04bcb2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=725d55431b700110b72e99f7b04bcb01^sys_idNOT INfa5d55431b700110b72e99f7b04bcb34"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c777307e-f2d0-4746-b924-60995c7496a6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inventory</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>inventory</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">725d55431b700110b72e99f7b04bcb01</model>
+        <model_id>725d55431b700110b72e99f7b04bcb01</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_725d55431b700110b72e99f7b04bcb01</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>fa5d55431b700110b72e99f7b04bcb34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_725d55431b700110b72e99f7b04bcb01^sys_idNOT IN725d55431b700110b72e99f7b04bcb39"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inventory</element>
+        <help/>
+        <hint/>
+        <label>inventory</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_725d55431b700110b72e99f7b04bcb01</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>725d55431b700110b72e99f7b04bcb39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="YED Inventory Monitor">b65d15431b700110b72e99f7b04bcbde</action>
+        <cid>56055e77-9fd8-45c6-b14d-34acd0a5c6c4</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>REST step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>7e5d15431b700110b72e99f7b04bcbe7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7e5d15431b700110b72e99f7b04bcbe7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7e5d15431b700110b72e99f7b04bcbe7</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>3a5d15431b700110b72e99f7b04bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <value>https://api.console.stage.yubico.com/v1/</value>
+        <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7e5d15431b700110b72e99f7b04bcbe7</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>3e5d15431b700110b72e99f7b04bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <value>f34e34f21b700110b72e99f7b04bcb1d</value>
+        <variable display_value="Connection Alias">262882f03b23320057a4a2e334efc4f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7e5d15431b700110b72e99f7b04bcbe7</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>725d15431b700110b72e99f7b04bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <value/>
+        <variable display_value="Connection Timeout">7a59009bc7522010820469467ec260c0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7e5d15431b700110b72e99f7b04bcbe7</document_key>
+        <order>13</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>765d15431b700110b72e99f7b04bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <value>18409d8007482000dada43c0d1021e8f</value>
+        <variable display_value="Capabilities">c30a451d2f201300a09a839fb18c95b4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7e5d15431b700110b72e99f7b04bcbe7</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>7a5d15431b700110b72e99f7b04bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Honor Duplicate Query Params">58715a1c53f22010d3a8ddeeff7b1248</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7e5d15431b700110b72e99f7b04bcbe7</document_key>
+        <order>30</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>b25d15431b700110b72e99f7b04bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Accept","value":"application/json"},{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Content-Type","value":"application/json"},{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Cookie","value":"GCP_IAAP_AUTH_TOKEN_832CBF3DB3196123=eyJhbGciOiJSUzI1NiIsImtpZCI6ImQwMWMxYWJlMjQ5MjY5ZjcyZWY3Y2EyNjEzYTg2YzlmMDVlNTk1NjciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI3NDY0NzgyOTM4OTAtdm0zbTBpaTZwcHFnN2I2NnFtZTFmczI3N2w4dTM3aGouYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI3NDY0NzgyOTM4OTAtdm0zbTBpaTZwcHFnN2I2NnFtZTFmczI3N2w4dTM3aGouYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDI5MjAzOTA0Mjg5NjQ0MTM4MTIiLCJoZCI6Inl1Ymljby5jb20iLCJlbWFpbCI6ImMuc2FsYXNAeXViaWNvLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiZUxqR1R1SWxmcTJ0T1VIYkJGeUdDZyIsImdvb2dsZSI6eyJnaWMiOiJBR09vNTJqMEV1WmlLUEVRZXF4STV2aU9PNmdYUnBvS3piNm5MWmZfODNZUDN3Wjl6ZU1DNGdoOVltMjBndUpGMVkzTVpuTExobXRnbVBRblMxam9jX1ZSZ0QtTWFDZTcycDA4S0RWcUdCZ2xvZ1IzQ0YzWER5SnBGVHFzdjZXQ29CV0YtNXFWd3p4dzlBbjNlTnNMTzJvS3FkSUdNSkFKcUN0empLVmY0enZMaGNvUUROdzNRdWNkNkdFdUk2MVFDTnRrc0xJSlRYM0Q2ZlllUW5ILXZMOG52NU40UmFfa3FFRSJ9LCJpYXQiOjE2NDEzMTc0MzUsImV4cCI6MTY0MTMyMTAzNX0.OZ73INaNPTri-kvjgWPDLKJ5KnAUFIiEBeAm3EzATWXMLjCqyTGepBdicS5ipziX_yFhmxVnorJWsKkltlZsXQ2_oiYoVpuhGImjmyt1pDHmOgB4iEgy_zzfgvya1nyu66-w0MqXB7_riIdYZsZJuloEjvsscMDje50VjKCDrRjPHUueyf8jD81sKy7un7dPrmgyC-kuQxEbALUP3mVL5LeZLfol5oXVA81UOI8dxMBLj-vrLcarQLH-MrywM5H_T3EEmLRFaApDs102jAe3-su2BSBt4kbdh1pzkUjyA101Qwesy7YZddc_cVYGrQCfm23kKeGKzJwNVWG5VPK5zA;GCP_IAP_UID=832CBF3DB3196123"}]}</value>
+        <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7e5d15431b700110b72e99f7b04bcbe7</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>b65d15431b700110b72e99f7b04bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <value>ef751ff07301330025d71afe2ff6a7f9</value>
+        <variable display_value="Retry Policy">37be397587c03300a8cc7d5e27cb0ba2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7e5d15431b700110b72e99f7b04bcbe7</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>be5d15431b700110b72e99f7b04bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="Query Parameters">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7e5d15431b700110b72e99f7b04bcbe7</document_key>
+        <order>12</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>fa5d15431b700110b72e99f7b04bcbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7e5d15431b700110b72e99f7b04bcbe7</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>fe5d15431b700110b72e99f7b04bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <value>/inventory</value>
+        <variable display_value="Resource Path">3d090af03b23320057a4a2e334efc455</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_7e5d15431b700110b72e99f7b04bcbe7^id=7e5d15431b700110b72e99f7b04bcbe7"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129^id=7e5d15431b700110b72e99f7b04bcbe7"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=7e5d15431b700110b72e99f7b04bcbe7^sys_idNOT INba5d15431b700110b72e99f7b04bcbee"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,isLocal=true,uiType=password2,uiTypeLabel=Password (2 Way Encrypted),uiUniqueId=ead7fc6f-eb67-4a8f-8874-2fe1323f24e5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sn_auth_token</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">password2</internal_type>
+        <label>Credential Value</label>
+        <mandatory>false</mandatory>
+        <max_length>255</max_length>
+        <model display_value="REST step">7e5d15431b700110b72e99f7b04bcbe7</model>
+        <model_id>7e5d15431b700110b72e99f7b04bcbe7</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_7e5d15431b700110b72e99f7b04bcbe7</name>
+        <next_element/>
+        <order>7</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>ba5d15431b700110b72e99f7b04bcbee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_7e5d15431b700110b72e99f7b04bcbe7^sys_idNOT INb25d15431b700110b72e99f7b04bcbf3"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sn_auth_token</element>
+        <help/>
+        <hint/>
+        <label>Credential Value</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_7e5d15431b700110b72e99f7b04bcbe7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>b25d15431b700110b72e99f7b04bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=b65d15431b700110b72e99f7b04bcbde^sys_idNOT IN365d15431b700110b72e99f7b04bcbe1"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=e6e3ba8e-a13a-4380-9fc4-f2ba1d305398</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inventory_threshold</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>inventory_threshold</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="YED Inventory Monitor">b65d15431b700110b72e99f7b04bcbde</model>
+        <model_id>b65d15431b700110b72e99f7b04bcbde</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_b65d15431b700110b72e99f7b04bcbde</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>365d15431b700110b72e99f7b04bcbe1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_output action="delete_multiple" query="model=b65d15431b700110b72e99f7b04bcbde^sys_idNOT IN325d55431b700110b72e99f7b04bcb50,365d55431b700110b72e99f7b04bcb48,6f2221871b700110b72e99f7b04bcb7b,7a5d55431b700110b72e99f7b04bcb42,875d55431b700110b72e99f7b04bcb5a,c35d55431b700110b72e99f7b04bcb55"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=6725bc77-bd21-47c9-8fe7-e9aa318bd70d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>http_status_code</element>
+        <element_prototype display_value="Status Code" element="status_code" name="var__m_sys_flow_step_definition_output_07a762fb47222200b4fad7527c9a7129">a053077347622200b4fad7527c9a716e</element_prototype>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>HTTP Status Code</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="YED Inventory Monitor">b65d15431b700110b72e99f7b04bcbde</model>
+        <model_id>b65d15431b700110b72e99f7b04bcbde</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>325d55431b700110b72e99f7b04bcb50</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=bd29c181-73e6-461e-95c4-449d89047b3b,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="YED Inventory Monitor">b65d15431b700110b72e99f7b04bcbde</model>
+        <model_id>b65d15431b700110b72e99f7b04bcbde</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>365d55431b700110b72e99f7b04bcb48</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=3577eb01-d594-4338-a295-dc50f8ceec2e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>inventory_message</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Inventory Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="YED Inventory Monitor">b65d15431b700110b72e99f7b04bcbde</model>
+        <model_id>b65d15431b700110b72e99f7b04bcbde</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 17:20:53</sys_created_on>
+        <sys_id>6f2221871b700110b72e99f7b04bcb7b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6f2221871b700110b72e99f7b04bcb7b^sys_idNOT IN372221871b700110b72e99f7b04bcb8f"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>inventory_message</input_name>
+        <instance>6f2221871b700110b72e99f7b04bcb7b</instance>
+        <referenced_table>sys_hub_action_output</referenced_table>
+        <script>{"inventory_message":{"scriptActive":false}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 17:20:54</sys_created_on>
+        <sys_id>372221871b700110b72e99f7b04bcb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:54</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDf65d55432b700110eabcd68d3a3cb940,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=7232fc30-be90-4069-9992-7b7d9b0826cc</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="YED Inventory Monitor">b65d15431b700110b72e99f7b04bcbde</model>
+        <model_id>b65d15431b700110b72e99f7b04bcbde</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>7a5d55431b700110b72e99f7b04bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=275197e5-7d63-44c9-ba07-19e7461d761b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>http_error_message</element>
+        <element_prototype display_value="Error Message" element="error_message" name="var__m_sys_flow_step_definition_output_07a762fb47222200b4fad7527c9a7129">26a48b7347622200b4fad7527c9a71c0</element_prototype>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>HTTP Error Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="YED Inventory Monitor">b65d15431b700110b72e99f7b04bcbde</model>
+        <model_id>b65d15431b700110b72e99f7b04bcbde</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>875d55431b700110b72e99f7b04bcb5a</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=332c7b42-cde6-4747-af29-68fa416f96e7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>http_error_code</element>
+        <element_prototype display_value="Error Code" element="error_code" name="var__m_sys_flow_step_definition_output_07a762fb47222200b4fad7527c9a7129">d1744b7347622200b4fad7527c9a7105</element_prototype>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>HTTP Error Code</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="YED Inventory Monitor">b65d15431b700110b72e99f7b04bcbde</model>
+        <model_id>b65d15431b700110b72e99f7b04bcbde</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>c35d55431b700110b72e99f7b04bcb55</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=b65d15431b700110b72e99f7b04bcbde^sys_idNOT IN835d55431b700110b72e99f7b04bcb77"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="YED Inventory Monitor">b65d15431b700110b72e99f7b04bcbde</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>835d55431b700110b72e99f7b04bcb77</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_b65d15431b700110b72e99f7b04bcbde^sys_idNOT IN3e5d15431b700110b72e99f7b04bcbe5"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inventory_threshold</element>
+        <help/>
+        <hint/>
+        <label>inventory_threshold</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_b65d15431b700110b72e99f7b04bcbde</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:48</sys_created_on>
+        <sys_id>3e5d15431b700110b72e99f7b04bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:48</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde^sys_idNOT IN035d55431b700110b72e99f7b04bcb54,725d55431b700110b72e99f7b04bcb47,7e5d55431b700110b72e99f7b04bcb4e,875d55431b700110b72e99f7b04bcb5e,c35d55431b700110b72e99f7b04bcb59,ef2221871b700110b72e99f7b04bcb7f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>http_status_code</element>
+        <help/>
+        <hint/>
+        <label>HTTP Status Code</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>035d55431b700110b72e99f7b04bcb54</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>725d55431b700110b72e99f7b04bcb47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>7e5d55431b700110b72e99f7b04bcb4e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>http_error_message</element>
+        <help/>
+        <hint/>
+        <label>HTTP Error Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>875d55431b700110b72e99f7b04bcb5e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>http_error_code</element>
+        <help/>
+        <hint/>
+        <label>HTTP Error Code</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 16:59:49</sys_created_on>
+        <sys_id>c35d55431b700110b72e99f7b04bcb59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 16:59:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>inventory_message</element>
+        <help/>
+        <hint/>
+        <label>Inventory Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_b65d15431b700110b72e99f7b04bcbde</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-06 17:20:54</sys_created_on>
+        <sys_id>ef2221871b700110b72e99f7b04bcb7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-06 17:20:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_type_definition action="update">
+        <sys_id>281f85471b300110b72e99f7b04bcbf8</sys_id>
+        <latest_snapshot>b65d15431b700110b72e99f7b04bcbde</latest_snapshot>
+    </sys_hub_action_type_definition>
+</record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias">
+    <sys_alias action="INSERT_OR_UPDATE">
+        <configuration_template/>
+        <connection_type>http_connection</connection_type>
+        <id>x_703594_yubico_en.yed_api_alias</id>
+        <multiple_connections>false</multiple_connections>
+        <name>yed_api_alias</name>
+        <parent/>
+        <retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy>
+        <sys_class_name>sys_alias</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 20:05:54</sys_created_on>
+        <sys_id>f34e34f21b700110b72e99f7b04bcb1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_703594_yubico_en.yed_api_alias</sys_name>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name>sys_alias_f34e34f21b700110b72e99f7b04bcb1d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 20:05:54</sys_updated_on>
+        <type>connection</type>
+    </sys_alias>
+</record_update>

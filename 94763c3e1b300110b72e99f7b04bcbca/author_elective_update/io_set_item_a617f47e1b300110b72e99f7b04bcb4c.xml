@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>100</order>
+        <sc_cat_item display_value="">b6f6747e1b300110b72e99f7b04bcbad</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 19:34:12</sys_created_on>
+        <sys_id>a617f47e1b300110b72e99f7b04bcb4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Standard Employee Questions.</sys_name>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name>io_set_item_a617f47e1b300110b72e99f7b04bcb4c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 19:34:12</sys_updated_on>
+        <variable_set display_value="Standard Employee Questions">e01cab1a4f334200086eeed18110c71f</variable_set>
+    </io_set_item>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</application>
+        <file_path/>
+        <instance_id>4acda43c1b887810e84d2f8dee4bcb8b</instance_id>
+        <instance_name>dev114096</instance_name>
+        <name>io_set_item_a617f47e1b300110b72e99f7b04bcb4c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item"><io_set_item action="INSERT_OR_UPDATE"><order>100</order><sc_cat_item display_value="">b6f6747e1b300110b72e99f7b04bcbad</sc_cat_item><sys_class_name>io_set_item</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-01-05 19:34:12</sys_created_on><sys_id>a617f47e1b300110b72e99f7b04bcb4c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Standard Employee Questions.</sys_name><sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package><sys_policy/><sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope><sys_update_name>io_set_item_a617f47e1b300110b72e99f7b04bcb4c</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-01-05 19:34:12</sys_updated_on><variable_set display_value="Standard Employee Questions">e01cab1a4f334200086eeed18110c71f</variable_set></io_set_item></record_update>]]></payload>
+        <payload_hash>-1746864730</payload_hash>
+        <record_name>Standard Employee Questions.</record_name>
+        <reverted_from/>
+        <source>d0763c3e1b300110b72e99f7b04bcbcc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 19:34:12</sys_created_on>
+        <sys_id>2e17f47e1b300110b72e99f7b04bcb51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e2bbc0ff60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 19:34:12</sys_updated_on>
+        <type>Catalog Variable Set</type>
+        <update_guid>a217f47eb5300110958140b9449e0051</update_guid>
+        <update_guid_history>a217f47eb5300110958140b9449e0051:-1746864730</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Standard Employee Questions.">a19d45321bb00110b72e99f7b04bcb97</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-01-05 21:12:26</sys_created_on>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>36cbf65da7b84c4eaf44a9348ac857e1</sys_id>
+        <sys_metadata>a617f47e1b300110b72e99f7b04bcb4c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Standard Employee Questions.</sys_name>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_scope_delete display_value="">1573c176f8c84b3998fe9a57ce7ce471</sys_scope_delete>
+        <sys_update_name>io_set_item_a617f47e1b300110b72e99f7b04bcb4c</sys_update_name>
+        <sys_update_version display_value="io_set_item_a617f47e1b300110b72e99f7b04bcb4c">2e17f47e1b300110b72e99f7b04bcb51</sys_update_version>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:12:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

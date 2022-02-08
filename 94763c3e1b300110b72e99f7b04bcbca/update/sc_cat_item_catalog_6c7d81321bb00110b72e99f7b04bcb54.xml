@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="YubiKey 5NFC">b6f6747e1b300110b72e99f7b04bcbad</sc_cat_item>
+        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:11:49</sys_created_on>
+        <sys_id>6c7d81321bb00110b72e99f7b04bcb54</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Service Catalog.YubiKey 5NFC</sys_name>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_6c7d81321bb00110b72e99f7b04bcb54</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:12:26</sys_updated_on>
+    </sc_cat_item_catalog>
+</record_update>

@@ -1,0 +1,1715 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-rome-06-23-2021__patch1-hotfix1-09-15-2021_09-16-2021_1434.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>yubico_yed_api_create_a_shipment</internal_name>
+        <label_cache>[{"name":"c8e99efa-2957-4aab-89ae-36611926f278.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"c8e99efa-2957-4aab-89ae-36611926f278.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"c8e99efa-2957-4aab-89ae-36611926f278.email","label":"4➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.quantity","label":"Trigger➛Requested Item Record➛Quantity","reference":"","reference_display":"Quantity","type":"integer","base_type":"integer","parent_table_name":"sc_req_item","column_name":"quantity"},{"name":"Service Catalog_1.request_item.requested_for.location.zip","label":"Trigger➛Requested Item Record➛Requested for➛Location➛Zip / Postal Code","reference":"","reference_display":"Zip / Postal Code","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"zip"},{"name":"Service Catalog_1.request_item.requested_for.location.state","label":"Trigger➛Requested Item Record➛Requested for➛Location➛State / Province","reference":"","reference_display":"State / Province","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"state"},{"name":"Service Catalog_1.request_item.requested_for.location.city","label":"Trigger➛Requested Item Record➛Requested for➛Location➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"city"},{"name":"Service Catalog_1.request_item.requested_for.location.street","label":"Trigger➛Requested Item Record➛Requested for➛Location➛Street","reference":"","reference_display":"Street","type":"multi_two_lines","base_type":"multi_two_lines","parent_table_name":"cmn_location","column_name":"street"},{"name":"Service Catalog_1.request_item.requested_for.location.phone","label":"Trigger➛Requested Item Record➛Requested for➛Location➛Phone","reference":"","reference_display":"Phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"phone"},{"name":"Service Catalog_1.request_item.requested_for.last_name","label":"Trigger➛Requested Item Record➛Requested for➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Service Catalog_1.request_item.requested_for.first_name","label":"Trigger➛Requested Item Record➛Requested for➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Service Catalog_1.request_item.requested_for.email","label":"Trigger➛Requested Item Record➛Requested for➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"Service Catalog_1.request_item.requested_for.company.name","label":"Trigger➛Requested Item Record➛Requested for➛Company➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"core_company","column_name":"name"},{"name":"Service Catalog_1.request_item.requested_for.location.country","label":"Trigger➛Requested Item Record➛Requested for➛Location➛Country","reference":"","reference_display":"Country","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"country"},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_messages","label":"2➛Shipment Messages","reference_display":"Shipment Messages","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"97d0bfb7-4d33-4f29-88b4-234f13f05574"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_state_message","label":"2➛Shipment State Message","reference_display":"Shipment State Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"792a0a84-4234-4b28-917c-76017559dd17"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_state_id","label":"2➛Shipment State ID","reference_display":"Shipment State ID","type":"integer","base_type":"integer","attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"32e1b9ca-916d-4adb-83c4-8f34bc2b8312"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_request_id","label":"2➛Shipment Request ID","reference_display":"Shipment Request ID","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"8af78d8b-3fd7-456e-bc35-49215874af53"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.http_error_message","label":"2➛HTTP Error Message","reference_display":"HTTP Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"6f1a295e-6d83-49ac-b816-eef11d4d21fa"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.http_error_code","label":"2➛HTTP Error Code","reference_display":"HTTP Error Code","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"9fc2d589-2431-46e5-a7fa-94d815cdaf64"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.http_status_code","label":"2➛HTTP Status Code","reference_display":"HTTP Status Code","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"26adbf7c-40b5-47b0-bcd6-e1c1d2e6106c"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4ccb06d9-a891-4ff6-aeeb-5f1f54e2d6bd"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD2c98cdfa1b7001104122e3e3996a4b55","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"43f3685a-8c50-4682-a418-de3790ade4e9"}},{"name":"048f55d9-4209-4ae1-92ad-2bfbe84f44dd.yubikey_product_id","label":"1➛yubikey_product_id","reference":"","reference_display":"yubikey_product_id","type":"choice","base_type":"choice","attributes":{"catalogType":"3","catalogTypeLabel":"Multiple Choice"}},{"name":"Service Catalog_1.request_item","label":"Trigger➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}}]</label_cache>
+        <master_snapshot>f34c81fe1b700110b72e99f7b04bcb11</master_snapshot>
+        <name>Yubico YED API Create a Shipment</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>a85cc1fe1b700110b72e99f7b04bcb68</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 20:54:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>12690d361b700110b72e99f7b04bcb5b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Yubico YED API Create a Shipment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name>sys_hub_flow_12690d361b700110b72e99f7b04bcb5b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:54</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=12690d361b700110b72e99f7b04bcb5b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=12690d361b700110b72e99f7b04bcb5b"/>
+    <sys_flow_catalog_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <catalog_item/>
+        <name/>
+        <run_flow_in>background</run_flow_in>
+        <sys_class_name>sys_flow_catalog_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a85cc1fe1b700110b72e99f7b04bcb68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:54</sys_updated_on>
+    </sys_flow_catalog_trigger>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=12690d361b700110b72e99f7b04bcb5b^sys_idNOT INed4ccdbe1b700110b72e99f7b04bcbdc"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Yubico YED API Create a Shipment">12690d361b700110b72e99f7b04bcb5b</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>ed4ccdbe1b700110b72e99f7b04bcbdc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:54</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ed4ccdbe1b700110b72e99f7b04bcbdc"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=12690d361b700110b72e99f7b04bcb5b^sys_idNOT INd269c93e1b700110b72e99f7b04bcb2b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>12690d361b700110b72e99f7b04bcb5b</id>
+        <name>Yubico YED API Create a Shipment</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 20:54:11</sys_created_on>
+        <sys_id>d269c93e1b700110b72e99f7b04bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 20:54:11</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=12690d361b700110b72e99f7b04bcb5b^sys_idNOT IN214ccdbe1b700110b72e99f7b04bcbce,a94ccdbe1b700110b72e99f7b04bcbd3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Yubico YED API Create a Shipment">12690d361b700110b72e99f7b04bcb5b</model>
+        <model_id>12690d361b700110b72e99f7b04bcb5b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_12690d361b700110b72e99f7b04bcb5b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:41</sys_created_on>
+        <sys_id>214ccdbe1b700110b72e99f7b04bcbce</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Yubico YED API Create a Shipment">12690d361b700110b72e99f7b04bcb5b</model>
+        <model_id>12690d361b700110b72e99f7b04bcb5b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_12690d361b700110b72e99f7b04bcb5b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:41</sys_created_on>
+        <sys_id>a94ccdbe1b700110b72e99f7b04bcbd3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=12690d361b700110b72e99f7b04bcb5b^sys_idNOT IN614ccdbe1b700110b72e99f7b04bcbe2,b54c01fe1b700110b72e99f7b04bcb0d,ed4ccdbe1b700110b72e99f7b04bcbfb"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Yubico YED API Create a Shipment">12690d361b700110b72e99f7b04bcb5b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>614ccdbe1b700110b72e99f7b04bcbe2</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:13:56</sys_updated_on>
+        <ui_id>048f55d9-4209-4ae1-92ad-2bfbe84f44dd</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=614ccdbe1b700110b72e99f7b04bcbe2"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>614ccdbe1b700110b72e99f7b04bcbe2</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>a54ccdbe1b700110b72e99f7b04bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <value>b6f6747e1b300110b72e99f7b04bcbad</value>
+        <variable display_value="Template Catalog Items and Variable Sets">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>614ccdbe1b700110b72e99f7b04bcbe2</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>ed4ccdbe1b700110b72e99f7b04bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <value>b247f87e1b300110b72e99f7b04bcb0f:item_option_new</value>
+        <variable display_value="Catalog Variables">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=614ccdbe1b700110b72e99f7b04bcbe2"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>catalog_variables</field>
+        <id>614ccdbe1b700110b72e99f7b04bcbe2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>e14ccdbe1b700110b72e99f7b04bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>requested_item</field>
+        <id>614ccdbe1b700110b72e99f7b04bcbe2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>6d4ccdbe1b700110b72e99f7b04bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>template_catalog_item</field>
+        <id>614ccdbe1b700110b72e99f7b04bcbe2</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>a94ccdbe1b700110b72e99f7b04bcbe4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Yubico YED API Create a Shipment">12690d361b700110b72e99f7b04bcb5b</flow>
+        <order>4</order>
+        <parent_ui_id>74053b27-ac89-48ab-95de-3fef54ddf256</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>b54c01fe1b700110b72e99f7b04bcb0d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:13:56</sys_updated_on>
+        <ui_id>c8e99efa-2957-4aab-89ae-36611926f278</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b54c01fe1b700110b72e99f7b04bcb0d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b54c01fe1b700110b72e99f7b04bcb0d</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>314c01fe1b700110b72e99f7b04bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <value>admin@example.com</value>
+        <variable display_value="To">59806bf4a70323008299b39f087901da</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b54c01fe1b700110b72e99f7b04bcb0d</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>b54c01fe1b700110b72e99f7b04bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <value>YubiKey Shipment Failure</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b54c01fe1b700110b72e99f7b04bcb0d</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>f14c01fe1b700110b72e99f7b04bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b54c01fe1b700110b72e99f7b04bcb0d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>b54c01fe1b700110b72e99f7b04bcb0d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>f94c01fe1b700110b72e99f7b04bcb0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;Shipment ID&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:2046e868-1f62-4693-a7d9-2fab98163386}}"&gt;&lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:2046e868-1f62-4693-a7d9-2fab98163386}}"&gt;&lt;span class="data-pill-content-container"&gt;2&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;Shipment State ID&lt;button id="transform_function_facade_2046e868-1f62-4693-a7d9-2fab98163386" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp; Reason&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:cfdb0656-05e1-4b2e-999b-f2ddfce07e32}}"&gt;&lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:cfdb0656-05e1-4b2e-999b-f2ddfce07e32}}"&gt;&lt;span class="data-pill-content-container"&gt;2&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;Shipment State Message&lt;button id="transform_function_facade_cfdb0656-05e1-4b2e-999b-f2ddfce07e32" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp; More Details&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:0c579042-0c0a-40fb-b970-6b7519bfa542}}"&gt;&lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:0c579042-0c0a-40fb-b970-6b7519bfa542}}"&gt;&lt;span class="data-pill-content-container"&gt;2&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;Shipment Messages&lt;button id="transform_function_facade_0c579042-0c0a-40fb-b970-6b7519bfa542" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp; Next Steps&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp; 1. Cancel the order&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp; 2. Notify user to fix the error and try again&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>b54c01fe1b700110b72e99f7b04bcb0d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>bd4c01fe1b700110b72e99f7b04bcb0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>b54c01fe1b700110b72e99f7b04bcb0d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>394c01fe1b700110b72e99f7b04bcb0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="YED Shipment Request">73884dfa1b700110b72e99f7b04bcbd8</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>73884dfa1b700110b72e99f7b04bcbd8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Yubico YED API Create a Shipment">12690d361b700110b72e99f7b04bcb5b</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>ed4ccdbe1b700110b72e99f7b04bcbfb</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:13:56</sys_updated_on>
+        <ui_id>fbab1503-fdfb-44bd-a9b4-844de6a3ff72</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ed4ccdbe1b700110b72e99f7b04bcbfb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ed4ccdbe1b700110b72e99f7b04bcbfb</document_key>
+        <order>16</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>214c01fe1b700110b72e99f7b04bcb02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <value/>
+        <variable display_value="Shipment Product Quantity">c4988dfa1b700110b72e99f7b04bcb6a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ed4ccdbe1b700110b72e99f7b04bcbfb</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>6d4c01fe1b700110b72e99f7b04bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Delivery Type">73884dfa1b700110b72e99f7b04bcbdb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ed4ccdbe1b700110b72e99f7b04bcbfb</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>a94c01fe1b700110b72e99f7b04bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Inventory Product ID">40988dfa1b700110b72e99f7b04bcb65</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ed4ccdbe1b700110b72e99f7b04bcbfb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>city</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>614ccdbe1b700110b72e99f7b04bcbff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.city}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>country_code_2</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>6d4ccdbe1b700110b72e99f7b04bcbff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.country}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>delivery_type</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>214c01fe1b700110b72e99f7b04bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>inventory_product_id</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>254ccdbe1b700110b72e99f7b04bcbff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>postal_code</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>ed4c01fe1b700110b72e99f7b04bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.zip}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>product_id</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>e14c01fe1b700110b72e99f7b04bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{048f55d9-4209-4ae1-92ad-2bfbe84f44dd.yubikey_product_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>recipient</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>694c01fe1b700110b72e99f7b04bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>recipient_email</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>e54ccdbe1b700110b72e99f7b04bcbff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>recipient_firstname</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>294c01fe1b700110b72e99f7b04bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.first_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>recipient_lastname</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>2d4c01fe1b700110b72e99f7b04bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.last_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>recipient_telephone</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>654c01fe1b700110b72e99f7b04bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.phone}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>region</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>a14c01fe1b700110b72e99f7b04bcb01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>shipment_product_quantity</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>a54c01fe1b700110b72e99f7b04bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.quantity}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>street_line_1</field>
+        <id>ed4ccdbe1b700110b72e99f7b04bcbfb</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>a94ccdbe1b700110b72e99f7b04bcbff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.street}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=12690d361b700110b72e99f7b04bcb5b^sys_idNOT INed4c01fe1b700110b72e99f7b04bcb02"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">a54c01fe1b700110b72e99f7b04bcb02</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Yubico YED API Create a Shipment">12690d361b700110b72e99f7b04bcb5b</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>ed4c01fe1b700110b72e99f7b04bcb02</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:54</sys_updated_on>
+        <ui_id>74053b27-ac89-48ab-95de-3fef54ddf256</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ed4c01fe1b700110b72e99f7b04bcb02"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>ed4c01fe1b700110b72e99f7b04bcb02</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>b14c01fe1b700110b72e99f7b04bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <value>Shipment Failure</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ed4c01fe1b700110b72e99f7b04bcb02"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>ed4c01fe1b700110b72e99f7b04bcb02</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>314c01fe1b700110b72e99f7b04bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_state_id}}!=3</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>ed4c01fe1b700110b72e99f7b04bcb02</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>7d4c01fe1b700110b72e99f7b04bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=12690d361b700110b72e99f7b04bcb5b^sys_idNOT IN354c01fe1b700110b72e99f7b04bcb13,f54c01fe1b700110b72e99f7b04bcb13,f94c01fe1b700110b72e99f7b04bcb12"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>12690d361b700110b72e99f7b04bcb5b</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_state_message}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>354c01fe1b700110b72e99f7b04bcb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>cfdb0656-05e1-4b2e-999b-f2ddfce07e32</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>12690d361b700110b72e99f7b04bcb5b</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_messages}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>f54c01fe1b700110b72e99f7b04bcb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0c579042-0c0a-40fb-b970-6b7519bfa542</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>12690d361b700110b72e99f7b04bcb5b</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_state_id}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>f94c01fe1b700110b72e99f7b04bcb12</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2046e868-1f62-4693-a7d9-2fab98163386</ui_id>
+    </sys_hub_pill_compound>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_12690d361b700110b72e99f7b04bcb5b^sys_idNOT IN254ccdbe1b700110b72e99f7b04bcbda,e54ccdbe1b700110b72e99f7b04bcbd2"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_12690d361b700110b72e99f7b04bcb5b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:42</sys_created_on>
+        <sys_id>254ccdbe1b700110b72e99f7b04bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_12690d361b700110b72e99f7b04bcb5b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:41</sys_created_on>
+        <sys_id>e54ccdbe1b700110b72e99f7b04bcbd2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=12690d361b700110b72e99f7b04bcb5b^sys_idNOT INe05cc1fe1b700110b72e99f7b04bcb69"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"e05cc1fe1b700110b72e99f7b04bcb69","name":"plan","plan_signature":null}}</plan>
+        <plan_id>12690d361b700110b72e99f7b04bcb5b</plan_id>
+        <snapshot>9fed4d321bb00110b72e99f7b04bcb12</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e05cc1fe1b700110b72e99f7b04bcb69</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:54</sys_updated_on>
+        <trigger display_value="">a85cc1fe1b700110b72e99f7b04bcb68</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>yubico_yed_api_create_a_shipment</internal_name>
+        <label_cache>[{"name":"c8e99efa-2957-4aab-89ae-36611926f278.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"c8e99efa-2957-4aab-89ae-36611926f278.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"c8e99efa-2957-4aab-89ae-36611926f278.email","label":"4➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.quantity","label":"Trigger➛Requested Item Record➛Quantity","reference":"","reference_display":"Quantity","type":"integer","base_type":"integer","parent_table_name":"sc_req_item","column_name":"quantity"},{"name":"Service Catalog_1.request_item.requested_for.location.zip","label":"Trigger➛Requested Item Record➛Requested for➛Location➛Zip / Postal Code","reference":"","reference_display":"Zip / Postal Code","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"zip"},{"name":"Service Catalog_1.request_item.requested_for.location.state","label":"Trigger➛Requested Item Record➛Requested for➛Location➛State / Province","reference":"","reference_display":"State / Province","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"state"},{"name":"Service Catalog_1.request_item.requested_for.location.city","label":"Trigger➛Requested Item Record➛Requested for➛Location➛City","reference":"","reference_display":"City","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"city"},{"name":"Service Catalog_1.request_item.requested_for.location.street","label":"Trigger➛Requested Item Record➛Requested for➛Location➛Street","reference":"","reference_display":"Street","type":"multi_two_lines","base_type":"multi_two_lines","parent_table_name":"cmn_location","column_name":"street"},{"name":"Service Catalog_1.request_item.requested_for.location.phone","label":"Trigger➛Requested Item Record➛Requested for➛Location➛Phone","reference":"","reference_display":"Phone","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"phone"},{"name":"Service Catalog_1.request_item.requested_for.last_name","label":"Trigger➛Requested Item Record➛Requested for➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Service Catalog_1.request_item.requested_for.first_name","label":"Trigger➛Requested Item Record➛Requested for➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Service Catalog_1.request_item.requested_for.email","label":"Trigger➛Requested Item Record➛Requested for➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"Service Catalog_1.request_item.requested_for.company.name","label":"Trigger➛Requested Item Record➛Requested for➛Company➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"core_company","column_name":"name"},{"name":"Service Catalog_1.request_item.requested_for.location.country","label":"Trigger➛Requested Item Record➛Requested for➛Location➛Country","reference":"","reference_display":"Country","type":"string","base_type":"string","parent_table_name":"cmn_location","column_name":"country"},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_messages","label":"2➛Shipment Messages","reference_display":"Shipment Messages","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"97d0bfb7-4d33-4f29-88b4-234f13f05574"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_state_message","label":"2➛Shipment State Message","reference_display":"Shipment State Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"792a0a84-4234-4b28-917c-76017559dd17"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_state_id","label":"2➛Shipment State ID","reference_display":"Shipment State ID","type":"integer","base_type":"integer","attributes":{"uiTypeLabel":"Integer","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"integer","uiUniqueId":"32e1b9ca-916d-4adb-83c4-8f34bc2b8312"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_request_id","label":"2➛Shipment Request ID","reference_display":"Shipment Request ID","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"8af78d8b-3fd7-456e-bc35-49215874af53"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.http_error_message","label":"2➛HTTP Error Message","reference_display":"HTTP Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"6f1a295e-6d83-49ac-b816-eef11d4d21fa"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.http_error_code","label":"2➛HTTP Error Code","reference_display":"HTTP Error Code","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"9fc2d589-2431-46e5-a7fa-94d815cdaf64"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.http_status_code","label":"2➛HTTP Status Code","reference_display":"HTTP Status Code","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"26adbf7c-40b5-47b0-bcd6-e1c1d2e6106c"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.__dont_treat_as_error__","label":"2➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"4ccb06d9-a891-4ff6-aeeb-5f1f54e2d6bd"}},{"name":"fbab1503-fdfb-44bd-a9b4-844de6a3ff72.__action_status__","label":"2➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD2c98cdfa1b7001104122e3e3996a4b55","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"43f3685a-8c50-4682-a418-de3790ade4e9"}},{"name":"048f55d9-4209-4ae1-92ad-2bfbe84f44dd.yubikey_product_id","label":"1➛yubikey_product_id","reference":"","reference_display":"yubikey_product_id","type":"choice","base_type":"choice","attributes":{"catalogType":"3","catalogTypeLabel":"Multiple Choice"}},{"name":"Service Catalog_1.request_item","label":"Trigger➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}}]</label_cache>
+        <master>true</master>
+        <name>Yubico YED API Create a Shipment</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Yubico YED API Create a Shipment">12690d361b700110b72e99f7b04bcb5b</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f34c81fe1b700110b72e99f7b04bcb11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=f34c81fe1b700110b72e99f7b04bcb11"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f34c81fe1b700110b72e99f7b04bcb11"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=f34c81fe1b700110b72e99f7b04bcb11^sys_idNOT IN8c5c81fe1b700110b72e99f7b04bcb95"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Yubico YED API Create a Shipment">f34c81fe1b700110b72e99f7b04bcb11</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>8c5c81fe1b700110b72e99f7b04bcb95</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:54</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8c5c81fe1b700110b72e99f7b04bcb95"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=f34c81fe1b700110b72e99f7b04bcb11^sys_idNOT IN734c81fe1b700110b72e99f7b04bcb12"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>f34c81fe1b700110b72e99f7b04bcb11</id>
+        <name>Yubico YED API Create a Shipment</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>734c81fe1b700110b72e99f7b04bcb12</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=f34c81fe1b700110b72e99f7b04bcb11^sys_idNOT INf74c81fe1b700110b72e99f7b04bcb13,fb4c81fe1b700110b72e99f7b04bcb4f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Yubico YED API Create a Shipment">f34c81fe1b700110b72e99f7b04bcb11</model>
+        <model_id>f34c81fe1b700110b72e99f7b04bcb11</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f34c81fe1b700110b72e99f7b04bcb11</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>f74c81fe1b700110b72e99f7b04bcb13</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Yubico YED API Create a Shipment">f34c81fe1b700110b72e99f7b04bcb11</model>
+        <model_id>f34c81fe1b700110b72e99f7b04bcb11</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f34c81fe1b700110b72e99f7b04bcb11</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>fb4c81fe1b700110b72e99f7b04bcb4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=f34c81fe1b700110b72e99f7b04bcb11^sys_idNOT IN405c81fe1b700110b72e99f7b04bcb93,805c81fe1b700110b72e99f7b04bcb85,ff4c81fe1b700110b72e99f7b04bcb64"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Yubico YED API Create a Shipment">f34c81fe1b700110b72e99f7b04bcb11</flow>
+        <order>4</order>
+        <parent_ui_id>74053b27-ac89-48ab-95de-3fef54ddf256</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>405c81fe1b700110b72e99f7b04bcb93</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <ui_id>c8e99efa-2957-4aab-89ae-36611926f278</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=405c81fe1b700110b72e99f7b04bcb93"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>405c81fe1b700110b72e99f7b04bcb93</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>045c81fe1b700110b72e99f7b04bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <value>admin@example.com</value>
+        <variable display_value="To">59806bf4a70323008299b39f087901da</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>405c81fe1b700110b72e99f7b04bcb93</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>885c81fe1b700110b72e99f7b04bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <value>YubiKey Shipment Failure</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>405c81fe1b700110b72e99f7b04bcb93</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>c45c81fe1b700110b72e99f7b04bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=405c81fe1b700110b72e99f7b04bcb93"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>405c81fe1b700110b72e99f7b04bcb93</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>cc5c81fe1b700110b72e99f7b04bcb94</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;Shipment ID&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:2046e868-1f62-4693-a7d9-2fab98163386}}"&gt;&lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:2046e868-1f62-4693-a7d9-2fab98163386}}"&gt;&lt;span class="data-pill-content-container"&gt;2&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;Shipment State ID&lt;button id="transform_function_facade_2046e868-1f62-4693-a7d9-2fab98163386" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp; Reason&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:cfdb0656-05e1-4b2e-999b-f2ddfce07e32}}"&gt;&lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:cfdb0656-05e1-4b2e-999b-f2ddfce07e32}}"&gt;&lt;span class="data-pill-content-container"&gt;2&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;Shipment State Message&lt;button id="transform_function_facade_cfdb0656-05e1-4b2e-999b-f2ddfce07e32" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp; More Details&amp;nbsp;&lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:0c579042-0c0a-40fb-b970-6b7519bfa542}}"&gt;&lt;span class="data_pill  accepts_transform_functions" contenteditable="false" data-pillvalue="{{fd_transform:0c579042-0c0a-40fb-b970-6b7519bfa542}}"&gt;&lt;span class="data-pill-content-container"&gt;2&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;Shipment Messages&lt;button id="transform_function_facade_0c579042-0c0a-40fb-b970-6b7519bfa542" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp; Next Steps&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp; 1. Cancel the order&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp; 2. Notify user to fix the error and try again&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>405c81fe1b700110b72e99f7b04bcb93</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>805c81fe1b700110b72e99f7b04bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>405c81fe1b700110b72e99f7b04bcb93</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>0c5c81fe1b700110b72e99f7b04bcb94</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="YED Shipment Request">73884dfa1b700110b72e99f7b04bcbd8</action_type>
+        <action_type_parent display_value="YED Shipment Request">76e870fe1b300110b72e99f7b04bcb88</action_type_parent>
+        <comment/>
+        <compiled_snapshot>73884dfa1b700110b72e99f7b04bcbd8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Yubico YED API Create a Shipment">f34c81fe1b700110b72e99f7b04bcb11</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>805c81fe1b700110b72e99f7b04bcb85</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <ui_id>fbab1503-fdfb-44bd-a9b4-844de6a3ff72</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=805c81fe1b700110b72e99f7b04bcb85"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>805c81fe1b700110b72e99f7b04bcb85</document_key>
+        <order>16</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>0c5c81fe1b700110b72e99f7b04bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <value/>
+        <variable display_value="Shipment Product Quantity">c4988dfa1b700110b72e99f7b04bcb6a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>805c81fe1b700110b72e99f7b04bcb85</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>485c81fe1b700110b72e99f7b04bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Delivery Type">73884dfa1b700110b72e99f7b04bcbdb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>805c81fe1b700110b72e99f7b04bcb85</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>845c81fe1b700110b72e99f7b04bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Inventory Product ID">40988dfa1b700110b72e99f7b04bcb65</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=805c81fe1b700110b72e99f7b04bcb85"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>city</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>4c5c81fe1b700110b72e99f7b04bcb87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.city}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>country_code_2</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>485c81fe1b700110b72e99f7b04bcb88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.country}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>delivery_type</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>0c5c81fe1b700110b72e99f7b04bcb88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>inventory_product_id</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>005c81fe1b700110b72e99f7b04bcb88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>postal_code</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>c85c81fe1b700110b72e99f7b04bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.zip}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>product_id</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>cc5c81fe1b700110b72e99f7b04bcb88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{048f55d9-4209-4ae1-92ad-2bfbe84f44dd.yubikey_product_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>recipient</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>445c81fe1b700110b72e99f7b04bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.company.name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>recipient_email</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>c05c81fe1b700110b72e99f7b04bcb88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.email}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>recipient_firstname</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>045c81fe1b700110b72e99f7b04bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.first_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>recipient_lastname</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>085c81fe1b700110b72e99f7b04bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.last_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>recipient_telephone</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>405c81fe1b700110b72e99f7b04bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.phone}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>region</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>8c5c81fe1b700110b72e99f7b04bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.state}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>shipment_product_quantity</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>805c81fe1b700110b72e99f7b04bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.quantity}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>street_line_1</field>
+        <id>805c81fe1b700110b72e99f7b04bcb85</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>845c81fe1b700110b72e99f7b04bcb88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <table>var__m_sys_hub_action_input_73884dfa1b700110b72e99f7b04bcbd8</table>
+        <value>{{Service Catalog_1.request_item.requested_for.location.street}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment/>
+        <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Yubico YED API Create a Shipment">f34c81fe1b700110b72e99f7b04bcb11</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>ff4c81fe1b700110b72e99f7b04bcb64</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <ui_id>048f55d9-4209-4ae1-92ad-2bfbe84f44dd</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ff4c81fe1b700110b72e99f7b04bcb64"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ff4c81fe1b700110b72e99f7b04bcb64</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>3b4c81fe1b700110b72e99f7b04bcb66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <value>b247f87e1b300110b72e99f7b04bcb0f:item_option_new</value>
+        <variable display_value="Catalog Variables">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ff4c81fe1b700110b72e99f7b04bcb64</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>fb4c81fe1b700110b72e99f7b04bcb66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <value>b6f6747e1b300110b72e99f7b04bcbad</value>
+        <variable display_value="Template Catalog Items and Variable Sets">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ff4c81fe1b700110b72e99f7b04bcb64"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>catalog_variables</field>
+        <id>ff4c81fe1b700110b72e99f7b04bcb64</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>334c81fe1b700110b72e99f7b04bcb66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>requested_item</field>
+        <id>ff4c81fe1b700110b72e99f7b04bcb64</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>b74c81fe1b700110b72e99f7b04bcb66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>template_catalog_item</field>
+        <id>ff4c81fe1b700110b72e99f7b04bcb64</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>f34c81fe1b700110b72e99f7b04bcb66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=f34c81fe1b700110b72e99f7b04bcb11^sys_idNOT INfb4c81fe1b700110b72e99f7b04bcb5b"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">a54c01fe1b700110b72e99f7b04bcb02</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Yubico YED API Create a Shipment">f34c81fe1b700110b72e99f7b04bcb11</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>fb4c81fe1b700110b72e99f7b04bcb5b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <ui_id>74053b27-ac89-48ab-95de-3fef54ddf256</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=fb4c81fe1b700110b72e99f7b04bcb5b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>fb4c81fe1b700110b72e99f7b04bcb5b</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>774c81fe1b700110b72e99f7b04bcb5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <value>Shipment Failure</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fb4c81fe1b700110b72e99f7b04bcb5b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>fb4c81fe1b700110b72e99f7b04bcb5b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>f34c81fe1b700110b72e99f7b04bcb5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_state_id}}!=3</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>fb4c81fe1b700110b72e99f7b04bcb5b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>334c81fe1b700110b72e99f7b04bcb5f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=f34c81fe1b700110b72e99f7b04bcb11^sys_idNOT IN085c81fe1b700110b72e99f7b04bcb96,0c5c81fe1b700110b72e99f7b04bcb96,885c81fe1b700110b72e99f7b04bcb96"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f34c81fe1b700110b72e99f7b04bcb11</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_messages}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>085c81fe1b700110b72e99f7b04bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0c579042-0c0a-40fb-b970-6b7519bfa542</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f34c81fe1b700110b72e99f7b04bcb11</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_state_id}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>0c5c81fe1b700110b72e99f7b04bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2046e868-1f62-4693-a7d9-2fab98163386</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>f34c81fe1b700110b72e99f7b04bcb11</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{fbab1503-fdfb-44bd-a9b4-844de6a3ff72.shipment_state_message}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:52</sys_created_on>
+        <sys_id>885c81fe1b700110b72e99f7b04bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:52</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>cfdb0656-05e1-4b2e-999b-f2ddfce07e32</ui_id>
+    </sys_hub_pill_compound>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_f34c81fe1b700110b72e99f7b04bcb11^sys_idNOT INb34c81fe1b700110b72e99f7b04bcb55,bf4c81fe1b700110b72e99f7b04bcb4b"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f34c81fe1b700110b72e99f7b04bcb11</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>b34c81fe1b700110b72e99f7b04bcb55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f34c81fe1b700110b72e99f7b04bcb11</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:06:51</sys_created_on>
+        <sys_id>bf4c81fe1b700110b72e99f7b04bcb4b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:06:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_flow action="update">
+        <sys_id>12690d361b700110b72e99f7b04bcb5b</sys_id>
+        <latest_snapshot>f34c81fe1b700110b72e99f7b04bcb11</latest_snapshot>
+    </sys_hub_flow>
+</record_update>

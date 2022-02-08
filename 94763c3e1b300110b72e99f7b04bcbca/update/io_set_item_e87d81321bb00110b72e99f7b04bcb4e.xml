@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <sc_cat_item display_value="YubiKey 5NFC">b6f6747e1b300110b72e99f7b04bcbad</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:11:49</sys_created_on>
+        <sys_id>e87d81321bb00110b72e99f7b04bcb4e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Standard Employee Questions.YubiKey 5NFC</sys_name>
+        <sys_package display_value="Yubico Enterprise Delivery API Spoke" source="x_703594_yubico_en">94763c3e1b300110b72e99f7b04bcbca</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Yubico Enterprise Delivery API Spoke">94763c3e1b300110b72e99f7b04bcbca</sys_scope>
+        <sys_update_name>io_set_item_e87d81321bb00110b72e99f7b04bcb4e</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:12:26</sys_updated_on>
+        <variable_set display_value="Standard Employee Questions">e01cab1a4f334200086eeed18110c71f</variable_set>
+    </io_set_item>
+</record_update>

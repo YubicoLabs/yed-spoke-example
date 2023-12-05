@@ -176,3 +176,245 @@ Set the single output using the variables below:
 Your script outputs menu should look like the example below.
 
 ![Scripts outputs](/img/actions_8.png)
+
+Click Save once your script is ready.
+
+## API REST call
+
+Next we will configure the action step for making the REST HTTP call to the YubiEnterprise Delivery API.
+
+On the left side, in the Action Outline, click the **bottom** blue **+** button.
+
+![Add second action](/img/actions_9.png)
+
+Search for **rest** and select the **REST** option
+
+:::note
+
+If the REST option does not appear then you have not activated the IntegrationHub plugin. Follow the instructions at the [prerequisites](/docs/prereqs) page earlier in the guide.
+
+:::
+
+![Inputs menu](/img/actions_10.png)
+
+### Connection details
+
+First we will add our API credentials to the REST call. We will utilize the connection alias that was created earlier in this guide.
+
+Ensure that the Connection field is set to **Use Connection Alias**.
+
+Change the **Connection Alias** to the one created earlier in the guide. The **Base URL** should be set automatically based on the connection alias.
+
+Your connection details should look like the example below.
+
+![Connection details final](/img/actions_11.png)
+
+### Request details
+
+Next we will configure the details of the API method call. We will by utilizing the [POST /shipments_exact API method](https://console.yubico.com/apidocs/#operation/CreateShipmentExact)
+
+Configure the Request Details section with the following values:
+
+- **Build Request**: Manually
+- **Resource Path**: /shipments_exact
+- **HTTP Method**: POST
+
+The query parameters should include two header properties using the values below
+
+| Name         | Value            |
+| ------------ | ---------------- |
+| Accept       | application/json |
+| Content-Type | application/json |
+
+Your request details should look like the example below.
+
+![Request details final](/img/actions_12.png)
+
+### Request content
+
+Next we will add data to the body of our POST request. We will utilize the output of the previous script step. In the **Request Content** section, set the following values
+
+- **Request Type**: Text
+- **Request Body**: Drag the **Shipment Exact Request** data pill from the **Script step** section on the right side of the menu.
+
+Your request content should look like the example below.
+
+![Request details final](/img/actions_13.png)
+
+Click save once your API call is complete
+
+## Output script
+
+We will now create another script to format the outputs of the action. This will ensure that we are able to not only capture data from a successful shipment, but to identify and understand potential errors with our shipment.
+
+On the left side, in the Action Outline, click the bottom blue **+** button.
+![Action outline 3](/img/actions_14.png)
+
+Search for **scripts** and select the **Script** option
+
+![Script action step](/img/actions_6.png)
+
+### Script inputs
+
+We'll start by creating the input for the script. We will only create one input, which will be the result of the previous REST step call
+
+- Click the **+Create Variable** button
+- **Name**: responseBody (case sensitive)
+- **Value**: Drag the Response Body data pill from the REST step section on the right side of the menu
+
+Your script inputs menu should look like the example below.
+
+![Script action step](/img/actions_15.png)
+
+### Adding the script
+
+Next we are going to add a script to Script field. Copy the script provided below into the Script field.
+
+```javascript
+(function execute(inputs, outputs) {
+  outputs.shipment_response = inputs.responseBody;
+  const response = JSON.parse(inputs.responseBody);
+  outputs.shipment_request_id = response.shipment_id;
+  outputs.shipment_state_id = response.shipment_state_id;
+  outputs.shipment_state_message = response.shipment_state_message;
+  const messages =
+    response.shipment_messages === undefined
+      ? ""
+      : JSON.stringify(response.shipment_messages);
+  outputs.shipment_messages = messages;
+})(inputs, outputs);
+```
+
+### Script outputs
+
+Lastly, we will add the output variable for the script
+
+For each row in the table below, perform the following steps:
+
+1. Click the **+Create Variable** button at the bottom.
+2. Fill in the input using the data provided below to the corresponding field (note that name will be automatically input).
+
+| Label                  | Type    | Mandatory |
+| ---------------------- | ------- | --------- |
+| Shipment Response      | String  | off       |
+| Shipment Request ID    | String  | off       |
+| Shipment State ID      | Integer | off       |
+| Shipment State Message | String  | off       |
+| Shipment Messages      | String  | off       |
+
+Your script outputs menu should look like the example below.
+
+![Script outputs](/img/actions_16.png)
+
+Click **Save** once your output script is complete
+
+## Action outputs
+
+Lastly we will define the outputs of the action. These outputs will be usable by the final flow that will orchestrate the ordering experience. We want to ensure that the action outputs are able to express details about the new shipment, or any issues should they occur.
+
+We will start by clicking the **Outputs** tab in the **Action Outline** pane.
+
+![Action outline outputs](/img/actions_17.png)
+
+Next we are going to configure the outputs.
+
+For each row in the table below, perform the following steps:
+
+1. Click the **+Create Output** button at the top.
+2. Fill in the input using the data provided below to the corresponding field (Note: Unlike the previous examples, the **Name** field is not auto-populated).
+
+| Label                  | Name                   | Type    | Mandatory |
+| ---------------------- | ---------------------- | ------- | --------- |
+| HTTP Status Code       | http_status_code       | String  | off       |
+| HTTP Error Code        | http_error_code        | String  | off       |
+| HTTP Error Message     | http_error_message     | String  | on        |
+| Shipment Request ID    | shipment_request_id    | String  | off       |
+| Shipment State ID      | shipment_state_id      | Integer | off       |
+| Shipment State Message | shipment_state_message | String  | off       |
+| Shipment Messages      | shipment_messages      | String  | off       |
+
+Your actions outputs menu should look like the example below.
+
+![Inputs menu](/img/actions_18.png)
+
+Once complete, press the **Exit Edit Mode** button on the top of the menu.
+
+A new menu should appear showing the outputs you just defined with empty **Value** fields. For each output, you will add a data pill from the **REST step** and **the second** **Script step** sections on the right side of the menu
+
+Use the table below to correlate the correct data pill to a label.
+
+| Label                  | Section > Data pill                  |
+| ---------------------- | ------------------------------------ |
+| HTTP Status Code       | REST step > Status Code              |
+| HTTP Error Code        | REST step > Error Code               |
+| HTTP Error Message     | REST step > Error message            |
+| Shipment Request ID    | Script step > Shipment Request ID    |
+| Shipment State ID      | Script Step > Shipment State ID      |
+| Shipment State Message | Script step > Shipment State Message |
+| Shipment Messages      | Script step > Shipment Messages      |
+
+Your actions outputs menu should look like the example below.
+
+![Inputs menu](/img/actions_19.png)
+
+Click **Save** once your outputs are complete
+
+## Test the action
+
+Lastly we want to ensure that a shipment can be made from our action. This will be used to ensure that our API credentials + script + REST call are configure correctly.
+
+At the top of the Actions menu, click the **Test** button
+
+![Inputs menu](/img/actions_20.png)
+
+A menu should appear, which contains references the inputs that were created earlier in this section. You may utilize the variables below, are you can use other known values.
+
+| Name                      | Value                   |
+| ------------------------- | ----------------------- |
+| Country Code 2            | US                      |
+| Recipient                 | Example Inc.            |
+| Recipient Telephone       | 5555555555              |
+| Street Line 1             | 5201 Great America Pkwy |
+| Street Line 2             | #122                    |
+| City                      | Santa Clara             |
+| Region                    | CA                      |
+| Postal Code               | 95054                   |
+| Product ID                | 1                       |
+| Inventory Product ID      | 1                       |
+| Shipment Product Quantity | 1                       |
+
+:::tip
+
+Below are some tips and pitfalls to watch out for in this initial test
+
+- The address above is Yubico's Santa Clara office
+- If you receive a 401 error, that means your API credentials are not correct
+- There will be a variation in the Product ID and Inventory Product ID field. This will vary based on the inventory in your YubiEnterprise Console. To help guide you, the list of possible values can be found [here](https://console.yubico.com/help/api-req.html#id5). Otherwise reach out to Yubico Customer Support
+
+:::
+
+When ready click the **Run Test** button at the bottom of the screen.
+
+Wait on the current page until a message appears saying "Your test has finished running. View the action execution details."
+
+![Action test complete](/img/actions_21.png)
+
+Click on the message to see the execution details.
+
+On the execution details screen, scroll until you see the **Output Data** section. The HTTP Status Code should be 200. If the response was not 200, take a look at the tips above, check the error message output, or expand the **Steps** section at the bottom of the details screen to troubleshoot.
+
+Below is an example of a successful outputs screen
+
+![Execution details](/img/actions_22.png)
+
+## Delete the test order
+
+:::danger
+
+After every test it is important that you delete any orders directly in the YubiEnterprise Console - See more information here - [Cancelling Your Test Orders](https://github.com/YubicoLabs/yed-spoke-example#cancelling-my-test-order)
+
+:::
+
+## Publish the action
+
+If everything looks good, click the **Publish** button at the top of the action menu to make the action available for all flows.

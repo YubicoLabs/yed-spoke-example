@@ -72,6 +72,7 @@ We'll start with the questions related to a user's address. For each row in the 
 
 | Question type | Question subtype | Question Label |
 | ------------- | ---------------- | -------------- |
+| Text          | Single-line      | Phone number   |
 | Text          | Single-line      | Street address |
 | Text          | Single-line      | Apt or Unit #  |
 | Text          | Single-line      | City           |
@@ -160,6 +161,8 @@ Follow the steps below to add a new question:
 10. Add one choice with the name **YubiKey 5C Nano** and a value of **4**
 
 For this example we'll only include these three YubiKeys, but you can expand, or subtract, from this list based on the YubiKeys that are present in your YubiEnterprise Console.
+
+//TODO: Add reference to the PID and IPID values
 
 Your options should look like the image below.
 

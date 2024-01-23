@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Prerequisites
 
-Before we continue with this guide, please ensure that you have read and completed the prerequisites below.
+Before you continue, please ensure that you have read and completed the prerequisites below.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ A YubiEnterprise Console account is needed for this tutorial as you will need an
 A Personal ServiceNow Developer Instance can be acquired for free by signing up for the ServiceNow Developer Program
 
 :::tip
-If your organization already has a dedicated ServiceNow instance, then please ignore the steps below and contact your SerivceNow administrator for access to a development environment.
+If your organization already has a dedicated ServiceNow instance, then please ignore the steps below and contact your ServiceNow administrator for access to a development environment.
 :::
 
 Please visit the following resources to sign up for the ServiceNow Developer Program, and to learn how to set up a Personal Developer Instance
@@ -29,4 +29,4 @@ Once you have your Developer Instance, please ensure that IntegrationHub is acti
 
 - [Enabling ServiceNow IntegrationHub](https://developer.servicenow.com/dev.do#!/learn/learning-plans/rome/servicenow_application_developer/app_store_learnv2_rest_rome_activating_integrationhub)
 
-Note that our example ios using ServiceNow's Vancouver build.
+Note that our example is using ServiceNow's Vancouver build.

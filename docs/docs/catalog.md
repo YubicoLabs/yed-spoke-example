@@ -4,11 +4,13 @@ sidebar_position: 4
 
 # Create catalog item
 
-Next we are going to create the catalog item for ordering a YubiKey. Doing this step now will allow us to move faster once we start configuring the action and flow. This will give you the baseline understanding of the data that will be required to place a YubiKey order through the YubiEnterprise Delivery API.
+Next we are going to create the catalog item for ordering a YubiKey. Doing this step now will allow us to move faster once we start configuring the action and flow. This will give you a baseline understanding of the data that will be required to place a YubiKey order through the YubiEnterprise Delivery API.
 
 ## Initialize catalog item
 
-On the ServiceNow home screen, search for **catalog builder**. Click **Catalog Builder**, a new window should open.
+On the ServiceNow home screen, search for **catalog builder**.
+
+Click **Catalog Builder**, a new window should open.
 
 ![Catalog menu item](/img/catalog_1.png)
 
@@ -43,11 +45,11 @@ When ready, click the **Continue to Location** button.
 
 The location options will allow you to set where in your service catalog your YubiKey item will appear.
 
-On the main location screen click **Edit selected catagories**.
+On the **Location** screen click **Edit selected catagories**.
 
 ![Catalog menu item](/img/catalog_5.png)
 
-A new menu will open where you can select the catagories. Select every option except the **Hardware** and **Peripherals** options, then click on the **left pointed arrow**, to move the item into the **Available options** column. Note that this is not a hard requirement, and can be placed in whatever category is most appropriate for your organization.
+A new menu will open where you can select the catagories. Select every option except the **Hardware** and **Peripherals** options, then click on the **left pointed arrow**, to move the item into the **Available options** column. Note that this is not a hard requirement, and the catalog item can be placed in whatever category is most appropriate for your organization.
 
 Once complete, your options should look like the image below.
 
@@ -82,9 +84,9 @@ Next we will add a dropdown list for the country code and the region.
 
 :::tip
 
-Note that country code must be the 2 character ISO country code. These values can either be found on the internet, or you can call the GET /countries endpoint on the YubiEnterprise Delivery API.
+Note that country code must be the 2 character ISO country code. These values can either be found on the internet, or you can call the [`GET /countries`](https://console.yubico.com/apidocs/#tag/countries/operation/ListCountries) endpoint on the YubiEnterprise Delivery API.
 
-Also the region (state) field is only required for orders made to the US and Canada. Please ensure that you use the 2 character USPS code, which can be found [here](https://console.yubico.com/help/api-req.html#id2)
+Also the region (state) field is only required for orders made to the US and Canada. Please ensure that you use the 2 character USPS code, which can be found [here](https://console.yubico.com/help/api-req.html#id4)
 
 :::
 
@@ -162,11 +164,22 @@ Follow the steps below to add a new question:
 
 For this example we'll only include these three YubiKeys, but you can expand, or subtract, from this list based on the YubiKeys that are present in your YubiEnterprise Console.
 
-//TODO: Add reference to the PID and IPID values
-
 Your options should look like the image below.
 
 ![Catalog menu item](/img/catalog_14.png)
+
+:::tip
+
+In the example above, the number associated to each YubiKey is its **Product ID**. This ID relates to the specific make/model, and tells the API which key to select for a delivery.
+
+Your YubiEnterprise instance may not be comprised of the specific products above, or your Product IDs may differ for various reasons.
+
+The complete list of standard Product IDs can be found at [this location](https://console.yubico.com/help/api-req.html#id7).
+
+You may also call the [`GET /inventory`](https://console.yubico.com/apidocs/#tag/inventory/operation/GetInventoryOfOrganizationInContext) endpoint for a full list of products associated to your organization.
+
+In the case of custom products, you may work directly with your Yubico representative to get these values.
+:::
 
 Click on the **Continue to Default values button**
 

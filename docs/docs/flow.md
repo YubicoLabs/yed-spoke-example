@@ -8,7 +8,9 @@ In this step we will configure a custom flow that will be triggered by the custo
 
 ## Flow properties
 
-On the ServiceNow home screen, search for **flow designer**. Click **Flow Designer**, a new window should open.
+On the ServiceNow home screen, search for **flow designer**.
+
+Click **Flow Designer**, a new window should open.
 
 ![Configuration menu](/img/actions_1.png)
 
@@ -18,9 +20,9 @@ Once the **Flow Designer** page opens, click the **Create new** button, then sel
 
 A menu will appear to configure the action's properties. Use the following values to initialize your action.
 
-- Flow name: YubiEnterprise create shipment
-- Description: Create a new YubiKey shipment order
-- Application: YubiEnterprise Delivery App
+- **Flow name**: YubiEnterprise create shipment
+- **Description**: Create a new YubiKey shipment order
+- **Application**: YubiEnterprise Delivery App
 - Use the defaults for the remaining properties
 
 ![Flow properties](/img/flow_2.png)
@@ -29,7 +31,7 @@ Click **Submit**.
 
 ## Add flow trigger
 
-Next, we're going to add a trigger. This will be the mechanism that will be used to trigger the flow. In our case, the trigger will be the custom catalog item that we built earlier.
+Next, we're going to add a trigger. This will be the mechanism that will be used to start the flow. In our case, the trigger will be the custom catalog item that we built earlier.
 
 First, click the **+ Add a trigger** button.
 
@@ -105,7 +107,14 @@ Use the table below to correlate the correct data pill, or hardcoded input to a 
 | Inventory Product ID      | [Your subscription or perpetual order ID*]                   |
 | Shipment Product Quantity | Trigger > Requested Item Record > Quantity                   |
 
-\*The inventory ID will vary based on your YubiEnterprise order. Please consult [this list](https://console.yubico.com/help/api-req.html#id5) to determine which inventory product ID is most relevant to your organization.
+:::tip
+The inventory product ID will vary based on your YubiEnterprise order. Please consult [this list](https://console.yubico.com/help/api-req.html#id7) to determine which inventory product ID is most relevant to your organization.
+
+The correct item will resemble the subscription used by your organization.
+
+You may call the [`GET /inventory`](https://console.yubico.com/apidocs/#tag/inventory/operation/GetInventoryOfOrganizationInContext) endpoint for a full list of inventory product IDs associated to your organization.
+
+:::
 
 Your action input mappings menu should look like the example below.
 

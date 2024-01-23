@@ -10,7 +10,9 @@ Before you proceed ensure that you have configured the connection alias and cred
 
 ## Action properties
 
-On the ServiceNow home screen, search for **flow designer**. Click **Flow Designer**, a new window should open.
+On the ServiceNow home screen, search for **flow designer**.
+
+Click **Flow Designer**, a new window should open.
 
 ![Configuration menu](/img/actions_1.png)
 
@@ -20,9 +22,9 @@ Once the **Flow Designer** page opens, click the **Create new** button, then sel
 
 A menu will appear to configure the action's properties. Use the following values to initialize your action.
 
-- Action name: YubiEnterprise create shipment
-- Application: YubiEnterprise Delivery App
-- Description: Place an order for a new YubiKey through the YubiEnterprise Delivery API
+- **Action name**: YubiEnterprise create shipment
+- **Application**: YubiEnterprise Delivery App
+- **Description**: Place an order for a new YubiKey through the YubiEnterprise Delivery API
 - Use the defaults for the remaining properties
 
 ![Configuration menu](/img/actions_3.png)
@@ -83,9 +85,9 @@ We'll start by creating inputs for the script. This will utilize the same inputs
 
 For each of the items in the table below, do the following steps:
 
-- Click the **+Create Variable** button
-- Set the name using the name provided in the table below (warning: these values are case sensitive)
-- Drag the corresponding data pill from the right side **Data** menu
+1. Click the **+Create Variable** button
+2. Set the name using the name provided in the table below (warning: these values are case sensitive)
+3. Drag the corresponding data pill from the right side **Data** menu
 
 | Name (case sensitive)     | Data pill                 |
 | ------------------------- | ------------------------- |
@@ -211,7 +213,7 @@ Your connection details should look like the example below.
 
 ### Request details
 
-Next we will configure the details of the API method call. We will by utilizing the [POST /shipments_exact API method](https://console.yubico.com/apidocs/#operation/CreateShipmentExact)
+Next we will configure the details of the API method call. We will by utilizing the [`POST /shipments_exact`](https://console.yubico.com/apidocs/#operation/CreateShipmentExact) API method
 
 Configure the Request Details section with the following values:
 
@@ -258,9 +260,9 @@ Search for **scripts** and select the **Script** option
 
 We'll start by creating the input for the script. We will only create one input, which will be the result of the previous REST step call
 
-- Click the **+Create Variable** button
-- **Name**: responseBody (case sensitive)
-- **Value**: Drag the Response Body data pill from the REST step section on the right side of the menu
+1. Click the **+Create Variable** button
+2. **Name**: responseBody (case sensitive)
+3. **Value**: Drag the Response Body data pill from the REST step section on the right side of the menu
 
 Your script inputs menu should look like the example below.
 
@@ -361,7 +363,7 @@ Click **Save** once your outputs are complete
 
 ## Test the action
 
-Lastly we want to ensure that a shipment can be made from our action. This will be used to ensure that our API credentials + script + REST call are configure correctly.
+Lastly we want to ensure that a shipment can be made from our action. This will be used to ensure that our API credentials + script + REST call are configured correctly.
 
 At the top of the Actions menu, click the **Test** button
 
@@ -389,7 +391,7 @@ Below are some tips and pitfalls to watch out for in this initial test
 
 - The address above is Yubico's Santa Clara office
 - If you receive a 401 error, that means your API credentials are not correct
-- There will be a variation in the Product ID and Inventory Product ID field. This will vary based on the inventory in your YubiEnterprise Console. To help guide you, the list of possible values can be found [here](https://console.yubico.com/help/api-req.html#id5). Otherwise reach out to Yubico Customer Support
+- There will be a variation in the Product ID and Inventory Product ID field. This will vary based on the inventory in your YubiEnterprise Console. To help guide you, the list of possible values can be found [here](https://console.yubico.com/help/api-req.html#id7). Otherwise reach out to Yubico Customer Support
 
 :::
 

@@ -4,9 +4,7 @@ sidebar_position: 5
 
 # Configure connection credentials
 
-In this step we will add our YubiEnterprise Delivery API to ServiceNow to allow our application to send and receive shipment details from the YubiEnterprise API. This credential will be reusable throughout your application, and prevents us from having to manually enter the API token inline every time we want to configure a new API call.
-
-- Generating
+In this step we will add our YubiEnterprise Delivery API token to ServiceNow to allow our application to send and receive shipment details from the YubiEnterprise API. This credential will be reusable throughout your application, and prevents us from having to manually enter the API token inline every time we want to configure a new API call.
 
 ## Prerequisites
 

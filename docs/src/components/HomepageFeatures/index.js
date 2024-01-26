@@ -4,18 +4,6 @@ import styles from './styles.module.css';
 
 import ReactPlayer from "react-player";
 
-const FeatureList = [
-  {
-    title: 'Authentication made easy',
-    video: "https://www.youtube-nocookie.com/embed/9bv2Q4fQfp4",
-    description: (
-      <>
-        Observe how seamless and intuitive it is to authenticate using a passkey. Your users can now increase their account security AND forgo the need to remember their login information
-      </>
-    ),
-  },
-];
-
 function Feature() {
   return (
     <div className={clsx('col col--12')}>
@@ -24,7 +12,7 @@ function Feature() {
         <ReactPlayer
           controls
           className='react-player'
-          url="https://www.youtube-nocookie.com/embed/9bv2Q4fQfp4"
+          url="https://www.youtube-nocookie.com/embed/4j82irl1s9s?si=oqDlCeiECSWV5X8S"
           width='100%'
           height='100%'
         />

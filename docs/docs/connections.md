@@ -46,7 +46,7 @@ This time select the **Credentials** menu.
 
 Once in the **Credentials** menu, click **New** at the top right corner.
 
-On the next screen, select **API Key Credentials** (this is typically the first one).
+On the next screen, select **API Key Credentials** (this is typically the first option).
 
 In the next menu, you will configure your API credential. On the configuration menu, provide the following values:
 
@@ -74,7 +74,7 @@ This time select the **Connections** menu.
 
 Once in the **Connections** menu, click **New** at the top right corner.
 
-On the next screen, select **HTTP(s) Connection** (this is typically the second one).
+On the next screen, select **HTTP(s) Connection** (this is typically the second option).
 
 In the next menu, you will configure your connection details. Here you will use the Connection Alias, and Credential that were configured above. In the menu, provide the following values
 

@@ -193,7 +193,7 @@ Search for **rest** and select the **REST** option
 
 :::note
 
-If the REST option does not appear then you have not activated the IntegrationHub plugin. Follow the instructions at the [prerequisites](/docs/prereqs) page earlier in the guide.
+If the REST option does not appear then you have not activated the IntegrationHub plugin. Follow the instructions in the [prerequisites](/docs/prereqs) page earlier in the guide.
 
 :::
 
@@ -289,7 +289,7 @@ Next we are going to add a script to Script field. Copy the script provided belo
 
 ### Script outputs
 
-Lastly, we will add the output variable for the script
+Lastly, we will add the output variables for the script
 
 For each row in the table below, perform the following steps:
 
@@ -329,7 +329,7 @@ For each row in the table below, perform the following steps:
 | ---------------------- | ---------------------- | ------- | --------- |
 | HTTP Status Code       | http_status_code       | String  | off       |
 | HTTP Error Code        | http_error_code        | String  | off       |
-| HTTP Error Message     | http_error_message     | String  | on        |
+| HTTP Error Message     | http_error_message     | String  | off       |
 | Shipment Request ID    | shipment_request_id    | String  | off       |
 | Shipment State ID      | shipment_state_id      | Integer | off       |
 | Shipment State Message | shipment_state_message | String  | off       |

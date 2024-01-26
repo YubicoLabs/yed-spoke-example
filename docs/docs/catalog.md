@@ -191,12 +191,22 @@ At this point your questions list should look like the image below
 
 ![Catalog menu item](/img/catalog_15.png)
 
-From the navigation pane on the left hand side, click **Submit and review**.
+## Fulfillment
 
-Once you've reviewed the items to ensure that they are correct, click **Submit** at the bottom of the page.
+From the navigation pane on the left hand side, click **Fulfillment**.
+
+For the value **Selected flow**, set the value to **Service Catalog item request**.
+
+![Set Fulfillment to Service Catalog item request](/img/catalog_16.png)
 
 :::note
 
 We will need to return to this catalog item to update the **Fulfillment** options to utilize our custom flow which will be configured later in this guide
 
 :::
+
+## Review and submit
+
+Next, from the navigation pane on the left hand side, click **Review and submit**.
+
+Once you've reviewed the items to ensure that they are correct, click **Submit** at the bottom of the page.

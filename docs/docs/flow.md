@@ -53,7 +53,7 @@ Next click **Action**. When the menu appears, search for **get catalog variables
 
 ![get catalog variables](/img/flow_5.png)
 
-Once the new meenu appears, drag the **Request Item Record** data pill from the **Data** table on the right into the **Submitted Request**.
+Once the new menu appears, drag the **Request Item Record** data pill from the **Data** table on the right into the **Submitted Request**.
 
 For the **Template** input, search for **yubikey** and select **YubiKey** (this will refer to the custom catalog item template that we previously created).
 
@@ -184,10 +184,10 @@ Once in the **YubiKey** item, populate the form with shipment information using 
 | Apt or Unit #           | #122                    |
 | City                    | Santa Clara             |
 | Postal Code             | 95054                   |
-| Region                  | CA                      |
+| Region                  | California              |
 | Country Code 2          | US                      |
 | Recipient               | Example Inc.            |
-| YubiKey model           | 1                       |
+| YubiKey model           | YubiKey 5 NFC           |
 
 Your form should look like the example below.
 

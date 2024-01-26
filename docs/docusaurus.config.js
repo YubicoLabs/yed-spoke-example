@@ -82,19 +82,19 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Passkey resources',
+            title: 'Other resources and guides',
             items: [
               {
-                label: 'Passkey.org',
-                to: 'https://passkey.org',
-              },
-              {
-                label: 'Passkeys.dev',
-                to: 'https://passkeys.dev',
-              },
-              {
                 label: 'developers.yubico.com',
-                to: 'https://developers.yubico.com/Passkeys',
+                to: 'https://developers.yubico.com',
+              },
+              {
+                label: 'Passkey workshop',
+                to: 'https://yubicolabs.github.io/passkey-workshop/',
+              },
+              {
+                label: 'Secure software supply chain guide',
+                to: 'https://https://yubicolabs.github.io/secure-software-supply-chain-guide//',
               },
             ],
           },
@@ -103,7 +103,7 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/passkey',
+                href: 'https://stackoverflow.com/questions/tagged/yubico',
               }
             ],
           },

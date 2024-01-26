@@ -83,7 +83,7 @@ Your connection details should look like the example below.
 
 #### Request details
 
-Next we will configure the details of the API method call. We will by utilizing the [`GET /shipments_exact/{id}`](https://console.yubico.com/apidocs/#tag/shipments/operation/GetShipmentExactById) API method
+Next we will configure the details of the API method call. We will be utilizing the [`GET /shipments_exact/{id}`](https://console.yubico.com/apidocs/#tag/shipments/operation/GetShipmentExactById) API method
 
 Configure the Request Details section with the following values:
 
@@ -104,7 +104,7 @@ Your request details should look like the example below.
 
 ### Output script
 
-We will now create another script to format the outputs of the action. This will ensure that we are able to not only capture data from a successful shipment, but to identify and understand potential errors with our shipment.
+We will now create a script to format the outputs of the action. This will ensure that we are able to not only capture data from a successful shipment, but to identify and understand potential errors with our shipment.
 
 On the left side, in the Action Outline, click the bottom blue **+** button.
 
@@ -493,7 +493,7 @@ Search for **create record**. Select **Create Record** in the **ServiceNow Core*
 A new menu should appear. Configure it with the following values:
 
 - **Table**: Select Incident \[incident\]
-- Click the Add field value X times. Add the following fields and values
+- Click the Add field value button 3 times. Add the following fields and values
   - **Short description**: YubiEnterprise Shipment has failed for an unknown reason
   - **Description**: YED Shipment \[Add shipment request ID data pill\] has failed. Please check the YubiEnterprise console to begin troubleshooting. https://console.yubico.com/shipments/ \[Add shipment request ID data pill\]
   - **Caller**: Add the data pill Trigger > Requested Item Record > Created By

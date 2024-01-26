@@ -213,7 +213,7 @@ Your connection details should look like the example below.
 
 ### Request details
 
-Next we will configure the details of the API method call. We will by utilizing the [`POST /shipments_exact`](https://console.yubico.com/apidocs/#operation/CreateShipmentExact) API method
+Next we will configure the details of the API method call. We will be utilizing the [`POST /shipments_exact`](https://console.yubico.com/apidocs/#operation/CreateShipmentExact) API method
 
 Configure the Request Details section with the following values:
 

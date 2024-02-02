@@ -63,7 +63,7 @@ Search for **rest** and select the **REST** option
 
 :::note
 
-If the REST option does not appear then you have not activated the IntegrationHub plugin. Follow the instructions in the [prerequisites](/docs/prereqs) page earlier in the guide.
+If the REST option does not appear then you have not activated the IntegrationHub plugin. Follow the instructions in the [prerequisites](/docs/prereqs) section.
 
 :::
 
@@ -91,7 +91,7 @@ Configure the Request Details section with the following values:
 - **Resource Path**: Type **/shipments_exact/** then drag the **Shipment ID** data pill to the end of the url (see the image below for an example)
 - **HTTP Method**: GET
 
-The query parameters should include two header properties using the values below
+The **Headers** should include two header properties using the values below
 
 | Name         | Value            |
 | ------------ | ---------------- |

@@ -86,7 +86,7 @@ Next we will add a dropdown list for the country code and the region.
 
 Note that country code must be the 2 character ISO country code. These values can either be found on the internet, or you can call the [`GET /countries`](https://console.yubico.com/apidocs/#tag/countries/operation/ListCountries) endpoint on the YubiEnterprise Delivery API.
 
-Also the region (state) field is only required for orders made to the US and Canada. Please ensure that you use the 2 character USPS code, which can be found [here](https://console.yubico.com/help/api-req.html#id4)
+Also the region (state) field is only required for orders made to the US and Canada. Please ensure that you use the 2 character USPS codes, which can be found [here](https://console.yubico.com/help/api-req.html#id4)
 
 :::
 
@@ -112,11 +112,11 @@ Your options should look like the image below.
 
 Click on the **Continue to Default values button**
 
-In the dropdown select the **California** value.
+In the dropdown select the **California** option.
 
 Once this is complete press the **Insert question** button
 
-Next we'll do the country code. Follow the steps below:
+Next we'll add an input for the country code. Follow the steps below:
 
 1. Click the **Insert new question** button
 2. Change **Question type** to **Choice**

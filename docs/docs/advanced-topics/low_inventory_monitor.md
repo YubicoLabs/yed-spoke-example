@@ -63,7 +63,7 @@ Search for **rest** and select the **REST** option
 
 :::note
 
-If the REST option does not appear then you have not activated the IntegrationHub plugin. Follow the instructions in the [prerequisites](/docs/prereqs) page earlier in the guide.
+If the REST option does not appear then you have not activated the IntegrationHub plugin. Follow the instructions in the [prerequisites](/docs/prereqs) section.
 
 :::
 
@@ -91,7 +91,7 @@ Configure the Request Details section with the following values:
 - **Resource Path**: **/inventory**
 - **HTTP Method**: GET
 
-The query parameters should include two header properties using the values below
+The **Headers** should include two header properties using the values below
 
 | Name         | Value            |
 | ------------ | ---------------- |
@@ -116,7 +116,7 @@ Search for **scripts** and select the **Script** option
 
 #### Script inputs
 
-We'll start by creating the input for the script. We will only create one input, which will be the result of the previous REST step call
+We'll start by creating the input for the script.
 
 1. Click the **+Create Variable** button
 2. **Name**: responseBody (case sensitive)

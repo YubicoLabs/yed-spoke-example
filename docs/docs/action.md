@@ -193,7 +193,7 @@ Search for **rest** and select the **REST** option
 
 :::note
 
-If the REST option does not appear then you have not activated the IntegrationHub plugin. Follow the instructions in the [prerequisites](/docs/prereqs) page earlier in the guide.
+If the REST option does not appear then you have not activated the IntegrationHub plugin. Follow the instructions in the [prerequisites](/docs/prereqs) section.
 
 :::
 
@@ -221,7 +221,7 @@ Configure the Request Details section with the following values:
 - **Resource Path**: /shipments_exact
 - **HTTP Method**: POST
 
-The query parameters should include two header properties using the values below
+The **Headers** should include two header properties using the values below
 
 | Name         | Value            |
 | ------------ | ---------------- |
@@ -247,7 +247,7 @@ Click save once your API call is complete
 
 ## Output script
 
-We will now create another script to format the outputs of the action. This will ensure that we are able to not only capture data from a successful shipment, but to identify and understand potential errors with our shipment.
+We will now create another script to format the outputs of the action. This will ensure that we can capture data from a successful shipment, and to identify and understand potential errors.
 
 On the left side, in the Action Outline, click the bottom blue **+** button.
 ![Action outline 3](/img/actions_14.png)
@@ -369,7 +369,7 @@ At the top of the Actions menu, click the **Test** button
 
 ![Inputs menu](/img/actions_20.png)
 
-A menu should appear, which contains references the inputs that were created earlier in this section. You may utilize the variables below, are you can use other known values.
+A menu should appear, which contains references the inputs that were created earlier in this section. You may utilize the variables below, or you can use other known values.
 
 | Name                      | Value                   |
 | ------------------------- | ----------------------- |
@@ -391,7 +391,7 @@ Below are some tips and pitfalls to watch out for in this initial test
 
 - The address above is Yubico's Santa Clara office
 - If you receive a 401 error, that means your API credentials are not correct
-- There will be a variation in the Product ID and Inventory Product ID field. This will vary based on the inventory in your YubiEnterprise Console. To help guide you, the list of possible values can be found [here](https://console.yubico.com/help/api-req.html#id7). Otherwise reach out to Yubico Customer Support
+- There may be variation in the Product ID and Inventory Product ID field. The variation will be based on the inventory in your YubiEnterprise Console. To help guide you, the list of possible values can be found [here](https://console.yubico.com/help/api-req.html#id7). Otherwise reach out to Yubico Customer Support
 
 :::
 

@@ -94,7 +94,7 @@ const config = {
               },
               {
                 label: 'Secure software supply chain guide',
-                to: 'https://https://yubicolabs.github.io/secure-software-supply-chain-guide//',
+                to: 'https://yubicolabs.github.io/secure-software-supply-chain-guide/',
               },
             ],
           },

@@ -1,0 +1,8 @@
+{
+  "label": "YubiEnterprise Delivery API actions",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Configure the following actions to make calls against the YubiEnterprise Delivery API for FIDO Pre-reg."
+  }
+}

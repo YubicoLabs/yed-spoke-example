@@ -1,0 +1,8 @@
+{
+  "label": "FIDO Pre-reg",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how to trigger FIDO Pre-reg requests from your YubiEnterprise Delivery ServiceNow application."
+  }
+}

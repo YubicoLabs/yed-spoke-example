@@ -51,7 +51,6 @@ For each row in the table below, perform the following steps:
 | Recipient Telephone       | String  | on        |
 | Street Line 1             | String  | on        |
 | Street Line 2             | String  | off       |
-| Street Line 3             | String  | off       |
 | City                      | String  | on        |
 | Region                    | String  | off       |
 | Postal Code               | String  | on        |
@@ -100,7 +99,6 @@ For each of the items in the table below, do the following steps:
 | recipient_telephone       | Recipient Telephone       |
 | street_line1              | Street Line 1             |
 | street_line2              | Street Line 2             |
-| street_line3              | Street Line 3             |
 | city                      | City                      |
 | region                    | Region                    |
 | postal_code               | Postal Code               |
@@ -127,7 +125,7 @@ Next we are going to add a script to **Script** field. Copy the script provided 
    * recipient: 20
    * recipient_firstname: 15
    * recipient_lastname: 20
-   * street_line_1, 2, and 3: 60
+   * street_line_1, and 2: 60
    * city: 60
    * region: 50
    * recipient_email: 80
@@ -147,7 +145,6 @@ Next we are going to add a script to **Script** field. Copy the script provided 
     recipient_telephone: inputs.recipient_telephone,
     street_line1: inputs.street_line1,
     street_line2: inputs.street_line2,
-    street_line3: inputs.street_line3,
     city: inputs.city,
     region: inputs.region,
     postal_code: inputs.postal_code,

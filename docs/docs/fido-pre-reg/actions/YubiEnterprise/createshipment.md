@@ -128,7 +128,7 @@ Next we are going to add a script to **Script** field. Copy the script provided 
    * recipient: 20
    * recipient_firstname: 15
    * recipient_lastname: 20
-   * street_line_1, 2, and 3: 60
+   * street_line_1, and 2: 60
    * city: 60
    * region: 50
    * recipient_email: 80

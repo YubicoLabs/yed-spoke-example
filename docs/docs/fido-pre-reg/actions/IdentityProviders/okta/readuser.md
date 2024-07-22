@@ -180,7 +180,7 @@ Your actions outputs menu should look like the example below.
 
 Once complete, press the **Exit Edit Mode** button on the top of the menu.
 
-A new menu should appear showing the outputs you just defined with empty **Value** fields. For each output, you will add a data pill from the **REST step** and **the second** **Script step** sections on the right side of the menu
+A new menu should appear showing the outputs you just defined with empty **Value** fields. For each output, you will add a data pill from the **Script step** section on the right side of the menu
 
 Use the table below to correlate the correct data pill to a label.
 

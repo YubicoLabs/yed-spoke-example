@@ -327,7 +327,7 @@ When complete, click **Done**.
 
 ## Call the YubiEnterprise get shipment (Pre-reg) action again
 
-Next, we are going to call to the YubiEnterprise API to get details about the shipment again. This is due to ServiceNow not being able to provide values outside of thee conditional loop.
+Next, we are going to call to the YubiEnterprise API to get details about the shipment again. This is due to ServiceNow not being able to provide values outside of the conditional loop.
 
 We will begin by adding the YubiEnterprise get shipment (Pre-reg) action directly outside of the conditional loop.
 

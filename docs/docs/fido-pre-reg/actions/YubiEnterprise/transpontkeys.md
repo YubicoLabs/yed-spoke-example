@@ -86,11 +86,11 @@ If the REST option does not appear then you have not activated the IntegrationHu
 
 ### Connection details
 
-First we will add our API credentials to the REST call. We will utilize the connection alias that was created earlier in this guide.
+First we will configure the connection to the YubiEnterprise endpoint. Unlike the previous request, we do not need to supply the API token as we are calling the `/.well-known` endpoint on the YubiEnterprise Console (this will also change the base URL used by the steps in this action).
 
 Ensure that the Connection field is set to **Define Connection Inline**.
 
-Change the **Bse URL** to https://console.yubico.com
+Change the **Base URL** to https://console.yubico.com
 
 ![Connection details final](/img/pre-reg/pr-12.png)
 

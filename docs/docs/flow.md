@@ -99,7 +99,6 @@ Use the table below to correlate the correct data pill, or hardcoded input to a 
 | Recipient Telephone       | Get Catalog Variable > phone_number                          |
 | Street Line 1             | Get Catalog Variable > street_address                        |
 | Street Line 2             | Get Catalog Variable > apt_or_unit                           |
-| Street Line 3             |                                                              |
 | City                      | Get Catalog Variable > city                                  |
 | Region                    | Get Catalog Variable > region_state                          |
 | Postal Code               | Get Catalog Variable > postal_code                           |

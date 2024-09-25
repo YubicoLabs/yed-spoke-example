@@ -10,6 +10,8 @@ With Yubico FIDO Pre-reg, an IT administrator can use the YubiEnterprise Deliver
 
 This guide is designed to be a starting point to demonstrate a basic integration exercising the critical path for ServiceNow and the YubicoEnterprise Delivery API. The resulting product is not production ready.
 
+:::
+
 ## Learn more
 
 The resources below dive into more details about Yubico's FIDO Pre-reg solution

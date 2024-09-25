@@ -306,9 +306,9 @@ For the field **Shipment ID**, drag the **Shipment Request ID** data pill from t
 
 Next, we are going to update the flow variable for the **Current Shipment State ID**. This will help us understand if the PIN and credential response is available for processing.
 
-First we'll start by setting the **Flow Variable Current Shipment State ID** to the updated state provided by the **Get FIDO Pre-reg shipment** action.
+First we'll start by setting the **Flow Variable Current Shipment State ID** to the updated state provided by the **YubiEnterprise get shipment (Pre-reg)** action.
 
-These steps should resemble the ones taken earlier on this page. Under the **Get FIDO Pre-reg shipment** action click the **+ Add an Action, Flow Logic, or Subflow** button.
+These steps should resemble the ones taken earlier on this page. Under the **YubiEnterprise get shipment (Pre-reg)** action click the **+ Add an Action, Flow Logic, or Subflow** button.
 
 Next, select **Flow Logic**.
 
@@ -318,7 +318,7 @@ A new menu will appear. Begin by clicking the **+** button in the new menu.
 
 In the **Name** field, select the flow variable **Current shipment state ID**.
 
-Drag the **Shipment State ID** value from the **Data** window on the right, in the **Get FIDO Pre-reg shipment** section.
+Drag the **Shipment State ID** value from the **Data** window on the right, in the **YubiEnterprise get shipment (Pre-reg)** section.
 
 Your resulting menu should resemble the image below.
 

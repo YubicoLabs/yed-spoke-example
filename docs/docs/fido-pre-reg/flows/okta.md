@@ -67,11 +67,11 @@ Use the right facing arrow to move the following fields to the column on the rig
 - street_address
 - apt_or_unit
 - city
-- region
+- region_state
 - postal_code
-- country
+- country_code
 - is_the_user_receiving_their_first_yubikey_or_a_replacement
-- select_a_yubikey_model
+- yubikey_model
 
 Your form variables menu should look like the example below.
 
@@ -164,10 +164,10 @@ Use the table below to correlate the correct data pill, to the inputs of the act
 | Street Line 1          | Get Catalog Variable > street_address                                                                                                  |
 | Street Line 2          | Get Catalog Variable > apt_or_unit                                                                                                     |
 | City                   | Get Catalog Variable > city                                                                                                            |
-| Region                 | Get Catalog Variable > region                                                                                                          |
+| Region                 | Get Catalog Variable > region_state                                                                                                    |
 | Postal Code            | Get Catalog Variable > postal_code                                                                                                     |
-| Country Code           | Get Catalog Variable > country                                                                                                         |
-| Product ID             | Get Catalog Variable > select_a_yubikey_model                                                                                          |
+| Country Code           | Get Catalog Variable > country_code                                                                                                    |
+| Product ID             | Get Catalog Variable > yubikey_model                                                                                                   |
 | Inventory Product ID   | Get Catalog Variable > is_the_user_receiving_their_first_yubikey_or_a_replacement                                                      |
 | Customization ID       | Enter your YubiEnterprise customization ID - This can be found in the YubiEnterprise console, or you can work with your Yubico contact |
 | Quantity               | 1                                                                                                                                      |

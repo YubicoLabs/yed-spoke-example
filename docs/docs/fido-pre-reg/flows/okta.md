@@ -188,8 +188,9 @@ We will need to create a flow variable to keep track of the current shipment sta
 1. Click the 3 dots on the top right of the screen
 2. Click **Flow Variables**
 3. Click the small **+** button on the right of the pop-up menu
-4. Set the **Label** to **Current shipment state ID**.
-5. Set the **Type** to **Integer**
+4. Set the **Label** to **Current shipment state ID**
+5. Set the **Name** to **current_shipment_state_id**
+6. Set the **Type** to **Integer**
 
 Your final settings should resemble the image below.
 

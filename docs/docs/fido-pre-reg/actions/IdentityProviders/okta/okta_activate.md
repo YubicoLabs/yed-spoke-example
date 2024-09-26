@@ -98,6 +98,7 @@ Next we are going to add a script to **Script** field. Copy the script provided 
 
 ```js
 (function execute(inputs, outputs) {
+  const parsed_signing_keys = JSON.parse(inputs.signing_keys)
   outputs.request_body = JSON.stringify({
     fulfillmentProvider: inputs.fulfillment_provider,
     userId: inputs.user_id,

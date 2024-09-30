@@ -305,7 +305,7 @@ For each row in the table below, perform the following steps:
 | Label             | Type    | Mandatory |
 | ----------------- | ------- | --------- |
 | shipment_id       | String  | on        |
-| shipment_state_id | Integer | on        |
+| shipment_state_id | String  | on        |
 
 Your script outputs menu should look like the example below.
 

@@ -104,7 +104,7 @@ Next we are going to add a script to **Script** field. Copy the script provided 
     userId: inputs.user_id,
     serial: inputs.serial_number,
     version: inputs.version,
-    yubicoSigningJwks: inputs.signing_keys,
+    yubicoSigningJwks: parsed_signing_keys.keys,
     pinResponseJwe: inputs.pin_response,
     credResponses: [
       {

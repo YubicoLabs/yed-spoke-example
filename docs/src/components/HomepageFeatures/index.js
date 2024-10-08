@@ -7,17 +7,6 @@ import ReactPlayer from "react-player";
 function Feature() {
   return (
     <div className={clsx('col col--12')}>
-      <div>
-      <div className='player-wrapper'>
-        <ReactPlayer
-          controls
-          className='react-player'
-          url="https://www.youtube-nocookie.com/embed/4j82irl1s9s?si=oqDlCeiECSWV5X8S"
-          width='100%'
-          height='100%'
-        />
-      </div>
-      </div>
     </div>
   );
 }

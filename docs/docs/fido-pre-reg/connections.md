@@ -28,5 +28,13 @@ Below are instructions for generating an API token for FIDO Pre-reg supported Id
 See [this section](/yed-spoke-example/docs/connections) from earlier in this guide to establish an API credential in ServiceNow. You will need to perform this step for both of the API tokens generated above.
 
 ::::warning
+
 The link to the previous section above references configurations for specifically the YubiEnterprise API. When configuring your IdP ensure that you set the **API Token/Secret** and **Base URL** to match what's expected for your IdP.
+
 ::::
+
+:::warning
+
+When creating the credential for Okta and adding the API Key, do not add `Bearer` before the token, instead add `SSWS`. See [Okta API tokens](https://developer.okta.com/docs/guides/create-an-api-token/main/#okta-api-tokens) for more information.
+
+:::

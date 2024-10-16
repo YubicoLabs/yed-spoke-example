@@ -67,11 +67,11 @@ Use the right facing arrow to move the following fields to the column on the rig
 - street_address
 - apt_or_unit
 - city
-- region
+- region_state
 - postal_code
-- country
+- country_code
 - is_the_user_receiving_their_first_yubikey_or_a_replacement
-- select_a_yubikey_model
+- yubikey_model
 
 Your form variables menu should look like the example below.
 
@@ -164,10 +164,10 @@ Use the table below to correlate the correct data pill, to the inputs of the act
 | Street Line 1          | Get Catalog Variable > street_address                                                                                                  |
 | Street Line 2          | Get Catalog Variable > apt_or_unit                                                                                                     |
 | City                   | Get Catalog Variable > city                                                                                                            |
-| Region                 | Get Catalog Variable > region                                                                                                          |
+| Region                 | Get Catalog Variable > region_state                                                                                                    |
 | Postal Code            | Get Catalog Variable > postal_code                                                                                                     |
-| Country Code           | Get Catalog Variable > country                                                                                                         |
-| Product ID             | Get Catalog Variable > select_a_yubikey_model                                                                                          |
+| Country Code           | Get Catalog Variable > country_code                                                                                                    |
+| Product ID             | Get Catalog Variable > yubikey_model                                                                                                   |
 | Inventory Product ID   | Get Catalog Variable > is_the_user_receiving_their_first_yubikey_or_a_replacement                                                      |
 | Customization ID       | Enter your YubiEnterprise customization ID - This can be found in the YubiEnterprise console, or you can work with your Yubico contact |
 | Quantity               | 1                                                                                                                                      |
@@ -188,8 +188,9 @@ We will need to create a flow variable to keep track of the current shipment sta
 1. Click the 3 dots on the top right of the screen
 2. Click **Flow Variables**
 3. Click the small **+** button on the right of the pop-up menu
-4. Set the **Label** to **Current shipment state ID**.
-5. Set the **Type** to **Integer**
+4. Set the **Label** to **Current shipment state ID**
+5. Set the **Name** to **current_shipment_state_id**
+6. Set the **Type** to **Integer**
 
 Your final settings should resemble the image below.
 
@@ -305,9 +306,9 @@ For the field **Shipment ID**, drag the **Shipment Request ID** data pill from t
 
 Next, we are going to update the flow variable for the **Current Shipment State ID**. This will help us understand if the PIN and credential response is available for processing.
 
-First we'll start by setting the **Flow Variable Current Shipment State ID** to the updated state provided by the **Get FIDO Pre-reg shipment** action.
+First we'll start by setting the **Flow Variable Current Shipment State ID** to the updated state provided by the **YubiEnterprise get shipment (Pre-reg)** action.
 
-These steps should resemble the ones taken earlier on this page. Under the **Get FIDO Pre-reg shipment** action click the **+ Add an Action, Flow Logic, or Subflow** button.
+These steps should resemble the ones taken earlier on this page. Under the **YubiEnterprise get shipment (Pre-reg)** action click the **+ Add an Action, Flow Logic, or Subflow** button.
 
 Next, select **Flow Logic**.
 
@@ -317,7 +318,7 @@ A new menu will appear. Begin by clicking the **+** button in the new menu.
 
 In the **Name** field, select the flow variable **Current shipment state ID**.
 
-Drag the **Shipment State ID** value from the **Data** window on the right, in the **Get FIDO Pre-reg shipment** section.
+Drag the **Shipment State ID** value from the **Data** window on the right, in the **YubiEnterprise get shipment (Pre-reg)** section.
 
 Your resulting menu should resemble the image below.
 
